@@ -10,6 +10,8 @@ const BridgeBox = () => {
   return (
     <Box
     sx={{
+      paddingTop: '2rem',
+      marginTop: '2rem',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -37,9 +39,9 @@ const BridgeBox = () => {
 
 
   return (
-    <Box backgroundColor= '#11029e'>
-      <MotionBirdBox />
-<BridgeBox />
+    <Box backgroundColor= '#242424' marginTop='2rem'>
+      {/* <MotionBirdBox /> */}
+{/* <BridgeBox /> */}
     </Box>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Button,
+  Center,
   Container,
   FormControl,
   FormErrorMessage,
@@ -13,8 +14,16 @@ import {
 } from '@chakra-ui/react';
 import { sendVolunteerForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
+import PageTextBox from '../../components/PageTextBox';
+import FormContainer from '../../components/FormContainer';
 
-const initValues = { name: '', email: '', phone: '', tshirt_size: '', message: '' };
+const initValues = {
+  name: '',
+  email: '',
+  phone: '',
+  tshirt_size: '',
+  message: '',
+};
 const initState = { isLoading: false, error: '', values: initValues };
 
 const Volunteer = () => {
@@ -60,22 +69,19 @@ const Volunteer = () => {
   };
 
   return (
-    <PageContainer>
-      <Container width={['600px']}>
-        <Heading>Volunteer</Heading>
-        <Text>
-          The Bridgetown Fest depends on a community of volunteers to take
-          tickets, pour beers, and sell merch! If you would like to volunteer,
-          please let us know which available slot below you would like.
-          Volunteers get a festival pass, festival shirt, and two drinks
-          tickets.{' '}
+    <PageContainer heading={'Volunteer'}>
+      <PageTextBox>
+        The Bridgetown Fest depends on a community of volunteers to take
+        tickets, pour beers, and sell merch! If you would like to volunteer,
+        please let us know which available slot below you would like. Volunteers
+        get a festival pass, festival shirt, and two drinks tickets.
+      </PageTextBox>
+      {error && (
+        <Text color='red.300' my={4} fontSize='xl'>
+          {error}
         </Text>
-        {error && (
-          <Text color='red.300' my={4} fontSize='xl'>
-            {error}
-          </Text>
-        )}
-
+      )}
+      <FormContainer>
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel>Name</FormLabel>
           <Input
@@ -157,19 +163,24 @@ const Volunteer = () => {
           />
           <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
         </FormControl>
-
-        <Button
-          variant='outline'
-          colorScheme='blue'
-          isLoading={isLoading}
-          disabled={
-            !values.name || !values.email || !values.phone || !values.tshirt_size || !values.message
-          }
-          onClick={onSubmit}
-        >
-          Send Message to BBFF Volunteer Crew
-        </Button>
-      </Container>
+        <Center>
+          <Button
+            variant='outline'
+            colorScheme='blue'
+            isLoading={isLoading}
+            disabled={
+              !values.name ||
+              !values.email ||
+              !values.phone ||
+              !values.tshirt_size ||
+              !values.message
+            }
+            onClick={onSubmit}
+          >
+            Send Message to BBFF Volunteer Crew
+          </Button>
+        </Center>
+      </FormContainer>
     </PageContainer>
   );
 };

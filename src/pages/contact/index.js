@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   Button,
   Container,
+  Center,
   FormControl,
   FormErrorMessage,
   FormLabel,
@@ -13,6 +14,8 @@ import {
 } from '@chakra-ui/react';
 import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
+import FormContainer from '../../components/FormContainer';
+import PageTextBox from '../../components/PageTextBox';
 
 const initValues = { name: '', email: '', subject: '', message: '' };
 
@@ -62,15 +65,22 @@ export default function Contact() {
   };
 
   return (
-    <PageContainer>
-      <Container width={['600px']}>
-        <Heading>Contact</Heading>
-        {error && (
-          <Text color='red.300' my={4} fontSize='xl'>
-            {error}
-          </Text>
-        )}
+    <PageContainer heading={'Contact'}>
+      <PageTextBox>
+        Please feel free to contact us with any further questions about the
+        festival.
+      </PageTextBox>
+      <PageTextBox>
+        Vendors: please use this form to let us know what your trade is and in
+        what capacity you would like to be involved.
+      </PageTextBox>
+      {error && (
+        <Text color='red.300' my={4} fontSize='xl'>
+          {error}
+        </Text>
+      )}
 
+      <FormContainer>
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel>Name</FormLabel>
           <Input
@@ -135,19 +145,23 @@ export default function Contact() {
           />
           <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
         </FormControl>
-
-        <Button
-          variant='outline'
-          colorScheme='blue'
-          isLoading={isLoading}
-          disabled={
-            !values.name || !values.email || !values.subject || !values.message
-          }
-          onClick={onSubmit}
-        >
-          Send Message to BBFF Crew
-        </Button>
-      </Container>
+        <Center>
+          <Button
+            variant='outline'
+            colorScheme='blue'
+            isLoading={isLoading}
+            disabled={
+              !values.name ||
+              !values.email ||
+              !values.subject ||
+              !values.message
+            }
+            onClick={onSubmit}
+          >
+            Send Message to BBFF Crew
+          </Button>
+        </Center>
+      </FormContainer>
     </PageContainer>
   );
 }

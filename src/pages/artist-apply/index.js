@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Button,
+  Center,
   Container,
   FormControl,
   FormErrorMessage,
@@ -13,8 +14,16 @@ import {
 } from '@chakra-ui/react';
 import { sendArtistApplication } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
+import PageTextBox from '../../components/PageTextBox';
+import FormContainer from '../../components/FormContainer';
 
-const initValues = { name: '', email: '', phone: '', tshirt_size: '', message: '' };
+const initValues = {
+  name: '',
+  email: '',
+  phone: '',
+  tshirt_size: '',
+  message: '',
+};
 const initState = { isLoading: false, error: '', values: initValues };
 
 const ArtistApply = () => {
@@ -60,26 +69,31 @@ const ArtistApply = () => {
   };
 
   return (
-    <PageContainer>
-      <Container width={['600px']}>
-        <Heading>Artist Application</Heading>
-        <Text>
-        Now accepting applications for 2023!
-
-The Bridgetown Bluegrass & Folk Festival seeks hard-working artists that are actively creating new and original music, and demonstrate a commitment to bringing that music to the public through consistent live performance.
-
-In this submission form, tell us about yourself/your band, send us links to your music, and show us what you’ve been up to. Submissions for Bridgetown 2023 close on March 1, 2023.
-
-All artists will be offered at least one 30 minute set, wristbands for the day of the fest, access to Bridgetown Green Room and Hospitality Lounges, and a +1 per band member.
-
-RADIUS CLAUSE: All artists confirmed for Bridgetown 2023 will be asked to not play any other Portland area (100 mile radius) shows in the festival month (TBD) of 2023 and to not announce any other Portland area shows in the following month 2023 and beyond until after their set at the festival. We are open to exceptions to this request, but ask that they are discussed with us before confirming your appearance.
+    <PageContainer heading={'Artist Application'}>
+      <PageTextBox>
+        Now accepting applications for 2023! The Bridgetown Bluegrass & Folk
+        Festival seeks hard-working artists that are actively creating new and
+        original music, and demonstrate a commitment to bringing that music to
+        the public through consistent live performance. In this submission form,
+        tell us about yourself/your band, send us links to your music, and show
+        us what you<span>&#39;</span>ve been up to. Submissions for Bridgetown
+        2023 close on March 1, 2023. All artists will be offered at least one 30
+        minute set, wristbands for the day of the fest, access to Bridgetown
+        Green Room and Hospitality Lounges, and a +1 per band member. RADIUS
+        CLAUSE: All artists confirmed for Bridgetown 2023 will be asked to not
+        play any other Portland area <span>&#40;</span>100 mile radius
+        <span>&#41;</span> shows in the festival month <span>&#40;</span>TBD
+        <span>&#41;</span> of 2023 and to not announce any other Portland area
+        shows in the following month 2023 and beyond until after their set at
+        the festival. We are open to exceptions to this request, but ask that
+        they are discussed with us before confirming your appearance.
+      </PageTextBox>
+      {error && (
+        <Text color='red.300' my={4} fontSize='xl'>
+          {error}
         </Text>
-        {error && (
-          <Text color='red.300' my={4} fontSize='xl'>
-            {error}
-          </Text>
-        )}
-
+      )}
+      <FormContainer>
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel>Artist/Band Name</FormLabel>
           <Input
@@ -124,7 +138,11 @@ RADIUS CLAUSE: All artists confirmed for Bridgetown 2023 will be asked to not pl
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl isRequired isInvalid={touched.website && !values.website} mb={5}>
+        <FormControl
+          isRequired
+          isInvalid={touched.website && !values.website}
+          mb={5}
+        >
           <FormLabel>Website</FormLabel>
           <Input
             type='text'
@@ -154,7 +172,11 @@ RADIUS CLAUSE: All artists confirmed for Bridgetown 2023 will be asked to not pl
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl isRequired isInvalid={touched.phone && !values.phone} mb={5}>
+        <FormControl
+          isRequired
+          isInvalid={touched.phone && !values.phone}
+          mb={5}
+        >
           <FormLabel>Contact Phone Number</FormLabel>
           <Input
             type='number'
@@ -219,19 +241,28 @@ RADIUS CLAUSE: All artists confirmed for Bridgetown 2023 will be asked to not pl
           />
           <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
         </FormControl>
-
-        <Button
-          variant='outline'
-          colorScheme='blue'
-          isLoading={isLoading}
-          disabled={
-            !values.name || !values.hometown || !values.bio || !values.website || !values.email || !values.phone || !values.video || !values.social || !values.message
-          }
-          onClick={onSubmit}
-        >
-          Send Message to BBFF Volunteer Crew
-        </Button>
-      </Container>
+        <Center>
+          <Button
+            variant='outline'
+            colorScheme='blue'
+            isLoading={isLoading}
+            disabled={
+              !values.name ||
+              !values.hometown ||
+              !values.bio ||
+              !values.website ||
+              !values.email ||
+              !values.phone ||
+              !values.video ||
+              !values.social ||
+              !values.message
+            }
+            onClick={onSubmit}
+          >
+            Send Message to BBFF Volunteer Crew
+          </Button>
+        </Center>
+      </FormContainer>
     </PageContainer>
   );
 };

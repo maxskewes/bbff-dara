@@ -1,15 +1,15 @@
 export const nav_obj = [
   {
+    title: 'Home',
+    route: '/',
+  },
+  {
     title: 'Artist Apply',
     route: 'artist-apply',
   },
   {
-    title: 'Line Up',
-    route: 'lineup',
-  },
-  {
-    title: 'Schedule',
-    route: 'schedule',
+    title: 'Schedule/Line-Up',
+    route: 'line-up',
   },
   {
     title: 'Tickets',
@@ -26,9 +26,5 @@ export const nav_obj = [
   {
     title: 'FAQs',
     route: 'faqs',
-  },
-  {
-    title: 'Pricing',
-    route: 'pricing',
   },
 ];

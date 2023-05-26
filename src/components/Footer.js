@@ -6,8 +6,7 @@ const Footer = () => {
     <>
       <Box
         sx={{
-          paddingTop: ['20px', null, '30px', '50px'],
-          paddingBottom: '50px',
+          paddingBottom: '150px',
           width: '100vw',
           display: 'flex',
           flexDirection: 'column',
@@ -21,20 +20,33 @@ const Footer = () => {
         <Box
           sx={{
             position: 'relative',
+            top: ['-28px', '-40px', '-60px', '-80px', '-100px'],
             display: 'flex',
             flexDirection: 'column',
+            justifyContent: 'center',
             alignItems: 'center',
           }}
         >
-          <Text>Bridgetown Bluegrass</Text>
-          <Text>is a not-for-profit music festival.</Text>
-          <Text>Only the musicians and technicians get paid.</Text>
+          <Image
+            src='/images/portland-grass.svg'
+            alt='portland grass'
+            sx={{ width: '70%' }}
+          />
+          <Box
+            sx={{
+              paddingTop: ['1rem', null, '2rem'],
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textColor: '#8a8a8a',
+              fontSize: ['.5rem', '.75rem', '1rem', null, '1.25rem']
+            }}
+          >
+            <Text>Bridgetown Bluegrass</Text>
+            <Text>is a not-for-profit music festival.</Text>
+            <Text>Only the musicians and technicians get paid.</Text>
+          </Box>
         </Box>
-        <Image
-          src='/images/portland-grass.svg'
-          alt='portland grass'
-          sx={{ width: '70%', position: 'relative' }}
-        />
       </Box>
     </>
   );

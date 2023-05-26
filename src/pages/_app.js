@@ -1,7 +1,7 @@
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import './_app.css';
 import theme from '../config/theme';
-import Header from '../components/Header';
+import HeaderSm from '../components/HeaderSm';
 import StaticHeader from '../components/StaticHeader';
 import Footer from '../components/Footer';
 import PageContainer from '../components/PageContainer';
@@ -17,8 +17,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <main className={specialElite.className}>
-        <StaticHeader />
-        <NavigationBar />
+        <HeaderSm />
         <PageContainer>
           <main className={specialElite.className}>
             <Component {...pageProps} />
