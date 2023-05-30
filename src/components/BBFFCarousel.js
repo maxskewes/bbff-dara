@@ -6,50 +6,51 @@ import { Carousel } from 'react-responsive-carousel';
 const BBFFCarousel = () => {
   const CarouselImageBox = ({ src, alt, children }) => {
     return (
-      // <Box width='100%'>
       <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          objectFit: 'cover',
-        }}
-        src={src}
-        alt={alt}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <Box sx={{ width: 500, height: 500 }}>{children}</Box>
+        <Box
+          sx={{
+            minWidth: ['400px', '500px', '600px', '700px'],
+            minHeight: ['300px', '400px', '450px', '500px'],
+            maxWidth: ['400px', '500px', '600px', '700px'],
+            maxHeight: ['300px', '400px', '450px', '500px'],
+          }}
+        >
+          <Box
+            sx={{
+              objectFit: 'cover',
+            }}
+            src={src}
+            alt={alt}
+          >
+            {children}
+          </Box>
+        </Box>
       </Box>
-      // </Box>
     );
   };
 
   const LegendBox = () => {
     return (
       <Box sx={{ maxWidth: '500px', minWidth: '500px' }}>
-        <p className='legend'>Image 1</p>
+        <p className='legend'></p>
       </Box>
     );
   };
 
   return (
     <>
-      <Box
-      // sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', maxWidth: '600px' }}
-      >
-        <Carousel autoPlay width='500px'>
+      <Box>
+        <Carousel autoPlay width='100vw'>
           <CarouselImageBox>
-            <img src='/images/carousel/VookDadKaraoke.jpg' alt='image1' />
-            <Box sx={{ maxWidth: '500px', minWidth: '500px' }}>
-              <h1 className='legend'>Image 1</h1>
-            </Box>
+            <img src='/images/carousel/1.jpg' alt='image1' />
           </CarouselImageBox>
           <CarouselImageBox>
-            <img src='/images/carousel/AnotherBaby.jpg' alt='image2' />
-            <p className='legend'>Image 2</p>
+            <img src='/images/carousel/2.jpg' alt='image2' />
           </CarouselImageBox>
           <CarouselImageBox>
-            <img src='/images/carousel/W!BG.png' alt='image3' />
-            <p className='legend'>Image 3</p>
+            <img src='/images/carousel/3.jpg' alt='image3' />
           </CarouselImageBox>
         </Carousel>
       </Box>

@@ -10,7 +10,7 @@ const PageContainer = ({ heading, children }) => {
         paddingBottom: ['0', null, '1rem', '1.5rem', '2rem'],
         minH: '500px',
         maxWidth: '100vw',
-        justifyContent: 'center',
+        justifyContent: 'flext-start',
         alignItems: 'center',
       }}
     >

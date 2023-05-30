@@ -16,7 +16,7 @@ const NavigationBar = () => {
   const SiteLink = ({ title, route }) => {
     return (
       <Link href={route}>
-        <NavBarText sx={{ color: '#090173', fontFamily: 'specialElite' }}>
+        <NavBarText sx={{ fontFamily: 'specialElite' }}>
           {title}
         </NavBarText>
       </Link>
@@ -41,7 +41,6 @@ const NavigationBar = () => {
         })}
       </Box>
       <Image
-fill='#4a8fff'
         src='/images/waves.svg'
         alt='Wave Border'
         position='absolute'
