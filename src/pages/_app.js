@@ -18,11 +18,11 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme}>
       <main className={specialElite.className}>
         <HeaderSm />
-        <PageContainer>
-          <main className={specialElite.className}>
-            <Component {...pageProps} />
-          </main>
-        </PageContainer>
+
+        <main className={specialElite.className}>
+          <Component {...pageProps} />
+        </main>
+
         <Footer />
       </main>
     </ChakraProvider>

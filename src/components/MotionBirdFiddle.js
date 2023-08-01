@@ -13,7 +13,7 @@ const MotionBirdFiddle = () => {
     //   transition={{
     //     duration: 5,
     //   }}
-<Flex flexDirection={'column'} position={'relative'}>
+    <Flex flexDirection={'column'} position={'relative'}>
       <motion.img
         style={{ originY: 0.8 }}
         animate={{ rotateX: 1440 }}
@@ -32,9 +32,9 @@ const MotionBirdFiddle = () => {
         alt='bird-fiddle-body'
         width={'120px'}
         height={'auto'}
-        sx={{ position: 'absolute', top: '48px'}}
+        sx={{ position: 'absolute', top: '48px' }}
       />
-      </Flex>
+    </Flex>
     // </motion.div>
   );
 };

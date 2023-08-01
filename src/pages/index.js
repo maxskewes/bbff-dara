@@ -4,7 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BBFFCarousel from '../components/BBFFCarousel';
 import PageContainer from '../components/PageContainer';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
+import MotionBirdBox from '../components/MotionBirdBox';
 
 export default function Home() {
   return (
@@ -17,8 +18,14 @@ export default function Home() {
       </Head>
 
       <main>
-
-        <BBFFCarousel />
+        <Box
+          bgImage="url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fdavidgn%2F4527467878&psig=AOvVaw1Uf1JmCclh1Zwa37c-Gnk9&ust=1690575260346000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKDk_4jcr4ADFQAAAAAdAAAAABAN)"
+          bgPosition='center'
+          bgRepeat='no-repeat'
+          w='100vw'
+          h='500'
+        />
+  
       </main>
     </>
   );

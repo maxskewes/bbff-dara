@@ -6,15 +6,16 @@ import MotionBirdBanjo from './MotionBirdBanjo';
 import MotionBirdGuitar from './MotionBirdGuitar';
 import MotionBirdMando from './MotionBirdMando';
 import MotionBirdBass from './MotionBirdBass';
+import BanjoBird from './BanjoBird';
 
 const MotionBirdBox = () => {
   return (
     <Box sx={{ paddingTop:'10rem'}} >
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: [1, 1, 1, 1, 1, 1, 0.5] }}
         transition={{ duration: 6 }}
-      > */}
+      >
         <Box
           sx={{
             maxWidth: '100vw',
@@ -26,13 +27,15 @@ const MotionBirdBox = () => {
             justifyContent: 'space-around'
           }}
         >
+
+
           <MotionBirdFiddle />
           <MotionBirdBanjo />
           <MotionBirdGuitar />
           <MotionBirdMando />
           <MotionBirdBass />
         </Box>
-      {/* </motion.div> */}
+      </motion.div>
     </Box>
   );
 };
