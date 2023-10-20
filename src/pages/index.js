@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import BBFFCarousel from '../components/BBFFCarousel';
 import PageContainer from '../components/PageContainer';
-import { Box, Center, Flex } from '@chakra-ui/react';
+import {  Box, Center, Flex } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 import chansel from '../assets/chansel-landing-bg.png';
 
@@ -19,24 +19,33 @@ export default function Home() {
       </Head>
 
       <main>
-        <div sx={{ position: 'relative', minWidth: '100%' }}>
-          <Center position={'relative'} minW={'100vw'} minH={300} bgColor={'pink.200'}>
+        <Box position={'relative'} minWidth={'100%'}>
+          <Center
+            position={'relative'}
+            minW={'100vw'}
+            minH={300}
+            bgColor={'black'}
+          >
             <Image
               style={{
                 minWidth: '100%',
                 maxWidth: '100vw',
                 objectFit: 'cover',
                 opacity: '80%',
-                backgroundColor: 'pink',
               }}
               src={chansel}
               alt='chansel image'
             />
-            <Box position={'absolute'}>
+            <Center
+              position={'absolute'}
+              w={'100%'}
+              h={'100%'}
+              bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
+            >
               <BBFFCarousel />
-            </Box>
+            </Center>
           </Center>
-        </div>
+        </Box>
       </main>
     </>
   );
