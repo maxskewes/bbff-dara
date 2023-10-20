@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 import BBFFCarousel from '../components/BBFFCarousel';
 import PageContainer from '../components/PageContainer';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Center, Flex } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
+import chansel from '../assets/chansel-landing-bg.png';
 
 export default function Home() {
   return (
@@ -18,14 +19,24 @@ export default function Home() {
       </Head>
 
       <main>
-        <Box
-          bgImage="url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fdavidgn%2F4527467878&psig=AOvVaw1Uf1JmCclh1Zwa37c-Gnk9&ust=1690575260346000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKDk_4jcr4ADFQAAAAAdAAAAABAN)"
-          bgPosition='center'
-          bgRepeat='no-repeat'
-          w='100vw'
-          h='500'
-        />
-  
+        <div sx={{ position: 'relative', minWidth: '100%' }}>
+          <Center position={'relative'} minW={'100vw'} minH={300} bgColor={'pink.200'}>
+            <Image
+              style={{
+                minWidth: '100%',
+                maxWidth: '100vw',
+                objectFit: 'cover',
+                opacity: '80%',
+                backgroundColor: 'pink',
+              }}
+              src={chansel}
+              alt='chansel image'
+            />
+            <Box position={'absolute'}>
+              <BBFFCarousel />
+            </Box>
+          </Center>
+        </div>
       </main>
     </>
   );

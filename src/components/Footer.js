@@ -42,9 +42,9 @@ const Footer = () => {
               fontSize: ['.5rem', '.75rem', '1rem', null, '1.25rem']
             }}
           >
-            <Text>Bridgetown Bluegrass</Text>
-            <Text>is a not-for-profit music festival.</Text>
-            <Text>Only the musicians and technicians get paid.</Text>
+            <Text>Bridgetown Bluegrass is a not-for-profit music festival.</Text>
+            <Text>Only the musicians technicians get paid.</Text>
+            <Text>Additional revenue is donated to charity.</Text>
           </Box>
         </Box>
       </Box>

@@ -12,3 +12,8 @@
   filter: invert(40%) sepia(6%) saturate(4284%) hue-rotate(161deg)
     brightness(104%) contrast(97%);
 }
+
+.chansel-bg {
+  min-width: 100%;
+  max-width: 100vw;
+}
