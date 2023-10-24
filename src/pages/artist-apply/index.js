@@ -6,6 +6,8 @@ import {
   FormControl,
   FormErrorMessage,
   FormLabel,
+  Grid,
+  GridItem,
   Heading,
   Input,
   Text,
@@ -94,174 +96,199 @@ const ArtistApply = () => {
         </Text>
       )}
       <FormContainer>
-        <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-          <FormLabel>Artist/Band Name</FormLabel>
-          <Input
-            type='text'
-            name='name'
-            errorBorderColor='red.300'
-            value={values.name}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.hometown && !values.hometown}
-          mb={5}
-        >
-          <FormLabel>Hometown</FormLabel>
-          <Input
-            type='text'
-            name='hometown'
-            errorBorderColor='red.300'
-            value={values.hometown}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
-        </FormControl>
-
-        <FormControl isRequired isInvalid={touched.bio && !values.bio} mb={5}>
-          <FormLabel>Bio</FormLabel>
-          <Textarea
-            type='text'
-            name='bio'
-            rows={4}
-            errorBorderColor='red.300'
-            value={values.bio}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.website && !values.website}
-          mb={5}
-        >
-          <FormLabel>Website</FormLabel>
-          <Input
-            type='text'
-            name='website'
-            errorBorderColor='red.300'
-            value={values.website}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.email && !values.email}
-          mb={5}
-        >
-          <FormLabel>Email</FormLabel>
-          <Input
-            type='email'
-            name='email'
-            errorBorderColor='red.300'
-            value={values.email}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.phone && !values.phone}
-          mb={5}
-        >
-          <FormLabel>Contact Phone Number</FormLabel>
-          <Input
-            type='number'
-            name='phone'
-            errorBorderColor='red.300'
-            value={values.phone}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          mb={5}
-          isRequired
-          isInvalid={touched.video && !values.video}
-        >
-          <FormLabel>Video URL</FormLabel>
-          <Input
-            type='text'
-            name='video'
-            errorBorderColor='red.300'
-            value={values.video}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          mb={5}
-          isRequired
-          isInvalid={touched.social && !values.social}
-        >
-          <FormLabel>Social Media Sites</FormLabel>
-          <Textarea
-            type='text'
-            name='social'
-            rows={2}
-            errorBorderColor='red.300'
-            value={values.social}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.message && !values.message}
-          mb={5}
-        >
-          <FormLabel>Message</FormLabel>
-          <Textarea
-            type='text'
-            name='message'
-            rows={4}
-            errorBorderColor='red.300'
-            value={values.message}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
-        </FormControl>
-        <Center>
-          <Button
-            variant='outline'
-            colorScheme='blue'
-            isLoading={isLoading}
-            disabled={
-              !values.name ||
-              !values.hometown ||
-              !values.bio ||
-              !values.website ||
-              !values.email ||
-              !values.phone ||
-              !values.video ||
-              !values.social ||
-              !values.message
-            }
-            onClick={onSubmit}
+        <GridItem colSpan={1}>
+          <FormControl
+            isRequired
+            isInvalid={touched.name && !values.name}
+     
           >
-            Send Message to BBFF Volunteer Crew
-          </Button>
-        </Center>
+            <FormLabel>Artist/Band Name</FormLabel>
+            <Input
+              type='text'
+              name='name'
+              errorBorderColor='red.300'
+              value={values.name}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={1}>
+          <FormControl
+            isRequired
+            isInvalid={touched.hometown && !values.hometown}
+     
+          >
+            <FormLabel>Hometown</FormLabel>
+            <Input
+              type='text'
+              name='hometown'
+              errorBorderColor='red.300'
+              value={values.hometown}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={2}>
+          <FormControl isRequired isInvalid={touched.bio && !values.bio} mb={[1, null, null, 2]}>
+            <FormLabel>Bio</FormLabel>
+            <Textarea
+              type='text'
+              name='bio'
+              rows={4}
+              errorBorderColor='red.300'
+              value={values.bio}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={1}>
+          <FormControl
+            isRequired
+            isInvalid={touched.website && !values.website}
+     
+          >
+            <FormLabel>Website</FormLabel>
+            <Input
+              type='text'
+              name='website'
+              errorBorderColor='red.300'
+              value={values.website}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={1}>
+          <FormControl
+            isRequired
+            isInvalid={touched.email && !values.email}
+     
+          >
+            <FormLabel>Email</FormLabel>
+            <Input
+              type='email'
+              name='email'
+              errorBorderColor='red.300'
+              value={values.email}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={1}>
+          <FormControl
+            isRequired
+            isInvalid={touched.phone && !values.phone}
+     
+          >
+            <FormLabel>Contact Phone Number</FormLabel>
+            <Input
+              type='number'
+              name='phone'
+              errorBorderColor='red.300'
+              value={values.phone}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={1}>
+          <FormControl
+     
+            isRequired
+            isInvalid={touched.video && !values.video}
+          >
+            <FormLabel>Video URL</FormLabel>
+            <Input
+              type='text'
+              name='video'
+              errorBorderColor='red.300'
+              value={values.video}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={2}>
+          <FormControl
+     
+            isRequired
+            isInvalid={touched.social && !values.social}
+          >
+            <FormLabel>Social Media Sites</FormLabel>
+            <Textarea
+              type='text'
+              name='social'
+              rows={2}
+              errorBorderColor='red.300'
+              value={values.social}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={2}>
+          <FormControl
+            isRequired
+            isInvalid={touched.message && !values.message}
+     
+          >
+            <FormLabel>Message</FormLabel>
+            <Textarea
+              type='text'
+              name='message'
+              rows={4}
+              errorBorderColor='red.300'
+              value={values.message}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={2}>
+          <Center>
+            <Button
+              variant='outline'
+              colorScheme='blue'
+              isLoading={isLoading}
+              disabled={
+                !values.name ||
+                !values.hometown ||
+                !values.bio ||
+                !values.website ||
+                !values.email ||
+                !values.phone ||
+                !values.video ||
+                !values.social ||
+                !values.message
+              }
+              onClick={onSubmit}
+            >
+              Send Message to BBFF Volunteer Crew
+            </Button>
+          </Center>
+        </GridItem>
       </FormContainer>
     </PageContainer>
   );

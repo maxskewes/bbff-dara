@@ -6,6 +6,7 @@ import {
   FormControl,
   FormErrorMessage,
   FormLabel,
+  GridItem,
   Heading,
   Input,
   Text,
@@ -146,40 +147,44 @@ const Volunteer = () => {
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl
-          isRequired
-          isInvalid={touched.message && !values.message}
-          mb={5}
-        >
-          <FormLabel>Message</FormLabel>
-          <Textarea
-            type='text'
-            name='message'
-            rows={4}
-            errorBorderColor='red.300'
-            value={values.message}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
-        </FormControl>
-        <Center>
-          <Button
-            variant='outline'
-            colorScheme='blue'
-            isLoading={isLoading}
-            disabled={
-              !values.name ||
-              !values.email ||
-              !values.phone ||
-              !values.tshirt_size ||
-              !values.message
-            }
-            onClick={onSubmit}
+        <GridItem colSpan={2}>
+          <FormControl
+            isRequired
+            isInvalid={touched.message && !values.message}
+            mb={5}
           >
-            Send Message to BBFF Volunteer Crew
-          </Button>
-        </Center>
+            <FormLabel>Message</FormLabel>
+            <Textarea
+              type='text'
+              name='message'
+              rows={4}
+              errorBorderColor='red.300'
+              value={values.message}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Center>
+            <Button
+              variant='outline'
+              colorScheme='blue'
+              isLoading={isLoading}
+              disabled={
+                !values.name ||
+                !values.email ||
+                !values.phone ||
+                !values.tshirt_size ||
+                !values.message
+              }
+              onClick={onSubmit}
+            >
+              Send Message to BBFF Volunteer Crew
+            </Button>
+          </Center>
+        </GridItem>
       </FormContainer>
     </PageContainer>
   );

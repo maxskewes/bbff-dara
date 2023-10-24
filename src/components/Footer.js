@@ -44,7 +44,7 @@ const Footer = () => {
           >
             <Text>Bridgetown Bluegrass is a not-for-profit music festival.</Text>
             <Text>Only the musicians technicians get paid.</Text>
-            <Text>Additional revenue is donated to charity.</Text>
+            <Text>All additional revenue is donated to charity.</Text>
           </Box>
         </Box>
       </Box>

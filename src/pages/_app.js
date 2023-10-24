@@ -6,9 +6,14 @@ import StaticHeader from '../components/StaticHeader';
 import Footer from '../components/Footer';
 import PageContainer from '../components/PageContainer';
 import NavigationBar from '../components/NavigationBar';
-import { Special_Elite } from 'next/font/google';
+import { Della_Respira, Special_Elite } from 'next/font/google';
+import localFont from 'next/font/local'
 
 const specialElite = Special_Elite({
+  subsets: ['latin'],
+  weight: ['400'],
+});
+const dellaRespira = Della_Respira({
   subsets: ['latin'],
   weight: ['400'],
 });
@@ -16,10 +21,10 @@ const specialElite = Special_Elite({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <main className={specialElite.className}>
+      <main className={dellaRespira.className}>
         <HeaderSm />
 
-        <main className={specialElite.className}>
+        <main>
           <Component {...pageProps} />
         </main>
 

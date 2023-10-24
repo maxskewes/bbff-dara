@@ -11,6 +11,7 @@ import {
   Text,
   Textarea,
   useToast,
+  GridItem,
 } from '@chakra-ui/react';
 import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
@@ -111,56 +112,62 @@ export default function Contact() {
           <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
 
-        <FormControl
-          mb={5}
-          isRequired
-          isInvalid={touched.subject && !values.subject}
-        >
-          <FormLabel>Subject</FormLabel>
-          <Input
-            type='text'
-            name='subject'
-            errorBorderColor='red.300'
-            value={values.subject}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Required</FormErrorMessage>
-        </FormControl>
-
-        <FormControl
-          isRequired
-          isInvalid={touched.message && !values.message}
-          mb={5}
-        >
-          <FormLabel>Message</FormLabel>
-          <Textarea
-            type='text'
-            name='message'
-            rows={4}
-            errorBorderColor='red.300'
-            value={values.message}
-            onChange={handleChange}
-            onBlur={onBlur}
-          />
-          <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
-        </FormControl>
-        <Center>
-          <Button
-            variant='outline'
-            colorScheme='blue'
-            isLoading={isLoading}
-            disabled={
-              !values.name ||
-              !values.email ||
-              !values.subject ||
-              !values.message
-            }
-            onClick={onSubmit}
+        <GridItem colSpan={2}>
+          <FormControl
+            mb={5}
+            isRequired
+            isInvalid={touched.subject && !values.subject}
           >
-            Send Message to BBFF Crew
-          </Button>
-        </Center>
+            <FormLabel>Subject</FormLabel>
+            <Input
+              type='text'
+              name='subject'
+              errorBorderColor='red.300'
+              value={values.subject}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+
+        <GridItem colSpan={2}>
+          <FormControl
+            isRequired
+            isInvalid={touched.message && !values.message}
+            mb={5}
+          >
+            <FormLabel>Message</FormLabel>
+            <Textarea
+              type='text'
+              name='message'
+              rows={4}
+              errorBorderColor='red.300'
+              value={values.message}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            <FormErrorMessage>Field Required - please revisit</FormErrorMessage>
+          </FormControl>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Center>
+            <Button
+              variant='outline'
+              colorScheme='blue'
+              isLoading={isLoading}
+              disabled={
+                !values.name ||
+                !values.email ||
+                !values.subject ||
+                !values.message
+              }
+              onClick={onSubmit}
+            >
+              Send Message to BBFF Crew
+            </Button>
+          </Center>
+        </GridItem>
       </FormContainer>
     </PageContainer>
   );
