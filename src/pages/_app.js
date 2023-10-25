@@ -2,6 +2,7 @@ import { Box, ChakraProvider } from '@chakra-ui/react';
 import './_app.css';
 import theme from '../config/theme';
 import HeaderSm from '../components/HeaderSm';
+import Header from '../components/Header';
 import StaticHeader from '../components/StaticHeader';
 import Footer from '../components/Footer';
 import PageContainer from '../components/PageContainer';

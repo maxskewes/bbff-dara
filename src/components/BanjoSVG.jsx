@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Image, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionBirdBanjo = () => {
+const BanjoSVG = () => {
   return (
     // <motion.div
     //   initial={{ x: 2000, y: -20 }}
@@ -49,22 +49,22 @@ const MotionBirdBanjo = () => {
           duration: 5,
         }}
         className='bird-instruments-color'
-        src='/images/birds-instruments/bird-banjo-wings.svg'
+        src='/images/new-birds/banjo-wing.svg'
         alt='bird-banjo-wings'
-        // width={'50px'}
-        // height={'auto'}
-        position={'relative'}
+
+    
+        sx={{ position: 'absolute', top: '-20', left: '-5px' }}
       />
-      <Image
+      <img
+          position={'relative'}
         className='bird-instruments-color'
-        src='/images/birds-instruments/bird-banjo-body.svg'
+        src='/images/new-birds/banjo-body.svg'
         alt='bird-banjo-body'
-        // width={'120px'}
-        // height={'auto'}
-        sx={{ position: 'absolute', top: '-1', left: '-5px' }}
+  
+        sx={{ position: 'absolute', top: '-20', left: '-5px' }}
       />
     </Flex>
   );
 };
 
-export default MotionBirdBanjo;
+export default BanjoSVG;

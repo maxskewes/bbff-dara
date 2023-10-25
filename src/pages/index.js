@@ -7,6 +7,11 @@ import PageContainer from '../components/PageContainer';
 import {  Box, Center, Flex } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 import chansel from '../assets/chansel-landing-bg.png';
+import MotionBirdFiddle from '../components/MotionBirdFiddle';
+import MotionBirdBanjo from '../components/MotionBirdBanjo';
+import MotionBirdGuitar from '../components/MotionBirdGuitar';
+import MotionBirdMando from '../components/MotionBirdMando';
+import MotionBirdBass from '../components/MotionBirdBass';
 
 export default function Home() {
   return (
@@ -42,7 +47,8 @@ export default function Home() {
               h={'100%'}
               bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
             >
-              <BBFFCarousel />
+          <MotionBirdBox />
+              {/* <BBFFCarousel /> */}
             </Center>
           </Center>
         </Box>
