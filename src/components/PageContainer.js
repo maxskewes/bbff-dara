@@ -7,7 +7,7 @@ const PageContainer = ({ heading, children }) => {
     <Box position={'relative'}>
       <Flex
         flexDirection={'column'}
-        bgGradient='linear(yellow.900 0%, yellow.600 50%, yellow.900 90%)'
+        bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
         sx={{
           padding: [2, 4, 6, 8],
           paddingBottom: ['0', null, '1rem', '1.5rem', '2rem'],
@@ -17,7 +17,7 @@ const PageContainer = ({ heading, children }) => {
           alignItems: 'center',
         }}
       >
-        <Button
+        {/* <Button
           position='relative'
           bgGradient='linear(to-l, #003e9b, #5949b4, #ad53cc 80%)'
           overflow='hidden'
@@ -37,12 +37,12 @@ const PageContainer = ({ heading, children }) => {
           <Text zIndex='1' color={'white'}>
             CONNECT WALLET TO BUY
           </Text>
-        </Button>
-        <PageTextBox>
-          <Heading size='2xl' color='white' pb={8} mx={12}>
+        </Button> */}
+
+          <Heading size='2xl' color='white' letterSpacing={3} p={8} mx={12}>
             {heading}
           </Heading>
-        </PageTextBox>
+
         {children}
       </Flex>
     </Box>

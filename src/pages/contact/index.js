@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {
+  Box,
   Button,
   Container,
   Center,
@@ -67,14 +68,16 @@ export default function Contact() {
 
   return (
     <PageContainer heading={'Contact'}>
-      <PageTextBox>
-        Please feel free to contact us with any further questions about the
-        festival.
-      </PageTextBox>
-      <PageTextBox>
-        Vendors: please use this form to let us know what your trade is and in
-        what capacity you would like to be involved.
-      </PageTextBox>
+      <Box color='white' textAlign={'center'} letterSpacing={3} maxW={'800px'}>
+        <Heading size='md' p={4}>
+          Please feel free to contact us with any further questions about the
+          festival.
+        </Heading>
+        <Heading size='md' p={4}>
+          Vendors: please use this form to let us know what your trade is and in
+          what capacity you would like to be involved.
+        </Heading>
+      </Box>
       {error && (
         <Text color='red.300' my={4} fontSize='xl'>
           {error}

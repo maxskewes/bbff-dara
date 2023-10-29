@@ -11,7 +11,7 @@ const PageTextBox = ({ children }) => {
         marginBottom: 6,
       }}
     >
-      <Box
+      {/* <Box
         position={'absolute'}
         filter='auto' blur='10px'
         width={'100%'}
@@ -20,17 +20,17 @@ const PageTextBox = ({ children }) => {
         rounded='3xl'
         bg='blacker'
   opacity={.8}
-      />
+      /> */}
       <Box
         position={'relative'}
         maxWidth={'1000px'}
         p={0}
-        my={4}
+        my={2}
         mx={12}
         rounded='md'
         // bg='black'
       >
-        <Text fontSize={['sm', 'md', null, 'lg']} color={'white'}>
+        <Text fontSize={['sm', 'md', null, 'lg']} letterSpacing={1.5} color={'white'}>
           <span>&emsp;&emsp;</span>
           {children}
         </Text>

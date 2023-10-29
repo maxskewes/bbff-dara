@@ -18,6 +18,7 @@ import { sendArtistApplication } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
 import PageTextBox from '../../components/PageTextBox';
 import FormContainer from '../../components/FormContainer';
+import ContactButton from '../../components/ContactButton';
 
 const initValues = {
   name: '',
@@ -268,9 +269,7 @@ const ArtistApply = () => {
 
         <GridItem colSpan={2}>
           <Center>
-            <Button
-              variant='outline'
-              colorScheme='blue'
+            <ContactButton
               isLoading={isLoading}
               disabled={
                 !values.name ||
@@ -285,8 +284,8 @@ const ArtistApply = () => {
               }
               onClick={onSubmit}
             >
-              Send Message to BBFF Volunteer Crew
-            </Button>
+              Send Message to Applications Crew
+            </ContactButton>
           </Center>
         </GridItem>
       </FormContainer>

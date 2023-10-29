@@ -23,8 +23,8 @@ export const nav_obj = [
     title: 'Contact',
     route: 'contact',
   },
-  {
-    title: 'FAQs',
-    route: 'faqs',
-  },
+  // {
+  //   title: 'FAQs',
+  //   route: 'faqs',
+  // },
 ];

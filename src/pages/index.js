@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import BBFFCarousel from '../components/BBFFCarousel';
 import PageContainer from '../components/PageContainer';
-import {  Box, Center, Flex } from '@chakra-ui/react';
+import { Box, Center, Flex, Container, Heading } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 import chansel from '../assets/chansel-landing-bg.png';
 import MotionBirdFiddle from '../components/MotionBirdFiddle';
@@ -41,15 +41,30 @@ export default function Home() {
               src={chansel}
               alt='chansel image'
             />
-            <Center
+            <Box
               position={'absolute'}
-              w={'100%'}
+              margin={'auto'}
+              w={'100vw'}
               h={'100%'}
               bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
             >
-          <MotionBirdBox />
+              <Box
+                color='white'
+                textAlign={'center'}
+                letterSpacing={3}
+                m={12}
+              >
+                <Heading size={'xl'} p={4}>
+                  The Fifth Annual
+                  <br />
+                  Bridgetown Bluegrass and Folk Festival
+                </Heading>
+                <Heading size={'3xl'} p={4}>May 4th 2024</Heading>
+                <Heading size={'xl'} p={4}>The First Saturday in May</Heading>
+              </Box>
+              {/* <MotionBirdBox /> */}
               {/* <BBFFCarousel /> */}
-            </Center>
+            </Box>
           </Center>
         </Box>
       </main>

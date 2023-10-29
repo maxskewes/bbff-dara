@@ -39,6 +39,8 @@ const Footer = () => {
               flexDirection: 'column',
               alignItems: 'center',
               textColor: '#8a8a8a',
+              fontWeight: 600,
+              letterSpacing: 2,
               fontSize: ['.5rem', '.75rem', '1rem', null, '1.25rem']
             }}
           >

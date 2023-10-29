@@ -17,6 +17,7 @@ import { sendVolunteerForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
 import PageTextBox from '../../components/PageTextBox';
 import FormContainer from '../../components/FormContainer';
+import ContactButton from '../../components/ContactButton';
 
 const initValues = {
   name: '',
@@ -168,9 +169,7 @@ const Volunteer = () => {
         </GridItem>
         <GridItem colSpan={2}>
           <Center>
-            <Button
-              variant='outline'
-              colorScheme='blue'
+            <ContactButton
               isLoading={isLoading}
               disabled={
                 !values.name ||
@@ -182,7 +181,7 @@ const Volunteer = () => {
               onClick={onSubmit}
             >
               Send Message to BBFF Volunteer Crew
-            </Button>
+            </ContactButton>
           </Center>
         </GridItem>
       </FormContainer>
