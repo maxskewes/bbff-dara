@@ -1,12 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PageContainer from '../../components/PageContainer';
 
 const Merch = () => {
-  return (
-    <div>
+  return <PageContainer heading='Merch'></PageContainer>;
+};
 
-      
-    </div>
-  )
-}
-
-export default Merch
+export default Merch;

@@ -1,17 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Image from 'next/image';
-import BBFFCarousel from '../components/BBFFCarousel';
-import PageContainer from '../components/PageContainer';
-import { Box, Center, Flex, Container, Heading } from '@chakra-ui/react';
-import MotionBirdBox from '../components/MotionBirdBox';
+import { Box, Center} from '@chakra-ui/react';
 import chansel from '../assets/chansel-landing-bg.png';
-import MotionBirdFiddle from '../components/MotionBirdFiddle';
-import MotionBirdBanjo from '../components/MotionBirdBanjo';
-import MotionBirdGuitar from '../components/MotionBirdGuitar';
-import MotionBirdMando from '../components/MotionBirdMando';
-import MotionBirdBass from '../components/MotionBirdBass';
 import {
   PageHeadingBoxLg,
   PageHeadingBoxSm,

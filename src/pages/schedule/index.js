@@ -1,6 +1,6 @@
 import React from 'react';
+import { Box, Heading } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
-import PageTextBox from '../../components/PageTextBox';
 
 const Schedule = () => {
   return (

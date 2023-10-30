@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import {
   Box,
-  Button,
-  Container,
   Center,
   FormControl,
   FormErrorMessage,
@@ -17,7 +15,6 @@ import {
 import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
 import FormContainer from '../../components/FormContainer';
-import PageTextBox from '../../components/PageTextBox';
 import ContactButton from '../../components/ContactButton';
 
 const initValues = { name: '', email: '', subject: '', message: '' };

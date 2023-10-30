@@ -1,7 +1,6 @@
 import React from 'react';
 import PageContainer from '../../components/PageContainer';
 import { Box, Heading } from '@chakra-ui/react';
-import PageTextBox from '../../components/PageTextBox';
 import {
   PageHeadingBoxLg,
   PageHeadingBoxSm,
