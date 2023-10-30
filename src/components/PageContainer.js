@@ -39,7 +39,7 @@ const PageContainer = ({ heading, children }) => {
           </Text>
         </Button> */}
 
-          <Heading size='2xl' color='white' letterSpacing={3} p={8} mx={12}>
+          <Heading size='2xl' color='white' letterSpacing={3} p={8} mx={12} textAlign={'center'}>
             {heading}
           </Heading>
 

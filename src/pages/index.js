@@ -12,6 +12,10 @@ import MotionBirdBanjo from '../components/MotionBirdBanjo';
 import MotionBirdGuitar from '../components/MotionBirdGuitar';
 import MotionBirdMando from '../components/MotionBirdMando';
 import MotionBirdBass from '../components/MotionBirdBass';
+import {
+  PageHeadingBoxLg,
+  PageHeadingBoxSm,
+} from '../components/PageHeadingBox';
 
 export default function Home() {
   return (
@@ -48,20 +52,26 @@ export default function Home() {
               h={'100%'}
               bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
             >
-              <Box
+              <Center
+                h='100%'
+                flexDirection={'column'}
                 color='white'
-                textAlign={'center'}
-                letterSpacing={3}
-                m={12}
               >
-                <Heading size={'xl'} p={4}>
+                <PageHeadingBoxSm>
                   The Fifth Annual
                   <br />
                   Bridgetown Bluegrass and Folk Festival
-                </Heading>
-                <Heading size={'3xl'} p={4}>May 4th 2024</Heading>
-                <Heading size={'xl'} p={4}>The First Saturday in May</Heading>
-              </Box>
+                </PageHeadingBoxSm>
+                <PageHeadingBoxLg p={[4, null, 6, 8, 4]}>
+                  May 4th 2024
+                </PageHeadingBoxLg>
+                <PageHeadingBoxSm>First Saturday in May</PageHeadingBoxSm>
+                <PageHeadingBoxSm>
+                  UCC's First Congregational Church <br />
+                  SW Park and Madison <br />
+                  Portland, OR
+                </PageHeadingBoxSm>
+              </Center>
               {/* <MotionBirdBox /> */}
               {/* <BBFFCarousel /> */}
             </Box>

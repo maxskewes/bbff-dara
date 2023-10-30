@@ -7,7 +7,13 @@ import { cormorantGaramond, specialElite } from '../assets/fonts';
 const NavigationBar = () => {
   const NavBarText = ({ children }) => {
     return (
-      <Text fontSize={['16px', null, null, '18px', '20px']} fontWeight={600} letterSpacing={1.5} color='#090173'>
+      <Text
+        fontSize={['16px', null, null, '18px', '20px']}
+        fontWeight={600}
+        letterSpacing={1.5}
+        color='#090173'
+        _hover={{ color: 'white' }}
+      >
         {children}
       </Text>
     );
@@ -16,15 +22,13 @@ const NavigationBar = () => {
   const SiteLink = ({ title, route }) => {
     return (
       <Link href={route}>
-        <NavBarText>
-          {title}
-        </NavBarText>
+        <NavBarText>{title}</NavBarText>
       </Link>
     );
   };
 
   return (
-    <Box position='relative'   zIndex={2}>
+    <Box position='relative' zIndex={2}>
       <Box
         zIndex={2}
         sx={{

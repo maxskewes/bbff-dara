@@ -18,6 +18,7 @@ import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
 import FormContainer from '../../components/FormContainer';
 import PageTextBox from '../../components/PageTextBox';
+import ContactButton from '../../components/ContactButton';
 
 const initValues = { name: '', email: '', subject: '', message: '' };
 
@@ -155,9 +156,7 @@ export default function Contact() {
         </GridItem>
         <GridItem colSpan={2}>
           <Center>
-            <Button
-              variant='outline'
-              colorScheme='blue'
+            <ContactButton
               isLoading={isLoading}
               disabled={
                 !values.name ||
@@ -168,7 +167,7 @@ export default function Contact() {
               onClick={onSubmit}
             >
               Send Message to BBFF Crew
-            </Button>
+            </ContactButton>
           </Center>
         </GridItem>
       </FormContainer>

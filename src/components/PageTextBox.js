@@ -6,8 +6,6 @@ const PageTextBox = ({ children }) => {
     <Center
       sx={{
         position: 'relative',
-        padding: 1,
-        margin: 1,
         marginBottom: 6,
       }}
     >
@@ -23,14 +21,17 @@ const PageTextBox = ({ children }) => {
       /> */}
       <Box
         position={'relative'}
-        maxWidth={'1000px'}
-        p={0}
-        my={2}
-        mx={12}
+        maxWidth={['600px', null, null, '800px', '1000px']}
+        p={1}
         rounded='md'
         // bg='black'
       >
-        <Text fontSize={['sm', 'md', null, 'lg']} letterSpacing={1.5} color={'white'}>
+        <Text
+          fontSize={['sm', null, 'md', null, 'lg']}
+          letterSpacing={[1, null, null, 1.5]}
+          color={'white'}
+          textAlign={'justify'}
+        >
           <span>&emsp;&emsp;</span>
           {children}
         </Text>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Box, Icon, Text, Image, Flex, Hide } from '@chakra-ui/react';
-import { ImMusic } from 'react-icons/im';
+import { IoIosMusicalNote, IoIosMusicalNotes } from 'react-icons/io';
 import { nav_obj } from '../assets/nav_obj';
 import NavigationBar from './NavigationBar';
 
@@ -46,20 +46,39 @@ const HeaderSm = () => {
 
 const MenuToggle = ({ handleToggle, isOpen }) => {
   return (
-    <Box onClick={handleToggle} m={2} borderRadius={6}>
+    <Flex
+      flexDirection={'column'}
+      onClick={handleToggle}
+      m={2}
+      borderRadius={6}
+      cursor={'pointer'}
+      color={'#4a8fff'}
+      _hover={{ color: 'white' }}
+    >
       {isOpen ? (
-        <Icon as={ImMusic} bgColor={'#4a8fff'} color={'#090173'} w={8} h={8} p={1} />
+        <Icon as={IoIosMusicalNote} w={8} h={8} p={1} />
       ) : (
-        <Icon as={ImMusic} color={'#4a8fff'} w={8} h={8} p={1} borderRadius={6}/>
+        <Icon as={IoIosMusicalNotes} w={8} h={8} p={1} />
       )}
-    </Box>
+      <Text fontSize={'12px'} lineHeight={0.6}>
+        menu
+      </Text>
+    </Flex>
   );
 };
 
 const SmLink = ({ key, href, title }) => {
   return (
     <Link key={key} href={href}>
-      <Text>{title}</Text>
+      <Text
+        p={0.5}
+        fontWeight={600}
+        letterSpacing={1.5}
+        color='#090173'
+        _hover={{ color: 'white' }}
+      >
+        {title}
+      </Text>
     </Link>
   );
 };
@@ -68,7 +87,7 @@ const SmLinkContainer = ({ isOpen }) => {
   return isOpen ? (
     <Box
       sx={{
-        backgroundColor: '#3b3b3b',
+        backgroundColor: '#4a8fff',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',
