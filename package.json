@@ -16,6 +16,7 @@
     "@fontsource/special-elite": "^5.0.8",
     "@fontsource/stylish": "^5.0.16",
     "@svgr/webpack": "^8.0.1",
+    "axios": "^1.6.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "framer-motion": "^10.12.10",

@@ -16,6 +16,10 @@ export const nav_obj = [
     route: 'tickets',
   },
   {
+    title: 'Merch',
+    route: 'merch',
+  },
+  {
     title: 'Volunteer',
     route: 'volunteer',
   },

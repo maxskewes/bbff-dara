@@ -1,16 +1,13 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
-import '@fontsource/della-respira';
-import '@fontsource/special-elite';
-import '@fontsource/stylish';
 
 
 const theme = extendTheme({
   // Fonts
-  fonts: {
-    heading: `'Della Respira', ${base.fonts.heading}`,
-    text: 'Della Respira',
-    link: 'Work Sans',
-  },
+  // fonts: {
+  //   heading: `'Della Respira', ${base.fonts.heading}`,
+  //   text: 'Della Respira',
+  //   link: 'Work Sans',
+  // },
   // Components
   components: {
     Button: {
