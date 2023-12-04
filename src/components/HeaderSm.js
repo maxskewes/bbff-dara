@@ -23,8 +23,8 @@ const HeaderSm = () => {
         <Image
           src='/images/bridgetown-bluegrass.svg'
           alt='bridgetown bluegrass'
-          width='70%'
-          marginLeft={'14%'}
+          width={['70%', '55%']}
+          marginLeft={['14%', '24%']}
           marginBottom={1}
         />
         <Icon

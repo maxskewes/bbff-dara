@@ -1,14 +1,19 @@
 import { extendTheme, theme as base } from '@chakra-ui/react';
+import { Della_Respira } from 'next/font/google';
+
+const dellaRespira = Della_Respira({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 
 
 const theme = extendTheme({
-  // Fonts
-  // fonts: {
-  //   heading: `'Della Respira', ${base.fonts.heading}`,
-  //   text: 'Della Respira',
-  //   link: 'Work Sans',
-  // },
-  // Components
+
+  fonts: {
+    heading: 'Della Respira',
+    text: 'Della Respira',
+    link: 'Della Respira',
+  },
   components: {
     Button: {
       variants: {
@@ -32,6 +37,7 @@ const theme = extendTheme({
     },
     // Typography
     Heading: {
+      font: 'Della Respira',
       variants: {
         h1: {
           fontSize: '26px',

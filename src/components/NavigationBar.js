@@ -1,4 +1,4 @@
-import { Box, Heading, Button, Text, Image } from '@chakra-ui/react';
+import { Box, Text, Image } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { nav_obj } from '../assets/nav_obj';

@@ -3,7 +3,7 @@ import './_app.css';
 import theme from '../config/theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Della_Respira, Special_Elite } from 'next/font/google';
+import { Della_Respira } from 'next/font/google';
 
 const dellaRespira = Della_Respira({
   subsets: ['latin'],
@@ -13,13 +13,17 @@ const dellaRespira = Della_Respira({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <main className={dellaRespira.className}>
-        <Header />
+      <div className={dellaRespira.className}>
+        <header>
+          <Header />
+        </header>
         <main>
           <Component {...pageProps} />
         </main>
-        <Footer />
-      </main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </ChakraProvider>
   );
 }

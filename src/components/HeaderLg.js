@@ -1,4 +1,4 @@
-import { Box, Icon, Image } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import React from 'react';
 import NavigationBar from '../components/NavigationBar'
 

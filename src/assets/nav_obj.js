@@ -8,7 +8,7 @@ export const nav_obj = [
     route: 'artist-apply',
   },
   {
-    title: 'Schedule/Line-Up',
+    title: '2024 Line-Up',
     route: 'line-up',
   },
   {

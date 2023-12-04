@@ -1,16 +1,16 @@
 import React from 'react';
-import { Heading, Image, Box } from '@chakra-ui/react';
+import { Text, Image, Box } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
-import { PageHeadingBoxLg, PageHeadingBoxSm } from '../../components/PageHeadingBox';
+import {
+  PageHeadingBoxLg,
+  PageHeadingBoxSm,
+} from '../../components/PageHeadingBox';
 
 const LineUp = () => {
   const PosterBox = ({ year }) => {
     return (
       <Box paddingY={['1rem', '2rem', null, '3.5rem']}>
-        <PageHeadingBoxLg
-          p={['.25rem', '.5rem', '1rem']}
-          textAlign={'center'}
-        >
+        <PageHeadingBoxLg p={['.25rem', '.5rem', '1rem']} textAlign={'center'}>
           {year}
         </PageHeadingBoxLg>
         <Image
@@ -22,17 +22,16 @@ const LineUp = () => {
   };
 
   return (
-    <PageContainer heading={'Line-Up and Schedule 2024'}>
+    <PageContainer
+      heading={'The 2024 lineup and festival schedule is yet to be announced.'}
+    >
       <Box
         color='white'
         textAlign={'center'}
         letterSpacing={3}
-        m={12}
+        m={2}
         maxW={'800px'}
       >
-        <PageHeadingBoxSm>
-          Stay tuned as the 2024 festival schedule is yet to be announced.
-        </PageHeadingBoxSm>
         <PageHeadingBoxSm>
           Scroll down to peruse previous year's schedules of a sampling of what
           to expect.
@@ -42,15 +41,26 @@ const LineUp = () => {
       <PosterBox year={'2022'} />
 
       <Box color={'white'} textAlign={'center'}>
-        <Heading as='h3' size='lg' pt={['1rem', '2rem', null, '3.5rem']}>
+        <Text
+          fontSize={['18px', null, '24px', '28px', '32px']}
+          fontWeight={600}
+          pt={['1rem', '2rem', null, '3.5rem']}
+        >
           * * * * *
-        </Heading>
-        <Heading as='h3' size='lg'>
+        </Text>
+        <Text
+          fontSize={['18px', null, '24px', '28px', '32px']}
+          fontWeight={600}
+        >
           2020 and 2021 Cancelled/Postponed
-        </Heading>
-        <Heading as='h3' size='lg' lineHeight={2}>
+        </Text>
+        <Text
+          fontSize={['18px', null, '24px', '28px', '32px']}
+          fontWeight={600}
+          lineHeight={2}
+        >
           * * * * *
-        </Heading>
+        </Text>
       </Box>
 
       <PosterBox year={'2019'} />

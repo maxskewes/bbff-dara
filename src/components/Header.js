@@ -9,10 +9,10 @@ const Header = () => {
         bgGradient: 'radial(#0000c9, #00024a)',
       }}
     >
-      <Show below='sm'>
+      <Show below='md'>
         <HeaderSm />
       </Show>
-      <Show above='sm'>
+      <Show above='md'>
       <HeaderLg />
       </Show>
     </Box>

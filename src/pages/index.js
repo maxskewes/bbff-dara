@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Box, Center} from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 import chansel from '../assets/chansel-landing-bg.png';
 import {
   PageHeadingBoxLg,
@@ -17,57 +17,51 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>
-        <Box position={'relative'} minWidth={'100%'}>
-          <Center
-            position={'relative'}
-            minW={'100vw'}
-            minH={300}
-            bgColor={'black'}
+      <Box position={'relative'} minWidth={'100%'}>
+        <Center
+          position={'relative'}
+          minW={'100vw'}
+          minH={300}
+          bgColor={'black'}
+        >
+          <Image
+            style={{
+              minWidth: '100%',
+              maxWidth: '100vw',
+              objectFit: 'cover',
+              opacity: '80%',
+            }}
+            src={chansel}
+            alt='chansel image'
+          />
+          <Box
+            position={'absolute'}
+            margin={'auto'}
+            w={'100vw'}
+            h={'100%'}
+            bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
           >
-            <Image
-              style={{
-                minWidth: '100%',
-                maxWidth: '100vw',
-                objectFit: 'cover',
-                opacity: '80%',
-              }}
-              src={chansel}
-              alt='chansel image'
-            />
-            <Box
-              position={'absolute'}
-              margin={'auto'}
-              w={'100vw'}
-              h={'100%'}
-              bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
-            >
-              <Center
-                h='100%'
-                flexDirection={'column'}
-                color='white'
-              >
-                <PageHeadingBoxSm>
-                  The Fifth Annual
-                  <br />
-                  Bridgetown Bluegrass and Folk Festival
-                </PageHeadingBoxSm>
-                <PageHeadingBoxLg p={[4, null, 6, 8, 4]}>
-                  May 4th 2024
-                </PageHeadingBoxLg>
-                <PageHeadingBoxSm>First Saturday in May</PageHeadingBoxSm>
-                <PageHeadingBoxSm>
-                  UCC's First Congregational Church <br />
-                  SW Park and Madison <br />
-                  Portland, OR
-                </PageHeadingBoxSm>
-              </Center>
-              {/* <MotionBirdBox /> */}
-              {/* <BBFFCarousel /> */}
-            </Box>
-          </Center>
-        </Box>
-      </main>
+            <Center h='100%' flexDirection={'column'} color='white'>
+              <PageHeadingBoxSm>
+                The Fifth Annual
+                <br />
+                Bridgetown Bluegrass and Folk Festival
+              </PageHeadingBoxSm>
+              <PageHeadingBoxLg p={[4, null, 6, 8, 4]}>
+                May 4th 2024
+              </PageHeadingBoxLg>
+              <PageHeadingBoxSm>First Saturday in May</PageHeadingBoxSm>
+              <PageHeadingBoxSm>
+                UCC's First Congregational Church <br />
+                SW Park and Madison <br />
+                Portland, OR
+              </PageHeadingBoxSm>
+            </Center>
+            {/* <MotionBirdBox /> */}
+            {/* <BBFFCarousel /> */}
+          </Box>
+        </Center>
+      </Box>
     </>
   );
 }
