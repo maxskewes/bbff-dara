@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Box, Center } from '@chakra-ui/react';
+import { Image as ChImage } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 import chansel from '../assets/chansel-landing-bg.png';
 import {
   PageHeadingBoxLg,
@@ -42,14 +43,21 @@ export default function Home() {
             bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
           >
             <Center h='100%' flexDirection={'column'} color='white'>
-              <PageHeadingBoxSm>
+              <Text
+                sx={{ textTransform: 'uppercase' }}
+                fontSize={['12px', null, '14px', '24px', '28px']}
+                fontWeight={600}
+              >
                 The Fifth Annual
-                <br />
+              </Text>
+              <PageHeadingBoxSm>
                 Bridgetown Bluegrass and Folk Festival
               </PageHeadingBoxSm>
-              <PageHeadingBoxLg p={[4, null, 6, 8, 4]}>
-                May 4th 2024
-              </PageHeadingBoxLg>
+              <ChImage
+                w={80}
+                src={'images/may4-2024.svg'}
+                alt='chansel image'
+              />
               <PageHeadingBoxSm>First Saturday in May</PageHeadingBoxSm>
               <PageHeadingBoxSm>
                 UCC's First Congregational Church <br />
