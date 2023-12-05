@@ -1,6 +1,5 @@
-import { Box, Flex, Heading, Text, Button } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
-import PageTextBox from './PageTextBox';
 
 const PageContainer = ({ heading, children }) => {
   return (
@@ -17,32 +16,17 @@ const PageContainer = ({ heading, children }) => {
           alignItems: 'center',
         }}
       >
-        {/* <Button
-          position='relative'
-          bgGradient='linear(to-l, #003e9b, #5949b4, #ad53cc 80%)'
-          overflow='hidden'
-          _before={{
-            position: 'absolute',
-            content: `""`,
-            width: '100%',
-            height: '100%',
-            bgGradient: 'linear(to-r, #003e9b, #5949b4, #ad53cc 80%)',
-            transition: '1s',
-          }}
-          _hover={{
-            _before: { opacity: 0 },
-          }}
+        <Text
+          fontSize={['18px', null, '24px', '28px', '32px']}
+          fontWeight={600}
+          color='white'
+          letterSpacing={3}
+          p={[2, null, 4, 6]}
+          mx={12}
+          textAlign={'center'}
         >
-          　
-          <Text zIndex='1' color={'white'}>
-            CONNECT WALLET TO BUY
-          </Text>
-        </Button> */}
-
-          <Heading size='2xl' color='white' letterSpacing={3} p={8} mx={12} textAlign={'center'}>
-            {heading}
-          </Heading>
-
+          {heading}
+        </Text>
         {children}
       </Flex>
     </Box>

@@ -21,7 +21,7 @@ const PriceCard = ({ price }) => {
 
   return (
     <Box>
-      <Heading>{price.nickname}</Heading>
+      <Text>{price.nickname}</Text>
 
       <Box>
         <Image>

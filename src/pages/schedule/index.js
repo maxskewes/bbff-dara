@@ -1,17 +1,18 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
+import { PageHeadingBoxSm } from '../../components/PageHeadingBox';
 
 const Schedule = () => {
   return (
     <PageContainer heading={'Schedule'}>
       <Box color='white' textAlign={'center'} letterSpacing={3} m={12}>
-        <Heading size={'xl'}>
+        <PageHeadingBoxSm>
           The 2024 festival schedule is yet to be announced.
-        </Heading>
-        <Heading size={'xl'}>
+        </PageHeadingBoxSm>
+        <PageHeadingBoxSm>
           Please look our previous year's schedules to know what to expect.
-        </Heading>
+        </PageHeadingBoxSm>
       </Box>
     </PageContainer>
   );

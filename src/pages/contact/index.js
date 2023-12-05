@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
+import PageTextBox from '../../components/PageTextBox';
 import FormContainer from '../../components/FormContainer';
 import ContactButton from '../../components/ContactButton';
 
@@ -67,14 +68,14 @@ export default function Contact() {
   return (
     <PageContainer heading={'Contact'}>
       <Box color='white' textAlign={'center'} letterSpacing={3} maxW={'800px'}>
-        <Heading size='md' p={4}>
+        <PageTextBox>
           Please feel free to contact us with any further questions about the
           festival.
-        </Heading>
-        <Heading size='md' p={4}>
+        </PageTextBox>
+        <PageTextBox>
           Vendors: please use this form to let us know what your trade is and in
           what capacity you would like to be involved.
-        </Heading>
+        </PageTextBox>
       </Box>
       {error && (
         <Text color='red.300' my={4} fontSize='xl'>
