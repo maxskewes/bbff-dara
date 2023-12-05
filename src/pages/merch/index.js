@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import PageContainer from '../../components/PageContainer';
 import PriceCard from '../../components/PriceCard';
+import { PriceObject } from '../../config/stripe';
 
 const Merch = () => {
   const [prices, setPrices] = useState([]);
@@ -11,7 +12,7 @@ const Merch = () => {
   }, []);
 
   const fetchPrices = async () => {
-    const { data } = await axios.get('/api/getprices');
+    const { data } = await axios.get({PriceObject});
     setPrices(data);
     console.log(data);
   };
