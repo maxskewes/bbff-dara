@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Box, Icon, Text, Image, Flex, Hide } from '@chakra-ui/react';
 import { nav_obj } from '../assets/nav_obj';
-import { FiMenu } from "react-icons/fi";
+import { FiMenu } from 'react-icons/fi';
 
 const HeaderSm = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,7 +83,7 @@ const SmLinkContainer = ({ isOpen }) => {
   return isOpen ? (
     <Box
       sx={{
-        backgroundColor: '#4a8fff',
+        bgGradient: 'radial(#4a8fff, #0000c9)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',

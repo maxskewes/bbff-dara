@@ -4,7 +4,7 @@ import { Text } from '@chakra-ui/react';
 export const PageHeadingBoxLg = ({ children, p }) => {
   return (
     <Text
-    fontSize={['24px', null, '28px', '32px', '36px']}
+      fontSize={['24px', null, '28px', '32px', '36px']}
       fontWeight={600}
       p={p}
       color={'white'}
