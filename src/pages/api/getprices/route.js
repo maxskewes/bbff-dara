@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-import { NextResponse } from "next/server";
+import { NextApiResponse } from "next";
 
 export async function GET(request) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -7,5 +7,5 @@ export async function GET(request) {
         limit: 4,
     });
 
-    return NextResponse.json(prices.data.reverse())
+    return NextApiResponse.json(prices.data.reverse())
 }

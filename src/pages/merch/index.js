@@ -11,18 +11,14 @@ const Merch = () => {
   }, []);
 
   const fetchPrices = async () => {
-    const { data } = await axios.get('/api/getprices');
+    const data = await axios.get('/api/getprices/route');
     setPrices(data);
     console.log(data);
   };
 
   return (
-    EMAIL=maxskewes@gmail.com
-EMAIL_PASS=elybfnhkbubshxuw
-STRIPE_PUBLIC=pk_test_51N0qlWAVyxDPFDWgf19lfRJm9E9SEryyUlUcpaZRI9fYbEHvrmzABk3PXPDKl92DvBPsI2pcFgVrj2818OZyZ9WO002Ces7kH3
-STRIPE_SECRET=sk_test_51N0qlWAVyxDPFDWgNammKAQJuWsmO2B4LxvdEUrsMWiftthqSeHOOx2yOSdTUfGfN6caAJ3rXuNDkyEzecrS2kDK00FrCUojJi
     <PageContainer heading='Merch'>
-      <section className='p-8 bg-white'>
+      {/* <section className='p-8 bg-white'>
         <div className='mx-auto max-w-4xl text-center mt-10 items-center'>
           <h2 className='text-3xl font-semibold leading-7 text-blue-700'>
             Merchandise
@@ -39,7 +35,7 @@ STRIPE_SECRET=sk_test_51N0qlWAVyxDPFDWgNammKAQJuWsmO2B4LxvdEUrsMWiftthqSeHOOx2yO
           {prices &&
             prices.map((price) => <PriceCard price={price} key={price.id} />)}
         </div>
-      </section>
+      </section> */}
     </PageContainer>
   );
 };
