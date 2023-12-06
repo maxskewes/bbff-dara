@@ -1,12 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Image as ChImage } from '@chakra-ui/react';
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Box, Center, Text, Flex } from '@chakra-ui/react';
 import chansel from '../assets/chansel-landing-bg.png';
-import {
-  PageHeadingBoxLg,
-  PageHeadingBoxSm,
-} from '../components/PageHeadingBox';
+import { PageHeadingBoxLg, PageHeadingBoxSm } from '../components/PageHeadingBox';
 
 export default function Home() {
   return (
@@ -22,7 +19,7 @@ export default function Home() {
         <Center
           position={'relative'}
           minW={'100vw'}
-          minH={300}
+          // minH={300}
           bgColor={'black'}
         >
           <Image
@@ -42,29 +39,43 @@ export default function Home() {
             h={'100%'}
             bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
           >
-            <Center h='100%' flexDirection={'column'} color='white'>
-              <Text
-                sx={{ textTransform: 'uppercase' }}
-                fontSize={['12px', null, '14px', '24px', '28px']}
-                fontWeight={600}
-              >
-                The Fifth Annual
-              </Text>
-              <PageHeadingBoxSm>
-                Bridgetown Bluegrass and Folk Festival
-              </PageHeadingBoxSm>
-              <ChImage
-                w={80}
-                src={'images/may4-2024.svg'}
-                alt='chansel image'
-              />
-              <PageHeadingBoxSm>First Saturday in May</PageHeadingBoxSm>
-              <PageHeadingBoxSm>
-                UCC's First Congregational Church <br />
-                SW Park and Madison <br />
-                Portland, OR
-              </PageHeadingBoxSm>
-            </Center>
+            <Flex h='100%' flexDirection={'column'} color='white' justifyContent={'center'}>
+              <Box textAlign={'center'} mb={[0, null, 2, 4, 8]}>
+                <Text
+                  sx={{ textTransform: 'uppercase' }}
+                  fontSize={['12px', null, '14px', '20px', '24px']}
+                  fontWeight={600}
+                >
+                  The Fifth Annual
+                </Text>
+                <Text fontSize={['24px', null, '28px', '32px', '36px']}>
+                  Bridgetown Bluegrass Folk Festival
+                </Text>
+
+                <ChImage
+                pt={1}
+                  pb={[1, null, 2]}
+                  m={'auto'}
+                  alignItems={'center'}
+                  justifyContent={'center'}
+                  w={[32, null, 48, null, 60, 68]}
+                  src={'images/may4-2024.svg'}
+                  alt='chansel image'
+                />
+                <Text fontSize={['18px', null, '24px', '28px', '32px']} mb={[1, null, 2]}>
+                  First Saturday in May
+                </Text>
+                <Text
+                  sx={{ textTransform: 'uppercase' }}
+                  fontSize={['12px', null, '14px', '18px', '20px']}
+                  fontWeight={600}
+                >
+                  UCC's First Congregational Church <br />
+                  SW Park and Madison <br />
+                  Portland, OR
+                </Text>
+              </Box>
+            </Flex>
             {/* <MotionBirdBox /> */}
             {/* <BBFFCarousel /> */}
           </Box>
