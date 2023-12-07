@@ -70,7 +70,7 @@ const SmLink = ({ key, href, title }) => {
         p={0.5}
         fontWeight={600}
         letterSpacing={1.5}
-        color='#090173'
+        color='#00024a'
         _hover={{ color: 'white' }}
       >
         {title}
@@ -83,7 +83,7 @@ const SmLinkContainer = ({ isOpen }) => {
   return isOpen ? (
     <Box
       sx={{
-        bgGradient: 'radial(#4a8fff, #0000c9)',
+        bgGradient: 'radial(#c2daff 0%, #0000c9 100%)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around',

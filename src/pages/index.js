@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Image as ChImage } from '@chakra-ui/react';
 import { Box, Center, Text, Flex } from '@chakra-ui/react';
 import chansel from '../assets/chansel-landing-bg.png';
+import MotionBirdBox from '../pages/birds/MotionBirdBox';
 import { PageHeadingBoxLg, PageHeadingBoxSm } from '../components/PageHeadingBox';
 
 export default function Home() {
@@ -54,11 +55,11 @@ export default function Home() {
 
                 <ChImage
                 pt={1}
-                  pb={[1, null, 2]}
+                  pb={[1, null, 2, 8]}
                   m={'auto'}
                   alignItems={'center'}
                   justifyContent={'center'}
-                  w={[32, null, 48, null, 60, 68]}
+                  w={[32, null, 48, null, 80]}
                   src={'images/may4-2024.svg'}
                   alt='chansel image'
                 />
@@ -76,7 +77,7 @@ export default function Home() {
                 </Text>
               </Box>
             </Flex>
-            {/* <MotionBirdBox /> */}
+            <MotionBirdBox />
             {/* <BBFFCarousel /> */}
           </Box>
         </Center>

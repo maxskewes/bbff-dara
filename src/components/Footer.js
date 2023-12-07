@@ -34,7 +34,7 @@ const Footer = () => {
           />
           <Box
             sx={{
-              paddingTop: ['3rem', null, '6rem'],
+              paddingTop: [4, null, 8],
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
