@@ -17,17 +17,18 @@ const MotionBirdBox = () => {
     transition={{
       duration: 5.2,
     }}
-    sx={{ position: 'absolute', width: '100vw', height: '100vh', top: 0, left: 0}}
+    sx={{width: '100%', height: '100%', top: 0, left: 0}}
     >
       
-    <Box sx={{ paddingTop: '-10rem' }}>
+    <Box sx={{ paddingTop: 0 }}>
       <motion.div
         initial={{
           x: 1000,
+          y: 0
         }}
         animate={{
           x: 0,
-          y: [-40, 20, -40, 20, -40, -20],
+          // y: [-40, 20, -40, 0],
         }}
         transition={{
           duration: 5,

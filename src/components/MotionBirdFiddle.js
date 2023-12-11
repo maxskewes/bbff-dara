@@ -2,11 +2,12 @@ import React from 'react';
 import { Box, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionBirdGuitar = () => {
+const MotionBirdFiddle = () => {
   return (
     <motion.div
-      initial={{ y: 40 }}
+      initial={{  y: 40 }}
       animate={{
+   
         y: [20, -40, 20, -40, 20, -20],
       }}
       transition={{
@@ -14,33 +15,33 @@ const MotionBirdGuitar = () => {
       }}
     >
       <Box
-        w={'16vw'}
+        w={'16%'}
         sx={{
           position: 'relative',
         }}
       >
         <motion.img
-          style={{ originY: 0.17 }}
+          style={{ originY: 0.31 }}
           animate={{ rotateX: 1440 }}
           transition={{
             duration: 5,
           }}
           className='bird-instruments-color'
-          src='/images/birds-instruments/guitar-wings.svg'
-          alt='bird-guitar-wings'
+          src='/images/birds-instruments/fiddle-wings.svg'
+          alt='bird-fiddle-wings'
           width={'100%'}
           sx={{ position: 'relative' }}
         />
         <Image
           className='bird-instruments-color'
-          src='/images/birds-instruments/guitar-body.svg'
-          alt='bird-guitar-body'
+          src='/images/birds-instruments/fiddle-body.svg'
+          alt='bird-fiddle-body'
           width={'100%'}
-          sx={{ position: 'absolute', top: 0, left: 0 }}
+          sx={{ position: 'absolute', top: 1, left: 0 }}
         />
       </Box>
     </motion.div>
   );
 };
 
-export default MotionBirdGuitar;
+export default MotionBirdFiddle;

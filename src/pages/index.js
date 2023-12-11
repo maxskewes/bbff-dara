@@ -1,10 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Image as ChImage } from '@chakra-ui/react';
-import { Box, Center, Text, Flex } from '@chakra-ui/react';
-import chansel from '../assets/chansel-landing-bg.png';
-import MotionBirdBox from '../pages/birds/MotionBirdBox';
-import { PageHeadingBoxLg, PageHeadingBoxSm } from '../components/PageHeadingBox';
+import background from '../../public/images/chansel-bg.png';
+import { Image, Box, Container, Text, Flex } from '@chakra-ui/react';
+import MotionBirdBox from '../components/MotionBirdBox';
 
 export default function Home() {
   return (
@@ -15,73 +12,51 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <Box position={'relative'} minWidth={'100%'}>
-        <Center
-          position={'relative'}
-          minW={'100vw'}
-          // minH={300}
-          bgColor={'black'}
-        >
-          <Image
-            style={{
-              minWidth: '100%',
-              maxWidth: '100vw',
-              objectFit: 'cover',
-              opacity: '80%',
-            }}
-            src={chansel}
-            alt='chansel image'
-          />
-          <Box
-            position={'absolute'}
-            margin={'auto'}
-            w={'100vw'}
-            h={'100%'}
-            bgGradient={'radial(rgba(0,0,0,0)50%, rgba(0,0,0,1))'}
-          >
-            <Flex h='100%' flexDirection={'column'} color='white' justifyContent={'center'}>
-              <Box textAlign={'center'} mb={[0, null, 2, 4, 8]}>
-                <Text
-                  sx={{ textTransform: 'uppercase' }}
-                  fontSize={['12px', null, '14px', '20px', '24px']}
-                  fontWeight={600}
-                >
-                  The Fifth Annual
-                </Text>
-                <Text fontSize={['24px', null, '28px', '32px', '36px']}>
-                  Bridgetown Bluegrass Folk Festival
-                </Text>
-
-                <ChImage
-                pt={1}
-                  pb={[1, null, 2, 8]}
-                  m={'auto'}
-                  alignItems={'center'}
-                  justifyContent={'center'}
-                  w={[32, null, 48, null, 80]}
-                  src={'images/may4-2024.svg'}
-                  alt='chansel image'
-                />
-                <Text fontSize={['18px', null, '24px', '28px', '32px']} mb={[1, null, 2]}>
-                  First Saturday in May
-                </Text>
-                <Text
-                  sx={{ textTransform: 'uppercase' }}
-                  fontSize={['12px', null, '14px', '18px', '20px']}
-                  fontWeight={600}
-                >
-                  UCC's First Congregational Church <br />
-                  SW Park and Madison <br />
-                  Portland, OR
-                </Text>
-              </Box>
-            </Flex>
-            <MotionBirdBox />
-            {/* <BBFFCarousel /> */}
+      <main>
+        <Box position='relative' width={'100vw'} height={'auto'} minH={300}>
+          <Box w={'100%'} h={'100%'} position='absolute' zIndex={-1} backgroundColor={'black'}>
+            <Image
+              src={'/images/chansel-bg.png'}
+              alt='chansel image'
+              sx={{ objectFit: 'cover', minWidth: '100%', minH: '100%', opacity: .7 }}
+            />
           </Box>
-        </Center>
-      </Box>
+          <Container py={[4, 12]}textAlign='center' justifyContent='center' alignItems='center' color='white'>
+            <Text
+              sx={{ textTransform: 'uppercase' }}
+              fontSize={['12px', null, '14px', '20px', '24px']}
+              fontWeight={600}
+            >
+              The Fifth Annual
+            </Text>
+            <Text fontSize={['24px', null, '28px', '32px', '36px']}>
+              Bridgetown Bluegrass Folk Festival
+            </Text>
+            <Image
+              pt={1}
+              pb={[1, null, 2, 8]}
+              m={'auto'}
+              alignItems={'center'}
+              justifyContent={'center'}
+              w={[32, null, 48, null, 80]}
+              src={'images/may4-2024.svg'}
+              alt='May 24th'
+            />
+            <Text fontSize={['18px', null, '24px', '28px', '32px']} mb={[1, null, 2]}>
+              First Saturday in May
+            </Text>
+            <Text
+              sx={{ textTransform: 'uppercase' }}
+              fontSize={['12px', null, '14px', '18px', '20px']}
+              fontWeight={600}
+            >
+              UCC's First Congregational Church <br />
+              SW Park and Madison <br />
+              Portland, OR
+            </Text>
+          </Container>
+        </Box>
+      </main>
     </>
   );
 }

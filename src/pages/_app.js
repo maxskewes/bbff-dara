@@ -4,6 +4,7 @@ import theme from '../config/theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Della_Respira } from 'next/font/google';
+import MotionBirdBox from '../components/MotionBirdBox';
 
 const dellaRespira = Della_Respira({
   subsets: ['latin'],

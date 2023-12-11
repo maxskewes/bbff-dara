@@ -2,45 +2,46 @@ import React from 'react';
 import { Box, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MotionBirdBass = () => {
+const MotionBirdBanjo = () => {
   return (
     <motion.div
-      initial={{ y: 40 }}
+      initial={{ y: -20 }}
       animate={{
-        y: [20, -40, 20, -40, 20, -20],
+      
+        y: [-40, 20, -40, 20, -40, -20],
       }}
       transition={{
         duration: 5,
       }}
     >
       <Box
-        w={'24vw'}
+        w={'17%'}
         sx={{
           position: 'relative',
         }}
       >
         <motion.img
-          style={{ originY: 0.16 }}
+          style={{ originY: 0.07 }}
           animate={{ rotateX: 1440 }}
           transition={{
             duration: 5,
           }}
           className='bird-instruments-color'
-          src='/images/birds-instruments/bass-wings.svg'
-          alt='bird-bass-wings'
+          src='/images/birds-instruments/banjo-wings.svg'
+          alt='bird-banjo-wings'
           width={'100%'}
           sx={{ position: 'relative' }}
         />
         <Image
-          className='bird-instruments-color'
-          src='/images/birds-instruments/bass-body.svg'
-          alt='bird-bass-body'
+           className='bird-instruments-color'
+          src='/images/birds-instruments/banjo-body.svg'
+          alt='bird-banjo-body'
           width={'100%'}
-          sx={{ position: 'absolute', left: 0, top: 0 }}
+          sx={{ position: 'absolute', left: -1, top: 1 }}
         />
       </Box>
     </motion.div>
   );
 };
 
-export default MotionBirdBass;
+export default MotionBirdBanjo;
