@@ -6,7 +6,6 @@ const MotionBirdMando = () => {
   return (
     <motion.div
       initial={{
-
         y: -20,
       }}
       animate={{
@@ -17,7 +16,7 @@ const MotionBirdMando = () => {
       }}
     >
       <Box
-        w={'18%'}
+        w={'18vw'}
         sx={{
           position: 'relative',
         }}
@@ -36,7 +35,7 @@ const MotionBirdMando = () => {
         />
 
         <Image
-           className='bird-instruments-color'
+          className='bird-instruments-color'
           src='/images/birds-instruments/mando-body.svg'
           alt='bird-banjo-body'
           width={'100%'}

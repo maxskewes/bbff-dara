@@ -12,7 +12,7 @@ const StaticHeader = () => {
         sx={{ position: 'relative', width: '100vw', height: 'auto' }}
       />
       <Box sx={{position: 'absolute', left: 0, top:0, }}>
-<MotionBirdBox />
+{/* <MotionBirdBox /> */}
 </Box>
       <NavigationBar />
 </Box>

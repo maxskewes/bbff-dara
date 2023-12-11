@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 import './_app.css';
 import theme from '../config/theme';
 import Header from '../components/Header';
@@ -15,11 +15,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <div className={dellaRespira.className}>
+        <div style={{ position: 'fixed', margin: '100px' }}>
+          <MotionBirdBox />
+        </div>
         <header>
           <Header />
         </header>
         <main>
-          <Component {...pageProps} />
+          <Component {...pageProps} position='relative' />
         </main>
         <footer>
           <Footer />

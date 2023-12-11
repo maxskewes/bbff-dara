@@ -15,7 +15,7 @@ const MotionBirdBanjo = () => {
       }}
     >
       <Box
-        w={'17%'}
+        w={'17vw'}
         sx={{
           position: 'relative',
         }}

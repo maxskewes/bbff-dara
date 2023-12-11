@@ -15,7 +15,7 @@ const MotionBirdBass = () => {
       }}
     >
       <Box
-        w={'24%'}
+        w={'24vw'}
         sx={{
           position: 'relative',
         }}
