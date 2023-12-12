@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Image, Box, Container, Text } from '@chakra-ui/react';
+import { Image, Box, Container, Center, AbsoluteCenter, Text } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 
 export default function Home() {
@@ -13,8 +13,6 @@ export default function Home() {
       </Head>
       <main>
         <Box position='relative' width={'100vw'} height={'auto'} minH={300}>
-     
-     
           <Box w={'100%'} h={'100%'} position='absolute' zIndex={-1} backgroundColor={'black'}>
             <Image
               src={'/images/chansel-bg.png'}
@@ -22,9 +20,9 @@ export default function Home() {
               sx={{ objectFit: 'cover', minWidth: '100%', minH: '100%', opacity: 0.7 }}
             />
           </Box>
-       
-
-
+          <Box position={'fixed'} axis='both' marginTop={['10%', null, null, '-10%']}>
+            <MotionBirdBox />
+          </Box>
 
           <Container
             py={[4, 12]}

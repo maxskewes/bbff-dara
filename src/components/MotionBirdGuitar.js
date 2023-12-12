@@ -7,7 +7,6 @@ const MotionBirdGuitar = () => {
     <motion.div
       initial={{ y: 40 }}
       animate={{
-
         y: [20, -40, 20, -40, 20, -20],
       }}
       transition={{
