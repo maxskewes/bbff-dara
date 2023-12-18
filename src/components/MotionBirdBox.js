@@ -13,7 +13,7 @@ const MotionBirdBox = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
-          opacity: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+          opacity: [0, 0, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0],
         }}
         transition={{
           duration: 5.8,
