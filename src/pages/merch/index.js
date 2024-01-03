@@ -1,43 +1,33 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import Stripe from 'stripe';
 import PageContainer from '../../components/PageContainer';
 import PriceCard from '../../components/PriceCard';
+import { SimpleGrid } from '@chakra-ui/react';
 
-const Merch = () => {
-  const [prices, setPrices] = useState([]);
-
-  useEffect(() => {
-    fetchPrices();
-  }, []);
-
-  const fetchPrices = async () => {
-    const data = await axios.get('/api/getprices/route');
-    setPrices(data);
-    console.log(data);
-  };
-
+const Merch = ({ prices = [] }) => {
   return (
     <PageContainer heading='Merch'>
-      {/* <section className='p-8 bg-white'>
-        <div className='mx-auto max-w-4xl text-center mt-10 items-center'>
-          <h2 className='text-3xl font-semibold leading-7 text-blue-700'>
-            Merchandise
-          </h2>
-          <p className='mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-            Title Here
-          </p>
-          <p className='mx-auto mt-4 max-w-2xl text-lg leading-8 text-gray-600 sm:text-center'>
-            A space for subheading
-          </p>
-        </div>
-
-        <div className='grid  grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1040px] items-center mx-auto'>
-          {prices &&
-            prices.map((price) => <PriceCard price={price} key={price.id} />)}
-        </div>
-      </section> */}
+      <SimpleGrid columns={[1, 2]} spacing={8} maxW={1000} mb={100}>
+        {prices &&
+          prices.map((price) => <PriceCard price={price} key={price.id} />)}
+      </SimpleGrid>
     </PageContainer>
   );
 };
+
+export async function getServerSideProps() {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  const { data: prices } = await stripe.prices.list({
+    active: true,
+    limit: 10,
+    expand: ['data.product'],
+  });
+  console.log(prices);
+
+  return {
+    props: {
+      prices,
+    },
+  };
+}
 
 export default Merch;

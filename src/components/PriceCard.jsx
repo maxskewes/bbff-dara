@@ -1,50 +1,47 @@
-import axios from 'axios';
 import { Box, Flex, Heading, Text, Button, Image } from '@chakra-ui/react';
 
 const PriceCard = ({ price }) => {
-  // POST request
-  const handlePurchase = async (e) => {
-    e.preventDefault();
-    const { data } = await axios.post(
-      '/api/payment',
-      {
-        priceId: price.id,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-    window.location.assign(data);
-  };
+  const { product, unit_amount } = price;
 
   return (
-    <Box>
-      <Text>{price.nickname}</Text>
+    <Flex
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      alignItems={'center'}
+      backgroundColor={'whiteAlpha.400'}
+      p={8}
+      borderRadius={8}
+    >
+      <Heading color='white' textAlign={'center'} m={2} maxW={'80%'}>
+        {product.name}
+      </Heading>
+      <Flex
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        flexGrow={1}
+      >
 
-      <Box>
-        <Image>
-          <img
-            src={'/images/dummy-images/local-image.png'}
-            alt={'images must be added locally with price api'}
-          />
-        </Image>
-      </Box>
 
-      <Box>
-        <h1 className='text-5xl font-bold'>
-          {(price.unit_amount / 100).toLocaleString('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          })}
-        </h1>
-      </Box>
+        <Image
+          src={product.images[0]}
+          alt={product.description}
+          maxWidth={'300px'}
+          m={4}
+        />
+      </Flex>
+      <Text color='white' m={2} textAlign={'center'}>
+        {product.description}
+      </Text>
+      <Heading color='white' m={2}>
+        {(unit_amount / 100).toLocaleString('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        })}
+      </Heading>
 
-      <Box>
-        <Button onClick={handlePurchase}>Purchase</Button>
-      </Box>
-    </Box>
+      <Button m={8}>Purchase</Button>
+    </Flex>
   );
 };
 

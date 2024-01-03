@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import { Image, Box, Container, Text } from '@chakra-ui/react';
+import { Image, Box, Container, Text, Button } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
+import { priceobject } from '../config/stripe';
 
 export default function Home() {
   return (
+
     <>
       <Head>
         <title>Bridgetown Bluegrass</title>
@@ -33,13 +35,7 @@ export default function Home() {
             alignItems='center'
             color='white'
           >
-            <Text
-              sx={{ textTransform: 'uppercase' }}
-              fontSize={['12px', null, '14px', '20px', '24px']}
-              fontWeight={600}
-            >
-              The Fifth Annual
-            </Text>
+
             <Text fontSize={['24px', null, '28px', '32px', '36px']}>
               Bridgetown Bluegrass Folk Festival
             </Text>
