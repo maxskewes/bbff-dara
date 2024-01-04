@@ -21,7 +21,7 @@ export async function getServerSideProps() {
     limit: 10,
     expand: ['data.product'],
   });
-  console.log(prices);
+  // console.log(prices);
 
   return {
     props: {
