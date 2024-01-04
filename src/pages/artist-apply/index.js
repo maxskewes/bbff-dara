@@ -184,7 +184,7 @@ const ArtistApply = () => {
           <FormControl isRequired isInvalid={touched.phone && !values.phone}>
             <FormLabel>Contact Phone Number</FormLabel>
             <Input
-              type='number'
+              type='text'
               name='phone'
               errorBorderColor='red.300'
               value={values.phone}
