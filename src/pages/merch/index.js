@@ -5,7 +5,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 
 const Merch = ({ prices = [] }) => {
   return (
-    <PageContainer heading='Merch'>
+    <PageContainer heading='Merch Test'>
       <SimpleGrid columns={[1, 2]} spacing={8} maxW={1000} mb={100}>
         {prices &&
           prices.map((price) => <PriceCard price={price} key={price.id} />)}
