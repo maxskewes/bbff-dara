@@ -15,10 +15,10 @@ export const nav_obj = [
     title: 'Tickets',
     route: 'tickets',
   },
-  {
-    title: 'Merch',
-    route: 'merch',
-  },
+  // {
+  //   title: 'Merch',
+  //   route: 'merch',
+  // },
   {
     title: 'Volunteer',
     route: 'volunteer',

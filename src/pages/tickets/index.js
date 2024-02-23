@@ -5,6 +5,7 @@ import {
   PageHeadingBoxLg,
   PageHeadingBoxSm,
 } from '../../components/PageHeadingBox';
+import EventbriteButton from '../../components/EventbriteButton';
 
 const Tickets = () => {
   const TicketsInfo = ({ children }) => {
@@ -25,12 +26,7 @@ const Tickets = () => {
   return (
     <PageContainer heading='Event Tickets'>
       <Box maxW={['400px', null, '500px','600px', '800px']} pb={8}>
-        <TicketsInfo>
-          Tickets will go on-sale in early 2024 and will be availible through this website.
-        </TicketsInfo>
-        <TicketsInfo>
-          Please stay tuned for announcements including including this year's line-up.
-        </TicketsInfo>
+        <EventbriteButton />
       </Box>
     </PageContainer>
   );
