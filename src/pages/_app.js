@@ -4,6 +4,7 @@ import theme from '../config/theme';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Della_Respira } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const dellaRespira = Della_Respira({
   subsets: ['latin'],
@@ -14,9 +15,17 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <div className={dellaRespira.className}>
-        <header>
+        <motion.header
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+        >
           <Header />
-        </header>
+        </motion.header>
         <main>
           <Component {...pageProps} position='relative' />
         </main>

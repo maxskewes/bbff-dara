@@ -1,16 +1,7 @@
 import Head from 'next/head';
-import {
-  Image,
-  Box,
-  Container,
-  Text,
-  Button,
-  Grid,
-  GridItem,
-  Flex,
-} from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { Image, Box, Flex } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
-import { priceobject } from '../config/stripe';
 
 export default function Home() {
   return (
@@ -50,43 +41,53 @@ export default function Home() {
           >
             <MotionBirdBox />
           </Box>
-
-          <Flex
-            py={[4]}
-            flexDirection={['column', null, 'row']}
-            justifyContent='center'
-            alignItems='center'
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
           >
-            <Image
-              src='/images/homepage-banner-date.svg'
-              alt='saturday may 4th'
-              height={'100%'}
-              width={'100%'}
-              minWidth={[260, null, null, 300]}
-              maxWidth={['60vw', null, '100px', '500px']}
-              mx={[12, null, 2, 8]}
-            />
+            <Flex
+              py={[4]}
+              flexDirection={['column', null, 'row']}
+              justifyContent='center'
+              alignItems='center'
+            >
+              <Image
+                src='/images/homepage-banner-date.svg'
+                alt='saturday may 4th'
+                height={'100%'}
+                width={'100%'}
+                minWidth={[260, null, null, 300]}
+                maxWidth={['60vw', null, '100px', '460px']}
+                mx={[12, null, 2, 8]}
+                color={'whiteAlpha.400'}
+              />
 
-            <Image
-              src='/images/zombie-hand-flat.svg'
-              alt='zombie hand wearing banjo picks'
-              height={'100%'}
-              maxHeight={'600px'}
-              width={'100%'}
-              minWidth={300}
-              maxWidth={['90vw', null, '30%']}
-            />
+              <Image
+                src='/images/zombie-banjo-picks.svg'
+                alt='zombie hand wearing banjo picks'
+                height={'100%'}
+                maxHeight={'600px'}
+                width={'100%'}
+                minWidth={300}
+                maxWidth={['90vw', null, '30%']}
+              />
 
-            <Image
-              src='/images/homepage-banner-location.svg'
-              alt='ucc first congregational church se park and madison'
-              height={'100%'}
-              width={'100%'}
-              minWidth={[260, null, null, 300]}
-              maxWidth={['60vw', null, '100px', '500px']}
-              mx={[12, null, 2, 8]}
-            />
-          </Flex>
+              <Image
+                src='/images/homepage-banner-location.svg'
+                alt='ucc first congregational church se park and madison'
+                height={'100%'}
+                width={'100%'}
+                minWidth={[260, null, null, 300]}
+                maxWidth={['60vw', null, '100px', '460px']}
+                mx={[12, null, 2, 8]}
+              />
+            </Flex>
+          </motion.div>
         </Box>
       </main>
     </>
