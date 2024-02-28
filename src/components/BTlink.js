@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const BTlink = ({route}) => {
   return (
-    <Link href={route}></Link>
+    <Link href={route} ></Link>
   )
 }
 

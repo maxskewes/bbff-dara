@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Box, Icon, Text, Image, Flex, Hide } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { nav_obj } from '../assets/nav_obj';
 import { FiMenu } from 'react-icons/fi';
 
@@ -35,6 +36,7 @@ const HeaderSm = () => {
           onClick={handleToggle}
           isOpen={isOpen}
           color={'#4a8fff'}
+          cursor={'pointer'}
         />
       </Flex>
 
@@ -43,59 +45,57 @@ const HeaderSm = () => {
   );
 };
 
-// const MenuToggle = ({ handleToggle, isOpen }) => {
-//   return (
-//     <Flex
-//       flexDirection={'column'}
-//       onClick={handleToggle}
-//       m={2}
-//       borderRadius={6}
-//       cursor={'pointer'}
-//       color={'#4a8fff'}
-//       _hover={{ color: 'white' }}
-//     >
-//       {isOpen ? (
-//         <Icon as={FiMenu} w={8} h={8} p={1} />
-//       ) : (
-//         <Icon as={FiMenu} w={8} h={8} p={1} />
-//       )}
-//     </Flex>
-//   );
-// };
-
 const SmLink = ({ key, href, title }) => {
   return (
     <Link key={key} href={href}>
-      <Text
-        p={0.5}
-        fontWeight={600}
-        letterSpacing={1.5}
+      <Flex
+        justifyContent={'center'}
+        alignItems={'center'}
+        minW={'100vw'}
         color='#00024a'
         _hover={{ color: 'white' }}
       >
-        {title}
-      </Text>
+        <Text
+          p={0.5}
+          fontWeight={600}
+          letterSpacing={1.5}
+          textDecoration={'none'}
+        >
+          {title}
+        </Text>
+      </Flex>
     </Link>
   );
 };
 
 const SmLinkContainer = ({ isOpen }) => {
   return isOpen ? (
-    <Box
-      sx={{
-        bgGradient: 'radial(#c2daff 0%, #0000c9 100%)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        width: '100vw',
-        height: 'auto',
+    <motion.div
+      initial={{ opacity: 0, y: -40 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.3,
       }}
     >
-      {nav_obj.map((nav, i) => {
-        return <SmLink key={i} title={nav.title} href={nav.route} />;
-      })}
-    </Box>
+      <Box
+        sx={{
+          bgGradient: 'radial(#c2daff 0%, #0000c9 100%)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          width: '100vw',
+          height: 'auto',
+        }}
+      >
+        {nav_obj.map((nav, i) => {
+          return <SmLink key={i} title={nav.title} href={nav.route} />;
+        })}
+      </Box>
+    </motion.div>
   ) : null;
 };
 
