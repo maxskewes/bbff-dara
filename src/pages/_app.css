@@ -9,8 +9,11 @@
 }
 
 .bird-instruments-color {
-
   filter: brightness(0) saturate(100%) invert(29%) sepia(29%) saturate(4467%) hue-rotate(194deg) brightness(90%) contrast(108%);
+}
+
+.zombie-hand-color {
+  
 }
 
 .chansel-bg {
