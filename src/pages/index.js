@@ -51,7 +51,8 @@ export default function Home() {
             }}
           >
             <Flex
-              py={[4]}
+              pt={[4, null, null, 8, 12]}
+              pb={[2, null, null, 4, 4]}
               flexDirection={['column', null, 'row']}
               justifyContent='center'
               alignItems='center'
@@ -61,7 +62,7 @@ export default function Home() {
                 alt='saturday may 4th'
                 height={'100%'}
                 width={'100%'}
-                minWidth={[260, null, null, 300]}
+                minWidth={[240, null, null, 300]}
                 maxWidth={['60vw', null, '100px', '460px']}
                 mx={[12, null, 2, 8]}
                 color={'whiteAlpha.400'}
@@ -82,7 +83,7 @@ export default function Home() {
                 alt='ucc first congregational church se park and madison'
                 height={'100%'}
                 width={'100%'}
-                minWidth={[260, null, null, 300]}
+                minWidth={[240, null, null, 300]}
                 maxWidth={['60vw', null, '100px', '460px']}
                 mx={[12, null, 2, 8]}
               />
@@ -92,7 +93,7 @@ export default function Home() {
                 color='white'
                 flexDirection={'column'}
                 alignItems={'center'}
-                pb={[20]}
+                pb={[20, null, null, null, 28]}
                 fontSize={['md', null, null, 'lg', 'xl']}
               >
                 <Text>
