@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Image, Box, Flex } from '@chakra-ui/react';
+import { Image, Box, Flex, Show, Text } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 
 export default function Home() {
@@ -87,6 +87,21 @@ export default function Home() {
                 mx={[12, null, 2, 8]}
               />
             </Flex>
+            <Show above='md'>
+              <Flex
+                color='white'
+                flexDirection={'column'}
+                alignItems={'center'}
+                pb={[20]}
+                fontSize={['md', null, null, 'lg', 'xl']}
+              >
+                <Text>
+                  Bridgetown Bluegrass is a not-for-profit music festival.
+                </Text>
+                <Text>Only the musicians and technicians get paid.</Text>
+                <Text>All additional revenue is donated to charity.</Text>
+              </Flex>
+            </Show>
           </motion.div>
         </Box>
       </main>

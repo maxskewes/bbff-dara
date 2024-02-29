@@ -4,16 +4,16 @@ import NavigationBar from '../components/NavigationBar';
 
 const HeaderLg = () => {
   return (
-    <Box sx={{ position: 'relative' }}>
-      <Flex width={'100vw'} justifyContent={'center'}>
+    <>
+      <Flex width={'100vw'} justifyContent={'center'} maxH={[0, null, 120, 140, 200]}>
       <Image
         src='/images/header-lg-nobg.svg'
         alt='Site Header'
-        sx={{ position: 'relative', width: '100vw', maxWidth: '1000px', height: 'auto' }}
+        // sx={{  maxHeight: '200px' }}
       />
       </Flex>
       <NavigationBar />
-    </Box>
+    </>
   );
 };
 

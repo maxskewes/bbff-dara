@@ -30,7 +30,7 @@ const Footer = () => {
           <Image
             src='/images/portland-grass.svg'
             alt='portland grass'
-            sx={{ width: '70%' }}
+            sx={{ width: '70%', maxHeight: [140, 180, 200, 220, 260] }}
           />
           <Box
             sx={{
@@ -41,10 +41,12 @@ const Footer = () => {
               textColor: '#8a8a8a',
               fontWeight: 600,
               letterSpacing: 2,
-              fontSize: ['.5rem', '.75rem', '1rem', null, '1.25rem']
+              fontSize: ['.5rem', '.75rem', '1rem', null, '1.25rem'],
             }}
           >
-            <Text>Bridgetown Bluegrass is a not-for-profit music festival.</Text>
+            <Text>
+              Bridgetown Bluegrass is a not-for-profit music festival.
+            </Text>
             <Text>Only the musicians and technicians get paid.</Text>
             <Text>All additional revenue is donated to charity.</Text>
           </Box>
