@@ -7,7 +7,7 @@ const HeaderLg = () => {
     <Box sx={{ position: 'relative' }}>
       <Flex width={'100vw'} justifyContent={'center'}>
       <Image
-        src='/images/static-header-nobg.svg'
+        src='/images/header-lg-nobg.svg'
         alt='Site Header'
         sx={{ position: 'relative', width: '100vw', maxWidth: '1000px', height: 'auto' }}
       />
