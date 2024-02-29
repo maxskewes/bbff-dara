@@ -29,10 +29,9 @@ const NavigationBar = () => {
   return (
     <Box position='relative' zIndex={2}>
       <Box
-        zIndex={2}
+        paddingTop={2}
+        px={[0, null, null, '5%', '10%']}
         sx={{
-          padding: '.5em .5rem .25rem',
-          backgroundColor: '#4a8fff',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-around',
@@ -47,8 +46,11 @@ const NavigationBar = () => {
         src='/images/waves.svg'
         alt='Wave Border'
         position='absolute'
-        top='-10px'
+        top='-16px'
         zIndex={-1}
+        height={'60px'}
+        minHeight={'60px'}
+        maxHeight={'60px'}
       />
     </Box>
   );

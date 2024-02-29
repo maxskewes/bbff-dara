@@ -1,4 +1,4 @@
-import { ChakraProvider, Box } from '@chakra-ui/react';
+import { ChakraProvider, Box, Image } from '@chakra-ui/react';
 import './_app.css';
 import theme from '../config/theme';
 import Header from '../components/Header';
@@ -26,6 +26,8 @@ function MyApp({ Component, pageProps }) {
         >
           <Header />
         </motion.header>
+        {/* <Image         src='/images/waves.svg'
+        alt='Wave Border'/> */}
         <main>
           <Component {...pageProps} position='relative' />
         </main>
