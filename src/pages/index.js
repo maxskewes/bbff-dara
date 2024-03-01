@@ -23,7 +23,7 @@ export default function Home() {
             backgroundColor={'black'}
           >
             <Image
-              src={'/images/chansel-bg.png'}
+              src={'/images/homepage-background.jpg'}
               alt='chansel image'
               sx={{
                 objectFit: 'cover',
