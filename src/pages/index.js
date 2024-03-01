@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Image, Box, Flex, Show, Text } from '@chakra-ui/react';
+import { Image, Box, Flex, Show, Text, Hide } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 
 export default function Home() {
@@ -22,16 +22,30 @@ export default function Home() {
             zIndex={-1}
             backgroundColor={'black'}
           >
-            <Image
-              src={'/images/homepage-background.jpg'}
-              alt='chansel image'
-              sx={{
-                objectFit: 'cover',
-                minWidth: '100%',
-                minH: '100%',
-                opacity: 0.3,
-              }}
-            />
+            <Show above='md'>
+              <Image
+                src={'/images/homepage-background.jpg'}
+                alt='chansel image'
+                sx={{
+                  objectFit: 'cover',
+                  minWidth: '100%',
+                  minH: '100%',
+                  opacity: 0.3,
+                }}
+              />
+            </Show>
+            <Hide above='md'>
+              <Image
+                src={'/images/homepage-bg-mobile.jpg'}
+                alt='chansel image'
+                sx={{
+                  objectFit: 'cover',
+                  minWidth: '100%',
+                  minH: '100%',
+                  opacity: 0.2,
+                }}
+              />
+            </Hide>
           </Box>
 
           <Box
