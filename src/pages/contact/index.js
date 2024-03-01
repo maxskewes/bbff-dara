@@ -14,7 +14,6 @@ import {
 } from '@chakra-ui/react';
 import { sendContactForm } from '../../lib/api';
 import PageContainer from '../../components/PageContainer';
-import PageTextBox from '../../components/PageTextBox';
 import FormContainer from '../../components/FormContainer';
 import ContactButton from '../../components/ContactButton';
 
@@ -67,18 +66,24 @@ export default function Contact() {
 
   return (
     <PageContainer heading={'Contact'}>
-      <Box color='white' textAlign={'center'} letterSpacing={3} maxW={'800px'}>
-        <PageTextBox>
+      <Box
+        color='white'
+        textAlign={'center'}
+        letterSpacing={[1, null, null, 1.5]}
+        maxW={['600px', null, null, null, '800px']}
+        fontSize={['sm', null, 'md', 'lg']}
+      >
+        <Text>
           Please feel free to contact us with any further questions about the
           festival.
-        </PageTextBox>
-        <PageTextBox>
+        </Text>
+        <Text padding={4}>
           Vendors: please use this form to let us know what your trade is and in
           what capacity you would like to be involved.
-        </PageTextBox>
+        </Text>
       </Box>
       {error && (
-        <Text color='red.300' my={4} fontSize='xl'>
+        <Text color='red.600' my={4} fontSize='xl'>
           {error}
         </Text>
       )}
@@ -89,7 +94,7 @@ export default function Contact() {
           <Input
             type='text'
             name='name'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.name}
             onChange={handleChange}
             onBlur={onBlur}
@@ -106,7 +111,7 @@ export default function Contact() {
           <Input
             type='email'
             name='email'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.email}
             onChange={handleChange}
             onBlur={onBlur}
@@ -124,7 +129,7 @@ export default function Contact() {
             <Input
               type='text'
               name='subject'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.subject}
               onChange={handleChange}
               onBlur={onBlur}
@@ -144,7 +149,7 @@ export default function Contact() {
               type='text'
               name='message'
               rows={4}
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}

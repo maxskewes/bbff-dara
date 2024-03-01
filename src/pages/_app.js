@@ -26,8 +26,6 @@ function MyApp({ Component, pageProps }) {
         >
           <Header />
         </motion.header>
-        {/* <Image         src='/images/waves.svg'
-        alt='Wave Border'/> */}
         <main>
           <Component {...pageProps} position='relative' />
         </main>

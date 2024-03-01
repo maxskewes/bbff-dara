@@ -89,7 +89,7 @@ const ArtistApply = () => {
         they are discussed with us before confirming your appearance.
       </PageTextBox>
       {error && (
-        <Text color='red.300' my={4} fontSize='xl'>
+        <Text color='red.600' my={4} fontSize='xl'>
           {error}
         </Text>
       )}
@@ -100,7 +100,7 @@ const ArtistApply = () => {
             <Input
               type='text'
               name='name'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.name}
               onChange={handleChange}
               onBlur={onBlur}
@@ -118,7 +118,7 @@ const ArtistApply = () => {
             <Input
               type='text'
               name='hometown'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.hometown}
               onChange={handleChange}
               onBlur={onBlur}
@@ -138,7 +138,7 @@ const ArtistApply = () => {
               type='text'
               name='bio'
               rows={4}
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.bio}
               onChange={handleChange}
               onBlur={onBlur}
@@ -156,7 +156,7 @@ const ArtistApply = () => {
             <Input
               type='text'
               name='website'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.website}
               onChange={handleChange}
               onBlur={onBlur}
@@ -171,7 +171,7 @@ const ArtistApply = () => {
             <Input
               type='email'
               name='email'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.email}
               onChange={handleChange}
               onBlur={onBlur}
@@ -186,7 +186,7 @@ const ArtistApply = () => {
             <Input
               type='text'
               name='phone'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.phone}
               onChange={handleChange}
               onBlur={onBlur}
@@ -201,7 +201,7 @@ const ArtistApply = () => {
             <Input
               type='text'
               name='video'
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.video}
               onChange={handleChange}
               onBlur={onBlur}
@@ -217,7 +217,7 @@ const ArtistApply = () => {
               type='text'
               name='social'
               rows={2}
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.social}
               onChange={handleChange}
               onBlur={onBlur}
@@ -236,7 +236,7 @@ const ArtistApply = () => {
               type='text'
               name='message'
               rows={4}
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}

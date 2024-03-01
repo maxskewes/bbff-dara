@@ -71,12 +71,12 @@ const Volunteer = () => {
     <PageContainer heading={'Volunteer'}>
       <PageTextBox>
         The Bridgetown Fest depends on a community of volunteers to take
-        tickets, pour beers, and sell merch! If you would like to volunteer,
+        tickets, pour beers, and sell merch. If you would like to volunteer,
         please let us know which available slot below you would like. Volunteers
-        get a festival pass, festival shirt, and two drinks tickets.
+        get a festival pass, festival shirt, and two drinks tickets for a three hour slot.
       </PageTextBox>
       {error && (
-        <Text color='red.300' my={4} fontSize='xl'>
+        <Text color='red.600' my={4} fontSize='xl'>
           {error}
         </Text>
       )}
@@ -86,7 +86,7 @@ const Volunteer = () => {
           <Input
             type='text'
             name='name'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.name}
             onChange={handleChange}
             onBlur={onBlur}
@@ -103,7 +103,7 @@ const Volunteer = () => {
           <Input
             type='email'
             name='email'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.email}
             onChange={handleChange}
             onBlur={onBlur}
@@ -120,7 +120,7 @@ const Volunteer = () => {
           <Input
             type='number'
             name='phone'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.phone}
             onChange={handleChange}
             onBlur={onBlur}
@@ -137,7 +137,7 @@ const Volunteer = () => {
           <Input
             type='text'
             name='tshirt_size'
-            errorBorderColor='red.300'
+            errorBorderColor='red.600'
             value={values.tshirt_size}
             onChange={handleChange}
             onBlur={onBlur}
@@ -156,7 +156,7 @@ const Volunteer = () => {
               type='text'
               name='message'
               rows={4}
-              errorBorderColor='red.300'
+              errorBorderColor='red.600'
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}
@@ -165,7 +165,12 @@ const Volunteer = () => {
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
-          <Center>
+          <Center flexDirection={'column'}>
+          {error && (
+        <Text color='red.600' my={4} fontSize='xl'>
+          {error}
+        </Text>
+      )}
             <ContactButton
               isLoading={isLoading}
               disabled={

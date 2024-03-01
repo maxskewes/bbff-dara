@@ -9,22 +9,11 @@ const PageTextBox = ({ children }) => {
         marginBottom: 6,
       }}
     >
-      {/* <Box
-        position={'absolute'}
-        filter='auto' blur='10px'
-        width={'100%'}
-        height={'100%'}
-        boxShadow='dark-lg'
-        rounded='3xl'
-        bg='blacker'
-  opacity={.8}
-      /> */}
       <Box
         position={'relative'}
         maxWidth={['600px', null, null, '800px', '1000px']}
         p={1}
         rounded='md'
-        // bg='black'
       >
         <Text
           fontSize={['sm', null, 'md', null, 'lg']}
