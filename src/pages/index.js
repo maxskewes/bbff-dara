@@ -42,7 +42,7 @@ export default function Home() {
                   objectFit: 'cover',
                   minWidth: '100%',
                   minH: '100%',
-                  opacity: 0.2,
+                  opacity: .8,
                 }}
               />
             </Hide>
