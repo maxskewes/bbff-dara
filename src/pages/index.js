@@ -24,25 +24,25 @@ export default function Home() {
           >
             <Show above='md'>
               <Image
-                src={'/images/homepage-background.jpg'}
+                src={'/images/homepage-background1000.jpg'}
                 alt='chansel image'
                 sx={{
                   objectFit: 'cover',
                   minWidth: '100%',
                   minH: '100%',
-                  opacity: 0.3,
+                  opacity: 0.8,
                 }}
               />
             </Show>
             <Hide above='md'>
               <Image
-                src={'/images/homepage-bg-mobile.jpg'}
+                src={'/images/homepage-bg-mobile500.jpg'}
                 alt='chansel image'
                 sx={{
                   objectFit: 'cover',
                   minWidth: '100%',
                   minH: '100%',
-                  opacity: .8,
+                  opacity: 0.8,
                 }}
               />
             </Hide>
@@ -65,7 +65,7 @@ export default function Home() {
             }}
           >
             <Flex
-              pt={[4, null, null, 8, 12]}
+              pt={[4, null, 8, null, 12]}
               pb={[2, null, null, 4, 4]}
               flexDirection={['column', null, 'row']}
               justifyContent='center'
