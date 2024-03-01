@@ -73,7 +73,8 @@ const Volunteer = () => {
         The Bridgetown Fest depends on a community of volunteers to take
         tickets, pour beers, and sell merch. If you would like to volunteer,
         please let us know which available slot below you would like. Volunteers
-        get a festival pass, festival shirt, and two drinks tickets for a three hour slot.
+        get a festival pass, festival shirt, and two drinks tickets for a three
+        hour slot.
       </PageTextBox>
       {error && (
         <Text color='red.600' my={4} fontSize='xl'>
@@ -166,11 +167,11 @@ const Volunteer = () => {
         </GridItem>
         <GridItem colSpan={2}>
           <Center flexDirection={'column'}>
-          {error && (
-        <Text color='red.600' my={4} fontSize='xl'>
-          {error}
-        </Text>
-      )}
+            {error && (
+              <Text color='red.600' my={4} fontSize='xl'>
+                {error}
+              </Text>
+            )}
             <ContactButton
               isLoading={isLoading}
               disabled={

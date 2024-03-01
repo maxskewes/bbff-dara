@@ -246,7 +246,12 @@ const ArtistApply = () => {
         </GridItem>
 
         <GridItem colSpan={2}>
-          <Center>
+          <Center flexDirection={'column'}>
+            {error && (
+              <Text color='red.600' my={4} fontSize='xl'>
+                {error}
+              </Text>
+            )}
             <ContactButton
               isLoading={isLoading}
               disabled={

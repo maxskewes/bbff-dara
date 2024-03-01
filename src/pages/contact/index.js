@@ -50,7 +50,7 @@ export default function Contact() {
       setTouched({});
       setState(initState);
       toast({
-        title: 'Message sent.',
+        title: 'Your message has been sent to the BBFF Crew.',
         status: 'success',
         duration: 2000,
         position: 'top',
@@ -158,7 +158,12 @@ export default function Contact() {
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
-          <Center>
+          <Center flexDirection={'column'}>
+            {error && (
+              <Text color='red.600' my={4} fontSize='xl'>
+                {error}
+              </Text>
+            )}
             <ContactButton
               isLoading={isLoading}
               disabled={
