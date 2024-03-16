@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Image, Box, Flex, Show, Text, Hide } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
+import EventbriteButton from '../components/EventbriteButton';
+import DonateButton from '../components/DonateButton';
 
 export default function Home() {
   return (
@@ -15,6 +17,29 @@ export default function Home() {
 
       <main>
         <Box position='relative' width={'100vw'} height={'auto'} minH={300}>
+          <Show above='md'>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 0, 0, 0, .8],
+              }}
+              transition={{
+                duration: 5,
+              }}
+            >
+              <Flex
+                w={'100%'}
+                position={'absolute'}
+                flexDirection={'row'}
+                justifyContent={'space-between'}
+                px={[5, null, null, null, 8]}
+              >
+                <EventbriteButton />
+                <DonateButton />
+              </Flex>
+            </motion.div>
+          </Show>
+
           <Box
             w={'100%'}
             h={'100%'}
@@ -55,6 +80,7 @@ export default function Home() {
           >
             <MotionBirdBox />
           </Box>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
