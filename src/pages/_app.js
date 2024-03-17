@@ -1,4 +1,4 @@
-import { ChakraProvider, Box, Image } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import './_app.css';
 import theme from '../config/theme';
 import Header from '../components/Header';
