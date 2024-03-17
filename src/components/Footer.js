@@ -1,5 +1,7 @@
-import { Box, Text, Image } from '@chakra-ui/react';
+import { Box, Text, Image, HStack, Icon } from '@chakra-ui/react';
 import React from 'react';
+import { RiInstagramFill } from 'react-icons/ri';
+import { FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -32,6 +34,33 @@ const Footer = () => {
             alt='portland grass'
             sx={{ width: '70%', maxHeight: [140, 180, 200, 220, 260] }}
           />
+          <HStack paddingTop={[4, null, 8]} spacing={[6]}>
+            <a
+              href='https://www.instagram.com/bridgetownbluegrassfest/?hl=en'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <Icon
+                as={RiInstagramFill}
+                w={[9, null, 12, null, 14]}
+                h={[9, null, 12, null, 14]}
+                color='#8a8a8a'
+              />
+            </a>
+
+            <a
+              href='https://www.facebook.com/bridgetownbluegrassfest/'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <Icon
+                as={FaFacebook}
+                w={[8, null, 10, null, 12]}
+                h={[8, null, 10, null, 12]}
+                color='#8a8a8a'
+              />
+            </a>
+          </HStack>
           <Box
             sx={{
               paddingTop: [4, null, 8],
