@@ -1,5 +1,14 @@
-import { Box, Text, Image, HStack, Icon } from '@chakra-ui/react';
 import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Box,
+  Text,
+  Image,
+  HStack,
+  SimpleGrid,
+  Flex,
+  Icon,
+} from '@chakra-ui/react';
 import { RiInstagramFill } from 'react-icons/ri';
 import { FaFacebook } from 'react-icons/fa';
 
@@ -44,7 +53,8 @@ const Footer = () => {
                 as={RiInstagramFill}
                 w={[9, null, 12, null, 14]}
                 h={[9, null, 12, null, 14]}
-                color='#8a8a8a'
+                color='#006699'
+                _hover={{ color: '#0551cd' }}
               />
             </a>
 
@@ -57,10 +67,111 @@ const Footer = () => {
                 as={FaFacebook}
                 w={[8, null, 10, null, 12]}
                 h={[8, null, 10, null, 12]}
-                color='#8a8a8a'
+                color='#006699'
+                _hover={{ color: '#0551cd' }}
               />
             </a>
           </HStack>
+
+          <SimpleGrid
+            columns={[2, null, 4]}
+            spacing={[6, null, null, 10]}
+            py={6}
+          >
+            <Flex
+              w={'full'}
+              h={'full'}
+              justifyContent={'center'}
+              alignItems={'center'}
+            >
+              <Box w={['100px', null, '200px']}>
+                <a
+                  href='https://www.eartrumpetlabs.com/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src='images/sponsors/eartrumpet.svg'
+                    alt='Ear Trumpet Labs logo/link'
+                    width='100%'
+                  />
+                </a>
+              </Box>
+            </Flex>
+            <Flex
+              w={'full'}
+              h={'full'}
+              justifyContent={'center'}
+              alignItems={'center'}
+            >
+              <Box w={['100px', null, '200px']}>
+                <a
+                  href='https://audixusa.com/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src='/images/sponsors/audix.svg'
+                    alt='Audix Micropthones logo/link'
+                    width='100%'
+                  />
+                </a>
+              </Box>
+            </Flex>
+            <Flex
+              w={'full'}
+              h={'full'}
+              justifyContent={'center'}
+              alignItems={'center'}
+            >
+              <Box w={['100px', null, '200px']}>
+                <a
+                  href='https://oregonbluegrass.org/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src='/images/sponsors/oba.svg'
+                    alt='Oregon Bluegrass Association logo/link'
+                    width='100%'
+                  />
+                </a>
+              </Box>
+            </Flex>
+            <Flex
+              w={'full'}
+              h={'full'}
+              justifyContent={'center'}
+              alignItems={'center'}
+            >
+              <Box w={['70px', null, '130px']}>
+                <a
+                  href='https://breakside.com/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src='/images/sponsors/breakside.svg'
+                    alt='Breakside Brewery logo/link'
+                    width='100%'
+                  />
+                </a>
+              </Box>
+            </Flex>
+          </SimpleGrid>
+
           <Box
             sx={{
               paddingTop: [4, null, 8],
