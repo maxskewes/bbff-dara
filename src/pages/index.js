@@ -17,7 +17,7 @@ export default function Home() {
 
       <main>
         <Box position='relative' width={'100vw'} height={'auto'} minH={300}>
-          <Show above='md'>
+          <Show above='md' zIndex={5}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{

@@ -18,6 +18,7 @@ const DonateButton = ({ topText, buttonText, bottomText }) => {
       {/* guard for null - resolves when Eventbrite loads */}
       {modalButtonCheckout && (
         <Button
+        zIndex={5}
           id={modalButtonCheckout.id}
           type='button'
           minWidth={['100%', '80%']}
