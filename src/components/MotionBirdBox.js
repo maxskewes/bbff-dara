@@ -11,7 +11,7 @@ const MotionBirdBox = () => {
   const [birdsInDom, setBirdsInDom] = useState(true);
   setTimeout(() => {
     setBirdsInDom(false);
-  }, 5000);
+  }, 6000);
 
   return (
     <div id='bird-box'>
