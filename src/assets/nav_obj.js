@@ -4,21 +4,26 @@ export const nav_obj = [
     route: '/',
   },
   {
-    title: 'Artist Apply',
-    route: 'artist-apply',
+    title: 'Tickets',
+    route: 'tickets',
   },
   {
     title: '2024 Line-Up',
     route: 'line-up',
   },
-  {
-    title: 'Tickets',
-    route: 'tickets',
-  },
+
   // {
   //   title: 'Merch',
   //   route: 'merch',
   // },
+  {
+    title: 'Previous Years',
+    route: 'previous-years',
+  },
+  {
+    title: 'Artist Apply',
+    route: 'artist-apply',
+  },
   {
     title: 'Volunteer',
     route: 'volunteer',
