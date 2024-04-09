@@ -1,7 +1,6 @@
 import React from 'react';
-import { Text, Image, Box, Center, SimpleGrid, Flex, Show } from '@chakra-ui/react';
+import { Text, Image, Box, Center, SimpleGrid, Flex } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
-import { PageHeadingBoxLg } from '../../components/PageHeadingBox';
 
 const LineUp = () => {
   const ArtistBox = ({ bandname, synop }) => {
@@ -169,7 +168,6 @@ const LineUp = () => {
         />
       </SimpleGrid>
 
-      {/* <Show above='md'> */}
       <SimpleGrid columns={[1, null, null]} spacing={[1]}>
         <FullArtistBox
           bandname={'ALDER STREET'}
@@ -386,14 +384,10 @@ const LineUp = () => {
           pic={'/images/bandphotos/party-mcfly.png'}
           ensemble={'Patrick Connell - Guitar\n Josiah Payne - Mandolin'}
         >
-          Bluegrass Mando/Guitar Duo. Interesting factoid: Pat and Jo were born concentric twins
-          from Bill Monroe and Charlie Parker's illegitimate man baby. Obviously Bill carried the
-          pair to term but upon excising them from his womb, as Charlie's eyes swelled with tears
-          &#40;not so much from love but from an excess of alcohol consumption&#41;, Bill exclaimed,
-          "Ain't no part of nuthin". The pair were then surgically separated."
+          Bluegrass Mando/Guitar Duo. Interesting factoid: Pat and Jo were born conjoined twins when
+          Bill Monroe was impregnated with Charlie Parker's seed.
         </FullArtistBox>
       </SimpleGrid>
-      {/* </Show> */}
     </PageContainer>
   );
 };
