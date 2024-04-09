@@ -11,19 +11,22 @@ export const nav_obj = [
     title: '2024 Line-Up',
     route: 'line-up',
   },
-
-  // {
-  //   title: 'Merch',
-  //   route: 'merch',
-  // },
   {
     title: 'Previous Years',
     route: 'previous-years',
   },
   {
-    title: 'Artist Apply',
-    route: 'artist-apply',
+    title: 'T-Shirts',
+    route: 't-shirts'
   },
+  // {
+  //   title: 'Merch',
+  //   route: 'merch',
+  // },
+  // {
+  //   title: 'Artist Apply',
+  //   route: 'artist-apply',
+  // },
   {
     title: 'Volunteer',
     route: 'volunteer',

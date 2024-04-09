@@ -84,8 +84,11 @@ const LineUp = () => {
         spacing={1}
         maxW={['1200px']}
         px={[12]}
-        pb={[20]}
+        pb={[12]}
+        mb={[8]}
         alignItems={'flex-start'}
+        borderRadius={'2xl'}
+        bgImage="radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
       >
         <ArtistBox
           bandname={'ALDER STREET'}
@@ -348,7 +351,7 @@ const LineUp = () => {
 
         <FullArtistBox
           bandname={'The LOIS & CLARK EXPEDITION'}
-          pic={'/images/bandphotos/lewis-and-clarke-expedition.jpg'}
+          pic={'/images/bandphotos/lois-and-clark-expedition.jpg'}
           ensemble={'Linda Leavitt - Guitar / Vocals\n Tom Nechville - Banjo / Vocals'}
         >
           Back in 2018, banjo music innovator Tom Nechville joined forces with his musical soulmate,
@@ -384,7 +387,7 @@ const LineUp = () => {
           pic={'/images/bandphotos/party-mcfly.png'}
           ensemble={'Patrick Connell - Guitar\n Josiah Payne - Mandolin'}
         >
-          Bluegrass Mando/Guitar Duo. Interesting factoid: Pat and Jo were born conjoined twins when
+          Bluegrass Mando/Guitar Duo. Fun Fact! Pat and Jo were born conjoined twins when
           Bill Monroe was impregnated with Charlie Parker's seed.
         </FullArtistBox>
       </SimpleGrid>

@@ -1,11 +1,24 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Image, Box, Flex, Show, Text, Hide } from '@chakra-ui/react';
+import { Image, Box, Flex, Show, Text, Hide, Icon } from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 import EventbriteButton from '../components/EventbriteButton';
 import DonateButton from '../components/DonateButton';
+import { TbBuildingBridge } from 'react-icons/tb';
+import { bandlist } from '../assets/bandlist';
 
 export default function Home() {
+  const BandListItem = ({ bandname }) => {
+    return (
+      <Flex flexDirection={'row'} >
+        <Text color={'white'} textTransform={'uppercase'} whiteSpace={'nowrap'}>
+          &nbsp;{bandname}&nbsp;
+        </Text><Flex alignItems={'center'} fontSize={'sm'}>
+        <Icon as={TbBuildingBridge} /></Flex>
+      </Flex>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -43,7 +56,13 @@ export default function Home() {
             </motion.div>
           </Show>
 
-          <Box w={'100%'} h={'100%'} position='absolute' zIndex={-1} backgroundColor={'black'}>
+          <Box
+            w={'100%'}
+            h={'100%'}
+            position='absolute'
+            zIndex={-1}
+            backgroundColor={'black'}
+          >
             <Show above='md'>
               <Image
                 src={'/images/homepage-background1000.jpg'}
@@ -70,7 +89,11 @@ export default function Home() {
             </Hide>
           </Box>
 
-          <Box position={'fixed'} axis='both' marginTop={['10%', null, null, '-10%']}>
+          <Box
+            position={'fixed'}
+            axis='both'
+            marginTop={['10%', null, null, '-10%']}
+          >
             <MotionBirdBox />
           </Box>
 
@@ -91,7 +114,7 @@ export default function Home() {
               alignItems='center'
             >
               <Image
-                src='/images/homepage-banner-date.svg'
+                src='/images/paint-date.svg'
                 alt='saturday may 4th'
                 height={'100%'}
                 width={'100%'}
@@ -112,7 +135,7 @@ export default function Home() {
               />
 
               <Image
-                src='/images/homepage-banner-location.svg'
+                src='/images/paint-location.svg'
                 alt='ucc first congregational church se park and madison'
                 height={'100%'}
                 width={'100%'}
@@ -133,12 +156,12 @@ export default function Home() {
               <Text pb={[1]} fontWeight={600}>
                 2024 LINEUP
               </Text>
-              <Text textTransform={'uppercase'}>
-                Alder Street * Jackstraw * Fog Holler * The Muddy Souls * The High Seagrass *
-                Skillethead * Band of Comerados * Amanda Richards and The Good Long Whiles * Thunder
-                Ridge * Blue Flags & Black Grass * Dadweed * The Lois and Clark Expedition * Sunny
-                South * Party McFly
-              </Text>
+              <Flex flexWrap={'wrap'} justifyContent={'center'}>
+                {bandlist.map((band, i) => {
+                  return <BandListItem key={i} bandname={band} />;
+                })}
+              </Flex>
+          
             </Flex>
             <Show above='md'>
               <Flex
@@ -148,7 +171,9 @@ export default function Home() {
                 pb={[20, null, null, null, 28]}
                 fontSize={['md', null, null, 'lg', 'xl']}
               >
-                <Text>Bridgetown Bluegrass is a not-for-profit music festival.</Text>
+                <Text>
+                  Bridgetown Bluegrass is a not-for-profit music festival.
+                </Text>
                 <Text>Only the musicians and technicians get paid.</Text>
                 <Text>All additional revenue is donated to charity.</Text>
               </Flex>
