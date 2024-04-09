@@ -111,8 +111,8 @@ const Tshirts = () => {
                   w={'full'}
                   h={'full'}
                   py={[2]}
-                  src={'/images/tshirts/2022'}
-                  alt={'2022 Tshirt Design'}
+                  src={'/images/tshirts/2019.png'}
+                  alt={'2019 Tshirt Design'}
                   objectFit={'cover'}
                 />
               </Box>

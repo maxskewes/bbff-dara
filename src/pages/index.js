@@ -11,7 +11,7 @@ export default function Home() {
   const BandListItem = ({ bandname }) => {
     return (
       <Flex flexDirection={'row'} >
-        <Text color={'white'} textTransform={'uppercase'} whiteSpace={'nowrap'}>
+        <Text color={'white'} textTransform={'uppercase'} whiteSpace={'nowrap'} fontWeight={600} letterSpacing={2}>
           &nbsp;{bandname}&nbsp;
         </Text><Flex alignItems={'center'} fontSize={'sm'}>
         <Icon as={TbBuildingBridge} /></Flex>
@@ -153,9 +153,7 @@ export default function Home() {
               pb={[20, null, null, null, 28]}
               fontSize={['md', null, null, 'lg', 'xl']}
             >
-              <Text pb={[1]} fontWeight={600}>
-                2024 LINEUP
-              </Text>
+        
               <Flex flexWrap={'wrap'} justifyContent={'center'}>
                 {bandlist.map((band, i) => {
                   return <BandListItem key={i} bandname={band} />;

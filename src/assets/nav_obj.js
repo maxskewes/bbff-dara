@@ -15,10 +15,10 @@ export const nav_obj = [
     title: 'Previous Years',
     route: 'previous-years',
   },
-  {
-    title: 'T-Shirts',
-    route: 't-shirts'
-  },
+  // {
+  //   title: 'T-Shirts',
+  //   route: 't-shirts'
+  // },
   // {
   //   title: 'Merch',
   //   route: 'merch',

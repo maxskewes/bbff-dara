@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Della_Respira } from 'next/font/google';
 import { motion } from 'framer-motion';
+import HeaderSm from '../components/HeaderSm';
 
 const dellaRespira = Della_Respira({
   subsets: ['latin'],
