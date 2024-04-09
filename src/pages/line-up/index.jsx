@@ -175,7 +175,7 @@ const LineUp = () => {
         <ArtistBox
           bandname={'PARTY McFLY'}
           synop={
-            "Bluegrass Mando/Guitar Duo\n (sshhhhhh - Bill Monroe and Charlie Parker's illegitimate man baby)"
+            "Bluegrass Mando/Guitar Duo."
           }
         />
       </SimpleGrid>
@@ -439,8 +439,7 @@ const LineUp = () => {
           pic={'/images/bandphotos/party-mcfly.png'}
           ensemble={'Patrick Connell - Guitar\n Josiah Payne - Mandolin'}
         >
-          Bluegrass Mando/Guitar Duo. Fun Fact! Pat and Jo were born conjoined
-          twins when Bill Monroe was impregnated with Charlie Parker's seed.
+          Bluegrass Mando/Guitar Duo.
         </FullArtistBox>
       </SimpleGrid>
     </PageContainer>
