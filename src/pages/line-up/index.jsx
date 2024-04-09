@@ -65,7 +65,7 @@ const LineUp = () => {
             </Text>
           </Flex>
 
-          <Flex alignItems={['center']} justifyContent={['center']}>
+          <Flex alignItems={['center']} justifyContent={['center']} pb={[6]}>
             <Text fontSize={['md']} textAlign={'justify'}>
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               {children}

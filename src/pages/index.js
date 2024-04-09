@@ -121,6 +121,25 @@ export default function Home() {
                 mx={[12, null, 2, 8]}
               />
             </Flex>
+            <Flex
+              flexDirection={'column'}
+              color='white'
+              justifyContent={'center'}
+              alignItems={'center'}
+              textAlign={'center'}
+              pb={[20, null, null, null, 28]}
+              fontSize={['md', null, null, 'lg', 'xl']}
+            >
+              <Text pb={[1]} fontWeight={600}>
+                2024 LINEUP
+              </Text>
+              <Text textTransform={'uppercase'}>
+                Alder Street * Jackstraw * Fog Holler * The Muddy Souls * The High Seagrass *
+                Skillethead * Band of Comerados * Amanda Richards and The Good Long Whiles * Thunder
+                Ridge * Blue Flags & Black Grass * Dadweed * The Lois and Clark Expedition * Sunny
+                South * Party McFly
+              </Text>
+            </Flex>
             <Show above='md'>
               <Flex
                 color='white'

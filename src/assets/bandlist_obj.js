@@ -1,0 +1,16 @@
+export const bandlist = [
+  'Alder Street',
+  'Jackstraw',
+  'Fog Holler',
+  'The Muddy Souls',
+  'The High Seagrass',
+  'Skillethead',
+  'Band of Comerados',
+  'Amanda Richards and The Good Long Whiles',
+  'Thunder Ridge',
+  'Blue Flags & Black Grass',
+  'Dadweed',
+  'The Lois and Clark Expedition',
+  'Sunny South',
+  'Party McFly',
+];
