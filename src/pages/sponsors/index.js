@@ -14,6 +14,31 @@ const Sponsors = () => {
           make donations to our supported charities. Please support them in any
           way you can. Click on the logos to be redirected to their website.
         </PageTextBox>
+
+        <Flex
+            w={'full'}
+            h={'full'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Box w={['300px']}>
+              <a
+                href='https://www.rainierbeer.com/'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  src='images/sponsors/R-rainier.png'
+                  alt='Rainier Beer logo/link'
+                  width='100%'
+                />
+              </a>
+            </Box>
+          </Flex>
+
         <SimpleGrid columns={[1, null, 3]} spacing={10} py={4}>
           <Flex
             w={'full'}

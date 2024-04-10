@@ -73,11 +73,39 @@ const Footer = () => {
             </a>
           </HStack>
 
+
+
+          <Flex
+          pt={[6]}
+              w={'full'}
+              h={'full'}
+              justifyContent={'center'}
+              alignItems={'center'}
+            >
+              <Box w={['100px', null, '200px']}>
+                <a
+                  href='https://rainierbeer.com/'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src='images/sponsors/rainier-retro.svg'
+                    alt='Rainier logo/link'
+                    width='100%'
+                  />
+                </a>
+              </Box>
+            </Flex>
           <SimpleGrid
             columns={[2, null, 4]}
+          
             spacing={[6, null, null, 10]}
             py={6}
           >
+
             <Flex
               w={'full'}
               h={'full'}
