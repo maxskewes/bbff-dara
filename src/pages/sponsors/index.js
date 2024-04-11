@@ -5,6 +5,34 @@ import { Flex, Box, SimpleGrid } from '@chakra-ui/react';
 import PageTextBox from '../../components/PageTextBox';
 
 const Sponsors = () => {
+  const SponsorLogoBox = ({ link, pic, alt }) => {
+    return (
+      <Flex
+        w={'full'}
+        h={'full'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Box w={['300px']}>
+          <a
+            href={`https://www.${link}`}
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              src={`images/sponsors/${pic}`}
+              alt={`${alt} logo/link`}
+              width='100%'
+            />
+          </a>
+        </Box>
+      </Flex>
+    );
+  };
+
   return (
     <div>
       <PageContainer heading={'Sponsors'}>
@@ -15,116 +43,91 @@ const Sponsors = () => {
           way you can. Click on the logos to be redirected to their website.
         </PageTextBox>
 
-        <Flex
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <Box w={['300px']}>
-              <a
-                href='https://www.rainierbeer.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src='images/sponsors/R-rainier.png'
-                  alt='Rainier Beer logo/link'
-                  width='100%'
-                />
-              </a>
-            </Box>
-          </Flex>
+        <SponsorLogoBox
+          link={'rainierbeer.com'}
+          pic={'R-rainier.png'}
+          alt={'Rainier Beer'}
+        />
 
         <SimpleGrid columns={[1, null, 3]} spacing={10} py={4}>
-          <Flex
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <Box w={['300px']}>
-              <a
-                href='https://www.eartrumpetlabs.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src='images/sponsors/eartrumpet.png'
-                  alt='Ear Trumpet Labs logo/link'
-                  width='100%'
-                />
-              </a>
-            </Box>
-          </Flex>
-          <Flex
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <Box w={['300px']}>
-              <a
-                href='https://audixusa.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src='/images/sponsors/audix.jpeg'
-                  alt='Audix Micropthones logo/link'
-                  width='100%'
-                />
-              </a>
-            </Box>
-          </Flex>
-          <Flex
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <Box w={['200px']}>
-              <a
-                href='https://breakside.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
-                <motion.img
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src='/images/sponsors/breakside.png'
-                  alt='Breakside Brewery logo/link'
-                  width='100%'
-                />
-              </a>
-            </Box>
-          </Flex>
+          {/* 
+          <SponsorLogoBox
+          link={''}
+          pic={''}
+          alt={''}
+        /> 
+        */}
+
+          <SponsorLogoBox
+            link={'eartrumpetlabs.com'}
+            pic={'eartrumpet.png'}
+            alt={'Ear Trumpet Labs'}
+          />
+
+          <SponsorLogoBox
+            link={'audixusa.com'}
+            pic={'audix.jpg'}
+            alt={'Audix Microphones'}
+          />
+          <SponsorLogoBox
+            link={'giganticbrewing.com'}
+            pic={'gigantic-color.png'}
+            alt={'Gigantic Brewing'}
+          />
+          <SponsorLogoBox
+            link={'breakside'}
+            pic={'breakside-color.png'}
+            alt={'Breakside Brewery'}
+          />
+
+          <SponsorLogoBox
+            link={'hopworksbeer.com'}
+            pic={'hub-color.png'}
+            alt={'Hopworks Brewery'}
+          />
+          <SponsorLogoBox
+            link={'stonecirclecider.com'}
+            pic={'stone-circle.png'}
+            alt={'Stone Circle Cider'}
+          />
+          <SponsorLogoBox
+            link={'travelmag.com'}
+            pic={'travelmag-color.png'}
+            alt={'Travelmag'}
+          />
+          <SponsorLogoBox
+            link={'stjosefswinery.com'}
+            pic={'st-josefs.png'}
+            alt={"St. Josef&apos's Winery"}
+          />
+          <SponsorLogoBox
+            link={'sanctuaryhall.com'}
+            pic={'sanctuary-hall.png'}
+            alt={'Sanctuary Hall'}
+          />
         </SimpleGrid>
         <Box w={['100%', null, '600px', '800px', '1000px']} p={[0, 6]}>
-          <a
-            href='https://oregonbluegrass.org/'
-            target='_blank'
-            rel='noreferrer noopener'
+          <Flex
+            w={'full'}
+            h={'full'}
+            justifyContent={'center'}
+            alignItems={'center'}
           >
-            <motion.img
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              src='/images/sponsors/oba.png'
-              alt='Oregon Bluegrass Association logo/link'
-              width='100%'
-            />
-          </a>
+            <a
+              href={`https://www.oregonbluegrass.org`}
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                src={`images/sponsors/oba.png`}
+                alt={`Oregon Bluegrass Association logo/link`}
+                width='100%'
+              />
+            </a>
+          </Flex>
         </Box>
       </PageContainer>
     </div>
