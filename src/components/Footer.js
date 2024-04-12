@@ -13,6 +13,34 @@ import { RiInstagramFill } from 'react-icons/ri';
 import { FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
+  const SponsorFooterBox = ({ link, pic, alt }) => {
+    return (
+      <Flex
+        w={'full'}
+        h={'full'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      >
+        <Box w={['100px', null, '200px']}>
+          <a
+            href={`https://www.${link}`}
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              src={`images/sponsors/${pic}`}
+              alt={`${alt} Labs logo/link`}
+              width='100%'
+            />
+          </a>
+        </Box>
+      </Flex>
+    );
+  };
+
   return (
     <>
       <Box
@@ -73,131 +101,85 @@ const Footer = () => {
             </a>
           </HStack>
 
-
-
           <Flex
-          pt={[6]}
-              w={'full'}
-              h={'full'}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Box w={['100px', null, '200px']}>
-                <a
-                  href='https://rainierbeer.com/'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src='images/sponsors/rainier-retro.svg'
-                    alt='Rainier logo/link'
-                    width='100%'
-                  />
-                </a>
-              </Box>
-            </Flex>
+            pt={[6]}
+            w={'full'}
+            h={'full'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Box w={['100px', null, '200px']}>
+              <a
+                href='https://rainierbeer.com/'
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                <motion.img
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  src='images/sponsors/rainier-retro.svg'
+                  alt='Rainier logo/link'
+                  width='100%'
+                />
+              </a>
+            </Box>
+          </Flex>
           <SimpleGrid
             columns={[2, null, 4]}
-          
             spacing={[6, null, null, 10]}
             py={6}
           >
-
-            <Flex
-              w={'full'}
-              h={'full'}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Box w={['100px', null, '200px']}>
-                <a
-                  href='https://www.eartrumpetlabs.com/'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src='images/sponsors/eartrumpet.svg'
-                    alt='Ear Trumpet Labs logo/link'
-                    width='100%'
-                  />
-                </a>
-              </Box>
-            </Flex>
-            <Flex
-              w={'full'}
-              h={'full'}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Box w={['100px', null, '200px']}>
-                <a
-                  href='https://audixusa.com/'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src='/images/sponsors/audix.svg'
-                    alt='Audix Micropthones logo/link'
-                    width='100%'
-                  />
-                </a>
-              </Box>
-            </Flex>
-            <Flex
-              w={'full'}
-              h={'full'}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Box w={['100px', null, '200px']}>
-                <a
-                  href='https://oregonbluegrass.org/'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src='/images/sponsors/oba.svg'
-                    alt='Oregon Bluegrass Association logo/link'
-                    width='100%'
-                  />
-                </a>
-              </Box>
-            </Flex>
-            <Flex
-              w={'full'}
-              h={'full'}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Box w={['70px', null, '130px']}>
-                <a
-                  href='https://breakside.com/'
-                  target='_blank'
-                  rel='noreferrer noopener'
-                >
-                  <motion.img
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src='/images/sponsors/breakside.svg'
-                    alt='Breakside Brewery logo/link'
-                    width='100%'
-                  />
-                </a>
-              </Box>
-            </Flex>
+            <SponsorFooterBox
+              link={'eartrumpetlabs.com'}
+              pic={'eartrumpet.svg'}
+              alt={'Ear Trumpet Labs'}
+            />
+            <SponsorFooterBox
+              link={'audixusa.com'}
+              pic={'audix.svg'}
+              alt={'Audix Microphones'}
+            />
+            <SponsorFooterBox
+              link={'breakside.com'}
+              pic={'breakside.svg'}
+              alt={'Breakside Brewing'}
+            />
+            <SponsorFooterBox
+              link={'oregonbluegrass.org'}
+              pic={'oba.svg'}
+              alt={'Oregon Bluegrass Association'}
+            />
+            <SponsorFooterBox
+              link={'stjosefswinery.com'}
+              pic={'st-josefs.svg'}
+              alt={"St. Josef's Winery"}
+            />
+            <SponsorFooterBox
+              link={'hopworksbeer.com'}
+              pic={'hub.svg'}
+              alt={'Hopworks Urban Brewery'}
+            />
+            <SponsorFooterBox
+              link={'stonecirclecider.com'}
+              pic={'stone-circle.svg'}
+              alt={'Stone Circle Cider'}
+            />
+            <SponsorFooterBox
+              link={'travelmag.com'}
+              pic={'travelmag.svg'}
+              alt={'Travelmag'}
+            />
+            <SponsorFooterBox
+              link={'sanctuaryhall.com'}
+              pic={'sanctuary-hall.svg'}
+              alt={'Sanctuary Hall'}
+            />{' '}
+            <SponsorFooterBox
+              link={'firstunitarianportland.org'}
+              pic={'church.svg'}
+              alt={'First Unitarian Portland'}
+            />
           </SimpleGrid>
 
           <Box
