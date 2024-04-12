@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-import { Text, Image, Flex, Button } from '@chakra-ui/react';
+import { Text, Image, Flex, Button, Box } from '@chakra-ui/react';
 import { nav_obj } from '../assets/nav_obj';
 import { FiMenu } from 'react-icons/fi';
 
@@ -9,7 +9,6 @@ const HeaderSm = () => {
     return (
       <Link key={key} href={href}>
         <MenuItem
-          // bgColor={'#00024a'}
           bgColor={'transparent'}
           color={'white'}
           justifyContent={'center'}
@@ -30,45 +29,55 @@ const HeaderSm = () => {
   };
 
   return (
-    <div>
-      <Flex
-        h={12}
-        justifyContent='space-between'
-        alignItems='center'
-        px={2}
-        sx={{
-          bgGradient: 'radial(#0000c9, #00024a)',
-        }}
-      >
-        <Image
-          src='/images/bridgetown-bluegrass.svg'
-          alt='bridgetown bluegrass'
-          width={['70%', '55%']}
-          marginLeft={['14%', '24%']}
-          marginBottom={1}
-        />
-        <Menu>
+    <Box
+      pb={1}
+      pt={1.5}
+      px={[3]}
+      width={'100vw'}
+      sx={{
+        bgGradient: 'radial(#0000c9, #00024a)',
+      }}
+    >
+      <Menu>
+        <Flex justifyContent={'space-between'} alignItems={'center'}>
+          <MenuButton
+            as={Button}
+            bg={'transparent'}
+            color={'transparent'}
+            rightIcon={<FiMenu />}
+          />
+
+          <Image
+            w={'70%'}
+            pl={'4%'}
+            src='/images/header-small.svg'
+            alt='bridgetown bluegrass'
+            marginBottom={1}
+          />
+
           <MenuButton
             as={Button}
             bg={'transparent'}
             color={'#4a8fff'}
+            fontSize={['20px', '28px']}
             rightIcon={<FiMenu />}
           />
-          <MenuList
-            minWidth={'100vw'}
-            borderRadius={0}
-            p={0}
-            sx={{
-              bgGradient: 'radial(#0000c9, #00024a)',
-            }}
-          >
-            {nav_obj.map((nav, i) => {
-              return <SmLink key={i} title={nav.title} href={nav.route} />;
-            })}
-          </MenuList>
-        </Menu>
-      </Flex>
-    </div>
+        </Flex>
+        <MenuList
+        border={0}
+          minWidth={'100vw'}
+          borderRadius={0}
+          p={0}
+          sx={{
+            bgGradient: 'radial(#0000c9, #00024a)',
+          }}
+        >
+          {nav_obj.map((nav, i) => {
+            return <SmLink key={i} title={nav.title} href={nav.route} />;
+          })}
+        </MenuList>
+      </Menu>
+    </Box>
   );
 };
 
