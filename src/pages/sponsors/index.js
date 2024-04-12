@@ -7,18 +7,9 @@ import PageTextBox from '../../components/PageTextBox';
 const Sponsors = () => {
   const SponsorLogoBox = ({ link, pic, alt }) => {
     return (
-      <Flex
-        w={'full'}
-        h={'full'}
-        justifyContent={'center'}
-        alignItems={'center'}
-      >
+      <Flex w={'full'} h={'full'} justifyContent={'center'} alignItems={'center'}>
         <Box w={['300px']}>
-          <a
-            href={`https://www.${link}`}
-            target='_blank'
-            rel='noreferrer noopener'
-          >
+          <a href={`https://www.${link}`} target='_blank' rel='noreferrer noopener'>
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -37,38 +28,22 @@ const Sponsors = () => {
     <div>
       <PageContainer heading={'Sponsors'}>
         <PageTextBox>
-          Our festival is made possible by our generous sponsors. They are what
-          enable us to pay musicians a wage worthy of their talent, as well as
-          make donations to our supported charities. Please support them in any
-          way you can. Click on the logos to be redirected to their website.
+          Our festival is made possible by our generous sponsors. They are what enable us to pay
+          musicians a wage worthy of their talent, as well as make donations to our supported
+          charities. Please support them in any way you can. Click on the logos to be redirected to
+          their website.
         </PageTextBox>
 
-        <SponsorLogoBox
-          link={'rainierbeer.com'}
-          pic={'R-rainier.png'}
-          alt={'Rainier Beer'}
-        />
+        <SponsorLogoBox link={'rainierbeer.com'} pic={'R-rainier.png'} alt={'Rainier Beer'} />
 
-        <SimpleGrid columns={[1, null, 3]} spacing={10} py={4}>
-          {/* 
-          <SponsorLogoBox
-          link={''}
-          pic={''}
-          alt={''}
-        /> 
-        */}
-
+        <SimpleGrid columns={[1, null, 3]} spacing={10} py={4} px={2}>
           <SponsorLogoBox
             link={'eartrumpetlabs.com'}
             pic={'eartrumpet.png'}
             alt={'Ear Trumpet Labs'}
           />
 
-          <SponsorLogoBox
-            link={'audixusa.com'}
-            pic={'audix.jpg'}
-            alt={'Audix Microphones'}
-          />
+          <SponsorLogoBox link={'audixusa.com'} pic={'audix.jpg'} alt={'Audix Microphones'} />
           <SponsorLogoBox
             link={'giganticbrewing.com'}
             pic={'gigantic-color.png'}
@@ -90,11 +65,7 @@ const Sponsors = () => {
             pic={'stone-circle.png'}
             alt={'Stone Circle Cider'}
           />
-          <SponsorLogoBox
-            link={'travelmag.com'}
-            pic={'travelmag-color.png'}
-            alt={'Travelmag'}
-          />
+          <SponsorLogoBox link={'travelmag.com'} pic={'travelmag-color.png'} alt={'Travelmag'} />
           <SponsorLogoBox
             link={'stjosefswinery.com'}
             pic={'st-josefs.png'}
@@ -107,17 +78,8 @@ const Sponsors = () => {
           />
         </SimpleGrid>
         <Box w={['100%', null, '600px', '800px', '1000px']} p={[0, 6]}>
-          <Flex
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <a
-              href={`https://www.oregonbluegrass.org`}
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+          <Flex w={'full'} h={'full'} justifyContent={'center'} alignItems={'center'}>
+            <a href={`https://www.oregonbluegrass.org`} target='_blank' rel='noreferrer noopener'>
               <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

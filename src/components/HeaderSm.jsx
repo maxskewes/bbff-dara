@@ -40,14 +40,10 @@ const HeaderSm = () => {
     >
       <Menu>
         <Flex justifyContent={'space-between'} alignItems={'center'}>
-          <MenuButton
-            as={Button}
-            bg={'transparent'}
-            color={'transparent'}
-            rightIcon={<FiMenu />}
-          />
+          <MenuButton as={Button} bg={'transparent'} color={'transparent'} rightIcon={<FiMenu />} />
 
           <Image
+            minHeight={'55px'}
             w={'70%'}
             pl={'4%'}
             src='/images/header-small.svg'
@@ -64,7 +60,7 @@ const HeaderSm = () => {
           />
         </Flex>
         <MenuList
-        border={0}
+          border={0}
           minWidth={'100vw'}
           borderRadius={0}
           p={0}

@@ -1,32 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Box,
-  Text,
-  Image,
-  HStack,
-  SimpleGrid,
-  Flex,
-  Icon,
-} from '@chakra-ui/react';
+import { Box, Text, Image, HStack, SimpleGrid, Flex, Icon } from '@chakra-ui/react';
 import { RiInstagramFill } from 'react-icons/ri';
 import { FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   const SponsorFooterBox = ({ link, pic, alt }) => {
     return (
-      <Flex
-        w={'full'}
-        h={'full'}
-        justifyContent={'center'}
-        alignItems={'center'}
-      >
+      <Flex w={'full'} h={'full'} justifyContent={'center'} alignItems={'center'}>
         <Box w={['100px', null, '200px']}>
-          <a
-            href={`https://www.${link}`}
-            target='_blank'
-            rel='noreferrer noopener'
-          >
+          <a href={`https://www.${link}`} target='_blank' rel='noreferrer noopener'>
             <motion.img
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -101,19 +84,9 @@ const Footer = () => {
             </a>
           </HStack>
 
-          <Flex
-            pt={[6]}
-            w={'full'}
-            h={'full'}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
+          <Flex pt={[6]} w={'full'} h={'full'} justifyContent={'center'} alignItems={'center'}>
             <Box w={['100px', null, '200px']}>
-              <a
-                href='https://rainierbeer.com/'
-                target='_blank'
-                rel='noreferrer noopener'
-              >
+              <a href='https://rainierbeer.com/' target='_blank' rel='noreferrer noopener'>
                 <motion.img
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -125,21 +98,13 @@ const Footer = () => {
               </a>
             </Box>
           </Flex>
-          <SimpleGrid
-            columns={[2, null, 4]}
-            spacing={[6, null, null, 10]}
-            py={6}
-          >
+          <SimpleGrid columns={[2, null, 4]} spacing={[6, null, null, 10]} py={6}>
             <SponsorFooterBox
               link={'eartrumpetlabs.com'}
               pic={'eartrumpet.svg'}
               alt={'Ear Trumpet Labs'}
             />
-            <SponsorFooterBox
-              link={'audixusa.com'}
-              pic={'audix.svg'}
-              alt={'Audix Microphones'}
-            />
+            <SponsorFooterBox link={'audixusa.com'} pic={'audix.svg'} alt={'Audix Microphones'} />
             <SponsorFooterBox
               link={'breakside.com'}
               pic={'breakside.svg'}
@@ -165,11 +130,7 @@ const Footer = () => {
               pic={'stone-circle.svg'}
               alt={'Stone Circle Cider'}
             />
-            <SponsorFooterBox
-              link={'travelmag.com'}
-              pic={'travelmag.svg'}
-              alt={'Travelmag'}
-            />
+            <SponsorFooterBox link={'travelmag.com'} pic={'travelmag.svg'} alt={'Travelmag'} />
             <SponsorFooterBox
               link={'sanctuaryhall.com'}
               pic={'sanctuary-hall.svg'}
@@ -184,19 +145,18 @@ const Footer = () => {
 
           <Box
             sx={{
-              paddingTop: [4, null, 8],
+              padding: [4, null, 8],
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              textColor: '#8a8a8a',
-              fontWeight: 600,
-              letterSpacing: 2,
+              textAlign: 'center',
+              // color: '#8a8a8a',
+              color: 'white',
+              fontWeight: 500,
+              letterSpacing: 1.5,
               fontSize: ['1rem', null, null, null, '1.25rem'],
             }}
           >
-            <Text>
-              Bridgetown Bluegrass is a not-for-profit music festival.
-            </Text>
+            <Text>Bridgetown Bluegrass is a not-for-profit music festival.</Text>
             <Text>Only the musicians and technicians get paid.</Text>
             <Text>All additional revenue is donated to charity.</Text>
           </Box>
