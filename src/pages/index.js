@@ -1,20 +1,43 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Image, Box, Flex, Show, Text, Hide, Icon } from '@chakra-ui/react';
+import {
+  Image,
+  Box,
+  Flex,
+  Show,
+  Text,
+  Hide,
+  Icon,
+  Container,
+  Grid,
+  GridItem,
+  VStack,
+  HStack,
+} from '@chakra-ui/react';
 import MotionBirdBox from '../components/MotionBirdBox';
 import EventbriteButton from '../components/EventbriteButton';
 import DonateButton from '../components/DonateButton';
 import { TbBuildingBridge } from 'react-icons/tb';
 import { bandlist } from '../assets/bandlist';
+import PromoVideoModal from '../components/PromoVideoModal';
+import ReactPlayer from 'react-player/lazy';
 
 export default function Home() {
   const BandListItem = ({ bandname }) => {
     return (
-      <Flex flexDirection={'row'} >
-        <Text color={'white'} textTransform={'uppercase'} whiteSpace={'nowrap'} fontWeight={600} letterSpacing={2}>
+      <Flex flexDirection={'row'}>
+        <Text
+          color={'white'}
+          textTransform={'uppercase'}
+          whiteSpace={'nowrap'}
+          fontWeight={600}
+          letterSpacing={2}
+        >
           &nbsp;{bandname}&nbsp;
-        </Text><Flex alignItems={'center'} fontSize={'sm'}>
-        <Icon as={TbBuildingBridge} /></Flex>
+        </Text>
+        <Flex alignItems={'center'} fontSize={'sm'}>
+          <Icon as={TbBuildingBridge} />
+        </Flex>
       </Flex>
     );
   };
@@ -33,7 +56,7 @@ export default function Home() {
 
       <main>
         <Box position='relative' width={'100vw'} height={'auto'} minH={300}>
-          <Show above='md' zIndex={5}>
+          {/* <Show above='md' zIndex={5}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
@@ -54,7 +77,7 @@ export default function Home() {
                 <DonateButton />
               </Flex>
             </motion.div>
-          </Show>
+          </Show> */}
 
           <Box
             w={'100%'}
@@ -106,76 +129,124 @@ export default function Home() {
               duration: 0.5,
             }}
           >
-            <Flex
+            <Box
+              width={'full'}
               pt={[4, null, 8, null, 12]}
               pb={[2, null, null, 4, 4]}
-              flexDirection={['column', null, 'row']}
-              justifyContent='center'
-              alignItems='center'
+              px={[4]}
             >
-              <Image
-                src='/images/paint-date.svg'
-                alt='saturday may 4th'
-                height={'100%'}
-                width={'100%'}
-                minWidth={[240, null, null, 300]}
-                maxWidth={['60vw', null, '100px', '460px']}
-                mx={[12, null, 2, 8]}
-                color={'whiteAlpha.400'}
-              />
+              {/*large display */}
+              <Show above='md'>
+                <Grid
+                  templateColumns={['repeat(1, 1fr)', null, 'repeat(3, 1fr)']}
+                  spacing={[4]}
+                >
+                  <GridItem
+                    colSpan={1}
+                    py={[0, null, null, 2, 6]}
+                    px={[2, null, null, 4]}
+                    pb={[4, null, 0]}
+                  >
+                    <ReactPlayer
+                      url='https://www.youtube.com/watch?v=TLzTBULRAME'
+                      playing
+                      controls
+                      width={'auto'}
+                    />
+                  </GridItem>
 
-              <Image
-                src='/images/zombie-banjo-picks.svg'
-                alt='zombie hand wearing banjo picks'
-                height={'100%'}
-                maxHeight={'600px'}
-                width={'100%'}
-                minWidth={300}
-                maxWidth={['90vw', null, '30%']}
-              />
+                  <GridItem colSpan={1}>
+                    <Image
+                      src='/images/zombie-banjo-picks.svg'
+                      alt='zombie hand wearing banjo picks'
+                    />
+                  </GridItem>
 
-              <Image
-                src='/images/paint-location.svg'
-                alt='ucc first congregational church se park and madison'
-                height={'100%'}
-                width={'100%'}
-                minWidth={[240, null, null, 300]}
-                maxWidth={['60vw', null, '100px', '460px']}
-                mx={[12, null, 2, 8]}
-              />
-            </Flex>
-            <Flex
-              flexDirection={'column'}
-              color='white'
-              justifyContent={'center'}
-              alignItems={'center'}
-              textAlign={'center'}
-              pb={[20, null, null, null, 28]}
-              fontSize={['md', null, null, 'lg', 'xl']}
-            >
-        
-              <Flex flexWrap={'wrap'} justifyContent={'center'}>
-                {bandlist.map((band, i) => {
-                  return <BandListItem key={i} bandname={band} />;
-                })}
-              </Flex>
-          
-            </Flex>
-            <Show above='md'>
+                  <GridItem
+                    colSpan={1}
+                    pt={[0, null, null, 2, null, 6]}
+                    display={'flex'}
+                    justifyContent={'center'}
+                  >
+                    <VStack>
+                      <EventbriteButton />
+                      <DonateButton />
+                      <Image
+                        src='/images/paint-all.svg'
+                        alt='Saturday May 4th First Congregational Church 1126 SW Park'
+                        pt={[4]}
+                        width={['200px', null, '280px', null]}
+                      />
+                    </VStack>
+                  </GridItem>
+                </Grid>
+              </Show>
+
+              {/*mobile display */}
+              <Hide above='md'>
+                <Flex
+                  flexDirection={'column'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                >
+                  <VStack w={'full'}>
+                    <HStack>
+                      <EventbriteButton width={'100%'}/>
+                      <DonateButton width={'100%'}/>
+                    </HStack>
+                    <Image
+                      src='/images/paint-all.svg'
+                      alt='Saturday May 4th First Congregational Church 1126 SW Park'
+                      pt={[4]}
+                      width={['200px', '300px']}
+                    />
+                  </VStack>
+
+                  <Image
+                    src='/images/zombie-banjo-picks.svg'
+                    alt='zombie hand wearing banjo picks'
+                  />
+
+                  <ReactPlayer
+                    url='https://www.youtube.com/watch?v=TLzTBULRAME'
+                    playing
+                    controls
+                    width={'auto'}
+                  />
+                </Flex>
+              </Hide>
+
               <Flex
-                color='white'
                 flexDirection={'column'}
+                color='white'
+                justifyContent={'center'}
                 alignItems={'center'}
-                pb={[20, null, null, null, 28]}
+                textAlign={'center'}
+                pb={8}
                 fontSize={['md', null, null, 'lg', 'xl']}
               >
-                <Text>
-                  Bridgetown Bluegrass is a not-for-profit music festival.
-                </Text>
-                <Text>Only the musicians and technicians get paid.</Text>
-                <Text>All additional revenue is donated to charity.</Text>
+                <Flex flexWrap={'wrap'} justifyContent={'center'}>
+                  {bandlist.map((band, i) => {
+                    return <BandListItem key={i} bandname={band} />;
+                  })}
+                </Flex>
               </Flex>
-            </Show>
+              <Show above='md'>
+                <Flex
+                  color='white'
+                  flexDirection={'column'}
+                  alignItems={'center'}
+                  pb={[20, null, null, null, 28]}
+                  fontSize={['md', null, null, 'lg', 'xl']}
+                >
+                  <Text>
+                    Bridgetown Bluegrass is a not-for-profit music festival.
+                  </Text>
+                  <Text>Only the musicians and technicians get paid.</Text>
+                  <Text>All additional revenue is donated to charity.</Text>
+                </Flex>
+              </Show>
+            </Box>
           </motion.div>
         </Box>
       </main>
