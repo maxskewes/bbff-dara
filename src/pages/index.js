@@ -189,10 +189,15 @@ export default function Home() {
                   justifyContent={'center'}
                   alignItems={'center'}
                 >
+                  {' '}
+                  <Image
+                    src='/images/zombie-banjo-picks.svg'
+                    alt='zombie hand wearing banjo picks'
+                  />
                   <VStack w={'full'}>
                     <HStack>
-                      <EventbriteButton width={'100%'}/>
-                      <DonateButton width={'100%'}/>
+                      <EventbriteButton width={'100%'} />
+                      <DonateButton width={'100%'} />
                     </HStack>
                     <Image
                       src='/images/paint-all.svg'
@@ -201,12 +206,6 @@ export default function Home() {
                       width={['200px', '300px']}
                     />
                   </VStack>
-
-                  <Image
-                    src='/images/zombie-banjo-picks.svg'
-                    alt='zombie hand wearing banjo picks'
-                  />
-
                   <ReactPlayer
                     url='https://www.youtube.com/watch?v=TLzTBULRAME'
                     playing
