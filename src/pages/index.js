@@ -189,7 +189,6 @@ export default function Home() {
                   justifyContent={'center'}
                   alignItems={'center'}
                 >
-                  {' '}
                   <Image
                     src='/images/zombie-banjo-picks.svg'
                     alt='zombie hand wearing banjo picks'

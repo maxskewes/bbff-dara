@@ -3,7 +3,7 @@ import { Text, Image, Box, Center, SimpleGrid, Flex } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
 
 const LineUp = () => {
-  const ArtistBox = ({ bandname, synop }) => {
+  const ArtistBox = ({ bandname, time, synop }) => {
     return (
       <Center p={4} color={'white'} flexDirection={'column'}>
         <Text
@@ -15,6 +15,14 @@ const LineUp = () => {
           maxW={[300]}
         >
           {bandname}
+        </Text>
+        <Text
+          fontSize={'xl'}
+          textAlign={'center'}
+          fontWeight={700}
+          letterSpacing={[2]}
+        >
+          {time}
         </Text>
         <Text fontSize={'md'} textAlign={'center'} whiteSpace={'pre-wrap'}>
           {synop}
@@ -97,70 +105,82 @@ const LineUp = () => {
       >
         <ArtistBox
           bandname={'ALDER STREET'}
+          time={'10:00pm'}
           synop={
             "Boot-Stompin', Gritty and Bourbon Flavored - reprises ranging from Iron Maiden to Bill Monroe"
           }
         />
         <ArtistBox
           bandname={'JACKSTRAW'}
+          time={'7:00pm'}
           synop={
             "Portland's own Iconic Bluegrass Band - out of their comfort zone of their 20+ year residency at the Laruelthirst Public House"
           }
         />
         <ArtistBox
           bandname={'FOG HOLLER'}
+          time={'9:00pm'}
           synop={
             'Bluegrass Cats that Shred - original songs, topical in substance yet traditional in style "the next generation of the many shades of grass"'
           }
         />
         <ArtistBox
           bandname={'The MUDDY SOULS'}
+          time={'8:00pm'}
           synop={
             'A leading Progressive/Jamgrass band featuring original songs, virtuosic improvisation, tight vocal harmonies, and a high-octane groove'
           }
         />
         <ArtistBox
           bandname={'The HIGH SEAGRASS'}
+          time={'3:00pm'}
           synop={
             'Bluegrass Marauders pickin’ and singin’ hard driving traditional prowess with bold improvisational exploration'
           }
         />
         <ArtistBox
           bandname={'SKILLETHEAD'}
+          time={'4:00pm'}
           synop={
             'Original, Traditional, Modern - the best of bluegrass old and new with driving fiddle tunes and layered harmonies'
           }
         />
         <ArtistBox
           bandname={'BAND of COMERADOS'}
+          time={'6:00pm'}
           synop={
             'Feel-Good Jamgrass with intimate ornamentaion, dual vocal parts and intense improvisational jams'
           }
         />
         <ArtistBox
           bandname={'Amanda Richards &\n The GOOD LONG WHILES'}
+          time={'1:00pm'}
           synop={
             'Three part harmony Gothic-Americana on rhythm guitar, bass, lap steel electric banjo'
           }
         />
         <ArtistBox
           bandname={'THUNDER RIDGE'}
+          time={'5:00pm'}
           synop={
             'Straight-Ahead Bluegrass - traditional five-piece band inspired by the masters'
           }
         />
         <ArtistBox
           bandname={'BLUE FLAGS & BLACK GRASS'}
+          time={'2:00pm'}
           synop={
             'Emulating string Bands of the 1920s and ‘30s - blending Ragtime, Viper Jazz, Country Blues, Old-Time, Jug Band and Bluegrass'
           }
         />
         <ArtistBox
           bandname={'DADWEED'}
+          time={'3:30pm'}
           synop={'Acoustic Jazz/Folk/Soul/R&B through a Bluegrass lens'}
         />
         <ArtistBox
           bandname={'The LOIS and CLARK EXPEDITION'}
+          time={'1:30pm'}
           synop={
             'Banjo/Guitar Duo with vocal harmonies featuring Linda Leavitt and Tom Nechville'
           }
@@ -168,15 +188,15 @@ const LineUp = () => {
 
         <ArtistBox
           bandname={'SUNNY SOUTH'}
+          time={'4:30pm'}
           synop={
             'Traditional Fiery Bluegrass with tight harmonies and wonderful musicianship for over 30 years'
           }
         />
         <ArtistBox
           bandname={'PARTY McFLY'}
-          synop={
-            "Bluegrass Mando/Guitar Duo."
-          }
+          time={'2:30'}
+          synop={'Bluegrass Mando/Guitar Duo.'}
         />
       </SimpleGrid>
 
