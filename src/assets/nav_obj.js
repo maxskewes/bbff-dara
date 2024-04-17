@@ -8,8 +8,13 @@ export const nav_obj = [
     route: 'tickets',
   },
   {
-    title: '2024 Line-Up',
-    route: 'line-up',
+    title: 'Schedule',
+    route: 'schedule',
+  },
+
+  {
+    title: 'Workshops',
+    route: 'workshops',
   },
   {
     title: 'Previous Years',
