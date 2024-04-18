@@ -12,12 +12,13 @@ const LineUp = () => {
         maxWidth={['300px']}
       >
         <Text
-          fontSize={'2xl'}
+          fontSize={['xl','2xl']}
           textAlign={'center'}
           fontWeight={600}
           letterSpacing={[2]}
           whiteSpace={'pre-wrap'}
           maxW={[300]}
+          textTransform={'uppercase'}
         >
           {bandname}
         </Text>

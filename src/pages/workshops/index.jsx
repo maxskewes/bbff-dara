@@ -8,8 +8,9 @@ const Workshops = () => {
       <Center
         color={'white'}
         flexDirection={'column'}
-        p={[6]}
-        h={[220, null, 300]}
+        m={[4]}
+        h={[220, 280, 220]}
+        width={[220, null, 300]}
         borderRadius={'2xl'}
         bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
       >
@@ -19,7 +20,7 @@ const Workshops = () => {
           fontWeight={600}
           letterSpacing={[2]}
           whiteSpace={'pre-wrap'}
-          maxW={[300]}
+          maxW={[200, null, 280]}
           textTransform={'uppercase'}
         >
           {instrument}
@@ -41,11 +42,12 @@ const Workshops = () => {
           textAlign={'center'}
           whiteSpace={'pre-wrap'}
           letterSpacing={[1]}
+          maxW={[200, null, 280]}
         >
-          {`of ${bandname}`}
+          {bandname}
         </Text>
         <Text
-          fontSize={'md'}
+          fontSize={['md', null, 'lg']}
           textAlign={'center'}
           fontWeight={700}
           letterSpacing={[2]}
@@ -57,48 +59,50 @@ const Workshops = () => {
   };
 
   return (
-    <PageContainer>
-      <SimpleGrid
-        columns={[1, null, 3]}
-        spacing={4}
+    <PageContainer heading={'WORKSHOPS'}>
+      <Text fontSize={['sm', null, 'md', 'xl']} fontWeight={600} letterSpacing={[2]} color={'white'}>
+        $10 donation to mentor
+      </Text>
+      <Flex
+        flexWrap={'wrap'}
         maxW={['1200px']}
-        p={[2]}
-        pb={[12]}
+        p={[4, null, 8]}
         mb={[8]}
-        alignItems={'flex-start'}
+        alignItems={'center'}
+        justifyContent={'center'}
       >
         <WorkshopBox
           instrument={'Bluegrass Vocal Harmony'}
           mentor={'Linda and Tom'}
-          bandname={'The Lois and Clark Expedition'}
+          bandname={'of The Lois and Clark Expedition'}
           time={'12:00 - 1:00'}
         />
         <WorkshopBox
           instrument={'Bluegrass Guitar'}
           mentor={'Lonnie Ohta-Mayer'}
-          bandname={'Flatpicker Extrodinare'}
+          bandname={'flatpicker extrodinare'}
           time={'12:00 - 1:00'}
         />
 
         <WorkshopBox
           instrument={'Bluegrass Fiddle'}
           mentor={'Lillian Sawyer'}
-          bandname={'Fog Holler'}
+          bandname={'of Fog Holler'}
           time={'11:00 - 12:00'}
         />
         <WorkshopBox
           instrument={'Bluegrass Mandolin'}
           mentor={'Kaden Hurst'}
-          bandname={'Never Come Down'}
+          bandname={'of Never Come Down'}
           time={'11:00 - 2:00'}
         />
         <WorkshopBox
           instrument={'Bluegrass Banjo'}
           mentor={'Chuck Holloway'}
-          bandname={'Thunder Ridge'}
+          bandname={'of Thunder Ridge'}
           time={'12:00 - 1:00'}
         />
-      </SimpleGrid>
+      </Flex>
     </PageContainer>
   );
 };

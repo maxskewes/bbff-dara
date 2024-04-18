@@ -98,7 +98,7 @@ const Footer = () => {
               </a>
             </Box>
           </Flex>
-          <SimpleGrid columns={[2, null, 4]} spacing={[6, null, null, 10]} py={6}>
+          <SimpleGrid columns={[2, null, 4]} spacing={[6, null, null, 10]} p={6}>
             <SponsorFooterBox
               link={'eartrumpetlabs.com'}
               pic={'eartrumpet.svg'}
