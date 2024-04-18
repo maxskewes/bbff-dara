@@ -73,12 +73,12 @@ const Workshops = () => {
           bandname={'The Lois and Clark Expedition'}
           time={'12:00 - 1:00'}
         />
-        {/* <WorkshopBox
+        <WorkshopBox
           instrument={'Bluegrass Guitar'}
-          mentor={'Lonnie'}
-       bandname={''}
+          mentor={'Lonnie Ohta-Mayer'}
+          bandname={'Flatpicker Extrodinare'}
           time={'12:00 - 1:00'}
-        /> */}
+        />
 
         <WorkshopBox
           instrument={'Bluegrass Fiddle'}
