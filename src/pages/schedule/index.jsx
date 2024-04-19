@@ -1,102 +1,132 @@
-import React from 'react';
 import { Text, Image, Box, Center, SimpleGrid, Flex } from '@chakra-ui/react';
 import PageContainer from '../../components/PageContainer';
+import Link from 'next/link';
 
 const LineUp = () => {
-  const ArtistBox = ({ bandname, time, synop }) => {
+  const BackToTop = () => {
     return (
-      <Center
-        p={4}
-        color={'white'}
-        flexDirection={'column'}
-        maxWidth={['300px']}
-      >
-        <Text
-          fontSize={['xl','2xl']}
-          textAlign={'center'}
-          fontWeight={600}
-          letterSpacing={[2]}
-          whiteSpace={'pre-wrap'}
-          maxW={[300]}
-          textTransform={'uppercase'}
-        >
-          {bandname}
-        </Text>
-        <Text
-          fontSize={'xl'}
-          textAlign={'center'}
-          fontWeight={700}
-          letterSpacing={[2]}
-        >
-          {time}
-        </Text>
-        <Text fontSize={'md'} textAlign={'center'} whiteSpace={'pre-wrap'}>
-          {synop}
-        </Text>
-      </Center>
+      <Box m={24}>
+        <Link href={'/schedule'}>BACK TO TOP</Link>
+      </Box>
     );
   };
 
-  const FullArtistBox = ({ bandname, pic, ensemble, children }) => {
+  const ArtistBox = ({ bandname, time, synop, to }) => {
     return (
-      <Box
-        width={'full'}
-        maxW={[1200]}
-        p={[6]}
-        m={[2]}
-        borderRadius={'2xl'}
-        bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
-      >
-        <Flex
+      <Link href={`/schedule#${to}`}>
+        <Center
+          p={4}
           color={'white'}
-          flexDirection={['column', null, 'row']}
-          justifyContent={'center'}
-          alignItems={'center'}
+          flexDirection={'column'}
+          maxWidth={['300px']}
         >
-          <Flex flexDirection={['column']} pr={[0, null, 6]}>
-            <Text
-              letterSpacing={[2]}
-              fontSize={['2xl']}
-              fontWeight={[600]}
-              textAlign={'center'}
-              whiteSpace={'pre-wrap'}
-              maxW={[300]}
-            >
-              {bandname}
-            </Text>
-            <Box w={[300]} h={[300]}>
-              <Image
-                w={'full'}
-                h={'full'}
-                py={[2]}
-                src={pic}
-                alt={`band photo of ${bandname}`}
-                objectFit={'cover'}
-              />
-            </Box>
-            <Text
-              fontSize={['xs']}
-              textAlign={'center'}
-              whiteSpace={'pre-wrap'}
-              pb={2}
-            >
-              {ensemble}
-            </Text>
-          </Flex>
+          <Text
+            fontSize={['xl', '2xl']}
+            textAlign={'center'}
+            fontWeight={600}
+            letterSpacing={[2]}
+            whiteSpace={'pre-wrap'}
+            maxW={[300]}
+            textTransform={'uppercase'}
+          >
+            {bandname}
+          </Text>
+          <Text
+            fontSize={'xl'}
+            textAlign={'center'}
+            fontWeight={700}
+            letterSpacing={[2]}
+          >
+            {time}
+          </Text>
+          <Text fontSize={'md'} textAlign={'center'} whiteSpace={'pre-wrap'}>
+            {synop}
+          </Text>
+        </Center>
+      </Link>
+    );
+  };
 
-          <Flex alignItems={['center']} justifyContent={['center']} pb={[6]}>
-            <Text fontSize={['md']} textAlign={'justify'}>
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              {children}
-            </Text>
+  const FullArtistBox = ({ bandname, pic, ensemble, children, sectionID }) => {
+    return (
+      <>
+        <section id={`#${sectionID}`}></section>
+        <Box
+          position={'relative'}
+          width={'full'}
+          maxW={[1200]}
+          p={[6]}
+          m={[2]}
+          borderRadius={'2xl'}
+          bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
+        >
+          <Box
+            position={'absolute'}
+            right={3}
+            bottom={3}
+            pt={1}
+            pb={2}
+            px={3}
+            borderRadius={'2xl'}
+            bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
+          >
+            <Link href={'/schedule'}>
+              <Text color={'white'}>back to lineup</Text>
+            </Link>
+          </Box>
+          <Flex
+            color={'white'}
+            flexDirection={['column', null, 'row']}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Flex flexDirection={['column']} pr={[0, null, 6]}>
+              <Text
+                letterSpacing={[2]}
+                fontSize={['2xl']}
+                fontWeight={[600]}
+                textAlign={'center'}
+                whiteSpace={'pre-wrap'}
+                maxW={[300]}
+              >
+                {bandname}
+              </Text>
+              <Box w={[300]} h={[300]}>
+                <Image
+                  w={'full'}
+                  h={'full'}
+                  py={[2]}
+                  src={pic}
+                  alt={`band photo of ${bandname}`}
+                  objectFit={'cover'}
+                />
+              </Box>
+              <Text
+                fontSize={['xs']}
+                textAlign={'center'}
+                whiteSpace={'pre-wrap'}
+                pb={2}
+              >
+                {ensemble}
+              </Text>
+            </Flex>
+
+            <Flex alignItems={['center']} justifyContent={['center']} pb={[6]}>
+              <Text fontSize={['md']} textAlign={'justify'}>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                {children}
+              </Text>
+            </Flex>
           </Flex>
-        </Flex>
-      </Box>
+        </Box>
+      </>
     );
   };
 
   return (
     <PageContainer heading={"THIS YEAR'S LINEUP"}>
+      <Text color={'whiteAlpha.700'}>click on band for biography</Text>
+      <Text color={'whiteAlpha.700'} pb={[4]}>time slots subject to change</Text>
       <Box>
         <Box
           color={'white'}
@@ -109,11 +139,9 @@ const LineUp = () => {
           borderRadius={'2xl'}
           bgImage="radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
         >
-          <Text fontSize={['xl']} fontWeight={600} letterSpacing={[1.5]}>
+          <Text fontSize={['2xl']} fontWeight={600} letterSpacing={[1.5]} pb={[4]}>
             Chansel Stage
           </Text>
-          <Text pb={[4]}>time slots subject to change</Text>
-          {/* <Text> click on bandname for more information</Text> */}
 
           <SimpleGrid columns={[1, null, 3]} spacing={1}>
             <ArtistBox
@@ -122,6 +150,7 @@ const LineUp = () => {
               synop={
                 "Boot-Stompin', Gritty and Bourbon Flavored - reprises ranging from Iron Maiden to Bill Monroe"
               }
+              to={'alder-street'}
             />
             <ArtistBox
               bandname={'JACKSTRAW'}
@@ -129,6 +158,7 @@ const LineUp = () => {
               synop={
                 "Portland's own Iconic Bluegrass Band - out of their comfort zone of their 20+ year residency at the Laruelthirst Public House"
               }
+              to={'jackstraw'}
             />
             <ArtistBox
               bandname={'FOG HOLLER'}
@@ -136,6 +166,7 @@ const LineUp = () => {
               synop={
                 'Bluegrass Cats that Shred - original songs, topical in substance yet traditional in style "the next generation of the many shades of grass"'
               }
+              to={'fog-holler'}
             />
             <ArtistBox
               bandname={'The HIGH SEAGRASS'}
@@ -143,6 +174,7 @@ const LineUp = () => {
               synop={
                 'Bluegrass Marauders pickin’ and singin’ hard driving traditional prowess with bold improvisational exploration'
               }
+              to={'high-seagrass'}
             />
 
             <ArtistBox
@@ -151,6 +183,7 @@ const LineUp = () => {
               synop={
                 'Feel-Good Jamgrass with intimate ornamentaion, dual vocal parts and intense improvisational jams'
               }
+              to={'band-of-comerados'}
             />
             <ArtistBox
               bandname={'The MUDDY SOULS'}
@@ -158,6 +191,7 @@ const LineUp = () => {
               synop={
                 'A leading Progressive/Jamgrass band featuring original songs, virtuosic improvisation, tight vocal harmonies, and a high-octane groove'
               }
+              to={'muddy-souls'}
             />
             <ArtistBox
               bandname={'THUNDER RIDGE'}
@@ -165,6 +199,7 @@ const LineUp = () => {
               synop={
                 'Straight-Ahead Bluegrass - traditional five-piece band inspired by the masters'
               }
+              to={'thunder-ridge'}
             />
             <ArtistBox
               bandname={'SKILLETHEAD'}
@@ -172,6 +207,7 @@ const LineUp = () => {
               synop={
                 'Original, Traditional, Modern - the best of bluegrass old and new with driving fiddle tunes and layered harmonies'
               }
+              to={'skillethead'}
             />
             <ArtistBox
               bandname={'BLUE FLAGS & BLACK GRASS'}
@@ -179,6 +215,7 @@ const LineUp = () => {
               synop={
                 'Emulating string Bands of the 1920s and ‘30s - blending Ragtime, Viper Jazz, Country Blues, Old-Time, Jug Band and Bluegrass'
               }
+              to={'blue-flags-and-black-grass'}
             />
             <ArtistBox
               bandname={'Amanda Richards &\n The GOOD LONG WHILES'}
@@ -186,6 +223,7 @@ const LineUp = () => {
               synop={
                 'Three part harmony Gothic-Americana on rhythm guitar, bass, lap steel electric banjo'
               }
+              to={'good-long-whiles'}
             />
           </SimpleGrid>
         </Box>
@@ -201,11 +239,9 @@ const LineUp = () => {
           borderRadius={'2xl'}
           bgImage="radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
         >
-          <Text fontSize={['xl']} fontWeight={600} letterSpacing={[1.5]}>
+          <Text pb={[4]} fontSize={['2xl']} fontWeight={600} letterSpacing={[1.5]}>
             Chapel Stage
           </Text>
-          <Text pb={[4]}>time slots subject to change</Text>
-          {/* <Text> click on bandname for more information</Text> */}
 
           <SimpleGrid columns={[1, null, 2]} spacing={1}>
             <ArtistBox
@@ -214,16 +250,19 @@ const LineUp = () => {
               synop={
                 'Traditional Fiery Bluegrass with tight harmonies and wonderful musicianship for over 30 years'
               }
+              to={'sunny-south'}
             />
             <ArtistBox
               bandname={'DADWEED'}
               time={'3:30pm'}
               synop={'Acoustic Jazz/Folk/Soul/R&B through a Bluegrass lens'}
+              to={'dadweed'}
             />
             <ArtistBox
               bandname={'PARTY McFLY'}
               time={'2:30'}
               synop={'Bluegrass Mando/Guitar Duo.'}
+              to={'party-mcfly'}
             />
             <ArtistBox
               bandname={'The LOIS and CLARK EXPEDITION'}
@@ -231,12 +270,14 @@ const LineUp = () => {
               synop={
                 'Banjo/Guitar Duo with vocal harmonies featuring Linda Leavitt and Tom Nechville'
               }
+              to={'lois-and-clark-expedition'}
             />
           </SimpleGrid>
         </Box>
       </Box>
 
       <SimpleGrid columns={[1, null, null]} spacing={[1]}>
+        <section id='alder-street' />
         <FullArtistBox
           bandname={'ALDER STREET'}
           pic={'/images/bandphotos/alder-street.jpg'}
@@ -254,6 +295,7 @@ const LineUp = () => {
           scene.
         </FullArtistBox>
 
+        <section id='jackstraw' />
         <FullArtistBox
           bandname={'JACKSTRAW'}
           pic={'/images/bandphotos/jackstraw.jpg'}
@@ -275,6 +317,7 @@ const LineUp = () => {
           impeccable musicianship and hard-driving original songs.
         </FullArtistBox>
 
+        <section id='fog-holler' />
         <FullArtistBox
           bandname={'FOG HOLLER'}
           pic={'/images/bandphotos/fog-holler.jpg'}
@@ -299,6 +342,7 @@ const LineUp = () => {
           bluegrass fans and newcomers alike.
         </FullArtistBox>
 
+        <section id='muddy-souls' />
         <FullArtistBox
           bandname={'The MUDDY SOULS'}
           pic={'/images/bandphotos/muddy-souls.jpg'}
@@ -318,6 +362,7 @@ const LineUp = () => {
           get your feet dancing and your face grinning.
         </FullArtistBox>
 
+        <section id='high-seagrass' />
         <FullArtistBox
           bandname={'The HIGH SEAGRASS'}
           pic={'/images/bandphotos/high-seagrass.jpg'}
@@ -335,6 +380,7 @@ const LineUp = () => {
           re-imagined covers.
         </FullArtistBox>
 
+        <section id='skillethead' />
         <FullArtistBox
           bandname={'SKILLETHEAD'}
           pic={'/images/bandphotos/skillethead.jpg'}
@@ -353,6 +399,7 @@ const LineUp = () => {
           and Skillethead is on that ride!
         </FullArtistBox>
 
+        <section id='band-of-comerados' />
         <FullArtistBox
           bandname={'BAND of\n COMERADOS'}
           pic={`https://static.wixstatic.com/media/929c29_e087af56464f43e7a9aac992db099965~mv2.jpg/v1/fill/w_977,h_548,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DSC09211.jpg`}
@@ -367,6 +414,7 @@ const LineUp = () => {
           these guys have so much damn fun when they&apos;re playing live music!
         </FullArtistBox>
 
+        <section id='good-long-whiles' />
         <FullArtistBox
           bandname={'The GOOD LONG WHILES'}
           pic={'/images/bandphotos/good-long-whiles.png'}
@@ -392,6 +440,7 @@ const LineUp = () => {
           shelter for wayward banjos.
         </FullArtistBox>
 
+        <section id='thunder-ridge' />
         <FullArtistBox
           bandname={'THUNDER RIDGE'}
           pic={
@@ -409,6 +458,7 @@ const LineUp = () => {
           bluegrass, and sprinkled with a few originals!
         </FullArtistBox>
 
+        <section id='blue-flags-and-black-grass' />
         <FullArtistBox
           bandname={'BLUE FLAGS & BLACK GRASS'}
           pic={'/images/bandphotos/blue-flags.jpg'}
@@ -426,6 +476,7 @@ const LineUp = () => {
           &apos;Fats&apos; McGuire.
         </FullArtistBox>
 
+        <section id={'dadweed'} />
         <FullArtistBox
           bandname={'DADWEED'}
           pic={'/images/bandphotos/dadweed.jpg'}
@@ -450,6 +501,7 @@ const LineUp = () => {
           mandolin, or banjo from time to time.
         </FullArtistBox>
 
+        <section id={'lois-and-clark-expedition'} />
         <FullArtistBox
           bandname={'The LOIS & CLARK EXPEDITION'}
           pic={'/images/bandphotos/lois-and-clark-expedition.jpg'}
@@ -468,6 +520,7 @@ const LineUp = () => {
           Expedition on their road of discovery.
         </FullArtistBox>
 
+        <section id={'sunny-south'} />
         <FullArtistBox
           bandname={'SUNNY SOUTH'}
           pic={
@@ -490,6 +543,7 @@ const LineUp = () => {
           that audiences enjoy.
         </FullArtistBox>
 
+        <section id={'party-mcfly'} />
         <FullArtistBox
           bandname={'PARTY McFLY'}
           pic={'/images/bandphotos/party-mcfly.png'}
@@ -498,6 +552,7 @@ const LineUp = () => {
           Bluegrass Mando/Guitar Duo.
         </FullArtistBox>
       </SimpleGrid>
+      <BackToTop />
     </PageContainer>
   );
 };
