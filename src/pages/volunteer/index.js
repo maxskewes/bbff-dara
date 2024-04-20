@@ -69,19 +69,28 @@ const Volunteer = () => {
 
   return (
     <PageContainer heading={'Volunteer'}>
-      <PageTextBox>
+      {/* PageTextBox for requesting volunteers */}
+      {/* <PageTextBox>
         The Bridgetown Fest depends on a community of volunteers to take
         tickets, pour beers, and sell merch. If you would like to volunteer,
         please let us know which available slot below you would like. Volunteers
         get a festival pass, festival shirt, and two drinks tickets for a three
         hour slot.
+      </PageTextBox> */}
+
+      {/* PageTextBox when all positions are filled */}
+      <PageTextBox>
+        All volunteer positions for this year's festival hav been filled. Thank
+        you for your interest, we hope to see you there regardless! Please don't
+        hesitate to apply when we announce the next fest.
       </PageTextBox>
+
       {error && (
         <Text color='red.600' my={4} fontSize='xl'>
           {error}
         </Text>
       )}
-      <FormContainer>
+      {/* <FormContainer>
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
           <FormLabel>Name</FormLabel>
           <Input
@@ -187,7 +196,7 @@ const Volunteer = () => {
             </ContactButton>
           </Center>
         </GridItem>
-      </FormContainer>
+      </FormContainer> */}
     </PageContainer>
   );
 };
