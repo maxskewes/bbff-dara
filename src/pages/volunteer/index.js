@@ -80,7 +80,7 @@ const Volunteer = () => {
 
       {/* PageTextBox when all positions are filled */}
       <PageTextBox>
-        All volunteer positions for this year's festival hav been filled. Thank
+        All volunteer positions for this year's festival have been filled. Thank
         you for your interest, we hope to see you there regardless! Please don't
         hesitate to apply when we announce the next fest.
       </PageTextBox>

@@ -183,7 +183,7 @@ export default function Home() {
               </Show>
 
               {/*mobile display */}
-              <Hide above='md'>
+              <Show below='md'>
                 <Flex
                   flexDirection={'column'}
                   justifyContent={'center'}
@@ -212,7 +212,7 @@ export default function Home() {
                     width={'auto'}
                   />
                 </Flex>
-              </Hide>
+              </Show>
 
               <Flex
                 flexDirection={'column'}
