@@ -32,10 +32,10 @@ export const nav_obj = [
   //   title: 'Artist Apply',
   //   route: 'artist-apply',
   // },
-  {
-    title: 'Volunteer',
-    route: 'volunteer',
-  },
+  // {
+  //   title: 'Volunteer',
+  //   route: 'volunteer',
+  // },
   {
     title: 'Sponsors',
     route: 'sponsors',
