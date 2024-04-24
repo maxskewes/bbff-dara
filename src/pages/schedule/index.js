@@ -39,20 +39,28 @@ const LineUp = () => {
     );
   };
 
-  const FullArtistBox = ({ bandname, pic, ensemble, children, sectionID }) => {
+  const FullArtistBox = ({
+    bandname,
+    pic,
+    ensemble,
+    children,
+    sectionID,
+    bandWebsite,
+  }) => {
     return (
       <>
         <section id={`#${sectionID}`}></section>
-        <Box
-          position={'relative'}
-          width={'full'}
-          maxW={[1200]}
-          p={[6]}
-          m={[2]}
-          borderRadius={'2xl'}
-          bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
-        >
-          {/* <Box
+        {/* <Link href={bandWebsite} alt={`External link to ${bandname}'s website`} target='_blank'> */}
+          <Box
+            position={'relative'}
+            width={'full'}
+            maxW={[1200]}
+            p={[6]}
+            m={[2]}
+            borderRadius={'2xl'}
+            bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
+          >
+            {/* <Box
             position={'absolute'}
             right={3}
             bottom={3}
@@ -66,78 +74,80 @@ const LineUp = () => {
               <Text color={'white'}>back to lineup</Text>
             </Link>
           </Box> */}
-          <Flex
-            color={'white'}
-            flexDirection={['column', null, 'row']}
-            justifyContent={'center'}
-            alignItems={'center'}
-          >
-            <Flex flexDirection={['column']} pr={[0, null, 6]}>
-              <Text
-                letterSpacing={[2]}
-                fontSize={['2xl']}
-                fontWeight={[600]}
-                textAlign={'center'}
-                whiteSpace={'pre-wrap'}
-                maxW={[300]}
-              >
-                {bandname}
-              </Text>
-              <Box w={[300]} h={[300]}>
-                <Image
-                  w={'full'}
-                  h={'full'}
-                  py={[2]}
-                  src={pic}
-                  alt={`band photo of ${bandname}`}
-                  objectFit={'cover'}
-                />
-              </Box>
-              <Text
-                fontSize={['xs']}
-                textAlign={'center'}
-                whiteSpace={'pre-wrap'}
-                pb={2}
-              >
-                {ensemble}
-              </Text>
-            </Flex>
-
             <Flex
-              flexDirection={'column'}
-              alignItems={['center']}
-              justifyContent={['center']}
-              pb={[0, null, 6, 0]}
+              color={'white'}
+              flexDirection={['column', null, 'row']}
+              justifyContent={'center'}
+              alignItems={'center'}
             >
-              <Text fontSize={['md']} textAlign={'justify'}>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                {children}
-              </Text>
-              <Box
-                position={['relative', null, 'absolute']}
-                bottom={[null, null, 3]}
-                right={[null, null, 6]}
-                textAlign={'center'}
-                width={['full', 'auto']}
-                mt={4}
-                pt={1}
-                pb={2}
-                px={12}
-                cursor={'pointer'}
-                borderRadius={'2xl'}
-                _hover={{
-                  bgGradient: 'linear( blue.600 0%, blue.400 50%, blue.600 90%)',
-                  color: 'white',
-                }}
-                bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
+              <Flex flexDirection={['column']} pr={[0, null, 6]}>
+                <Text
+                  letterSpacing={[2]}
+                  fontSize={['2xl']}
+                  fontWeight={[600]}
+                  textAlign={'center'}
+                  whiteSpace={'pre-wrap'}
+                  maxW={[300]}
+                >
+                  {bandname}
+                </Text>
+                <Box w={[300]} h={[300]}>
+                  <Image
+                    w={'full'}
+                    h={'full'}
+                    py={[2]}
+                    src={pic}
+                    alt={`band photo of ${bandname}`}
+                    objectFit={'cover'}
+                  />
+                </Box>
+                <Text
+                  fontSize={['xs']}
+                  textAlign={'center'}
+                  whiteSpace={'pre-wrap'}
+                  pb={2}
+                >
+                  {ensemble}
+                </Text>
+              </Flex>
+
+              <Flex
+                flexDirection={'column'}
+                alignItems={['center']}
+                justifyContent={['center']}
+                pb={[0, null, 6, 0]}
               >
-                <Link href={'/schedule'}>
-                  <Text color={'white'}>back to lineup</Text>
-                </Link>
-              </Box>
+                <Text fontSize={['md']} textAlign={'justify'}>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  {children}
+                </Text>
+                <Box
+                  position={['relative', null, 'absolute']}
+                  bottom={[null, null, 3]}
+                  right={[null, null, 6]}
+                  textAlign={'center'}
+                  width={['full', 'auto']}
+                  mt={4}
+                  pt={1}
+                  pb={2}
+                  px={12}
+                  cursor={'pointer'}
+                  borderRadius={'2xl'}
+                  _hover={{
+                    bgGradient:
+                      'linear( blue.600 0%, blue.400 50%, blue.600 90%)',
+                    color: 'white',
+                  }}
+                  bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
+                >
+                  <Link href={'/schedule'}>
+                    <Text color={'white'}>back to lineup</Text>
+                  </Link>
+                </Box>
+              </Flex>
             </Flex>
-          </Flex>
-        </Box>
+          </Box>
+        {/* </Link> */}
       </>
     );
   };
@@ -303,6 +313,14 @@ const LineUp = () => {
               }
               to={'lois-and-clark-expedition'}
             />
+            <ArtistBox
+              bandname={'FIDDLOCITY'}
+              time={'12:45pm'}
+              synop={
+                'A high energy fiddle performance group comprised of players all 18 years and younger.'
+              }
+              to={'fiddlocity'}
+            />
           </SimpleGrid>
         </Box>
       </Box>
@@ -314,6 +332,7 @@ const LineUp = () => {
         ensemble={
           'Ian Royer- Guitar\n Chris Kelley- Banjo\n Aaron Nelson- Bass\n Jake Beckwith- Fiddle\n Jesse Lawton- Mandolin\n Emily West- Drums'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Alder Street is boot-stompin&apos;, gritty, and bourbon flavored. The
         band draws its inspiration from a variety of sources, evinced by
@@ -331,6 +350,7 @@ const LineUp = () => {
         ensemble={
           'Jon Neufeld - Guitar\n David Pugh - Mandolin\n Jesse Withers - Upright Bass\n Darrin Craig - Guitar'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Jackstraw formed in 1997 when rhythm guitarist Darrin Craig and lead
         player Jon Neufeld met mandolin picker David Pugh and bassist Jesse
@@ -353,6 +373,7 @@ const LineUp = () => {
         ensemble={
           'Casey James Holmberg: Banjo\n Lillian Sawyer: Fiddle\n Tommy Schulz: Guitar\n Noa: Bass Fiddle'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Fog Holler is a bluegrass band with an edge. What gives them that edge
         is a topic of hot debate. For some, it&apos;s musicianship - these
@@ -377,6 +398,7 @@ const LineUp = () => {
         ensemble={
           'Peter Romanelli - guitar/vocals\n Austen Slone - mandolin/vocals\n Jacob Camara - banjo/vocals\n Zachary Wallmark - bass'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         The Muddy Souls are a leading progressive/jamgrass band based in Eugene,
         OR featuring original songs, virtuosic improvisation, tight vocal
@@ -395,6 +417,7 @@ const LineUp = () => {
         bandname={'The HIGH SEAGRASS'}
         pic={'/images/bandphotos/high-seagrass.jpg'}
         ensemble={'Mandolin\n Banjo\n Guitar\n Bass\n Squareneck Dobro'}
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         The High Seagrass are a swashbuckling band of bluegrass marauders
         pickin&apos; and singin&apos; at sea level. The 5-piece Pacific
@@ -415,6 +438,7 @@ const LineUp = () => {
         ensemble={
           'Benji Nagel - Dobro, Guitar, Vocals\n Joe Schulte - Mandolin, Guitar, Vocals\n Aaron Moore - Bass, Vocals\n Garrett Miller - Banjo, Guitar, Vocals\n Casey Willis - Fiddle, Mandolinnic Guitar, Harps'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Setting roots in the high and dry Central Oregon desert, Skillethead
         calls forth the best of bluegrass old and new. They ground themselves
@@ -434,6 +458,7 @@ const LineUp = () => {
         ensemble={
           'Ryan McMahon - Mandolin, Vocals\nDevon James - Guitar, Vocals\nKyle Donaldson - Guitar, Vocals\nJeffrey Leppert - Upright Bass'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Since 2015 and extending far into the future, Band of Comerados plays
         music that makes you feel good. Call it bluegrass, jamgrass, folk, or
@@ -449,6 +474,7 @@ const LineUp = () => {
         ensemble={
           'Amanda Richards - Vocals/Guitar\n Steve Moore -  banjo/lap steel/vocals\n Christine McAllister - Bass'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Amanda Richards & The Good Long Whiles are a three part harmony
         gothic-americana band based out of Portland, Oregon featuring Amanda
@@ -474,8 +500,9 @@ const LineUp = () => {
           'https://images.squarespace-cdn.com/content/v1/651317f72307517a6a58f036/3decfb8a-85c5-4874-bdff-1549507f0644/Photo+Gallery+2.jpg?format=1000w'
         }
         ensemble={
-          'Drew Tucker - Mandolin/Vocals\n Chuck Holloway- Banjo\n Aaron Redner - Fiddle\n Casey Davidson - Bass'
+          'Drew Tucker - Mandolin/Vocals\n Chuck Holloway- Banjo\n Aaron Redner - Fiddle\n Casey Davidson - Bass\n Patrick Connell - Guitar'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Thunder Ridge is a straight-ahead bluegrass band from Portland, OR. The
         traditional five-piece band is made up of banjo, guitar, mandolin, bass
@@ -492,6 +519,7 @@ const LineUp = () => {
         ensemble={
           'Flip McGuire - Banjo, Res-o-phonic Guitar, Kazoo\n Dumpster Joe - Res-o-phonic Guitar, Harps\n Elwood Johncox - Upright Bass\n Aaron Koch - Washboard\n Jeffrey Reynolds - Fiddle\n Andrew Alikhanov - Clarinet'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Blue Flags & Black Grass is a combination of many flavors of acoustic
         American Roots Music. With the instrumentation of Banjo, Res-o-phonic
@@ -510,6 +538,7 @@ const LineUp = () => {
         ensemble={
           '2 Guitars and a Bass\n often swapped out for a dobro,\n pedal steel, mandolin, or banjo'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         From the jump, Dadweed have been eager to start something new within the
         Bluegrass genre, taking a non-traditional approach, but always finding
@@ -534,6 +563,7 @@ const LineUp = () => {
         ensemble={
           'Linda Leavitt - Guitar / Vocals\n Tom Nechville - Banjo / Vocals'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Back in 2018, banjo music innovator Tom Nechville joined forces with his
         musical soulmate, Linda Leavitt and their mutual musical journey began.
@@ -554,6 +584,7 @@ const LineUp = () => {
         ensemble={
           'Dave Elliott - Mandolin/Vocals\n Mike Stahlman - Banjo/Vocals\n Steve Reischman - Rhythm Guitar/Vocals\n Aaron Stocek - Lead Guitar\n Dee Johnson - Bass'
         }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Sunny South is a bluegrass band playing in the Portland, Oregon region.
         Sunny South plays bluegrass with an emphasis on traditional style like
@@ -572,8 +603,24 @@ const LineUp = () => {
         bandname={'PARTY McFLY'}
         pic={'/images/bandphotos/party-mcfly.png'}
         ensemble={'Patrick Connell - Guitar\n Josiah Payne - Mandolin'}
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
         Bluegrass Mando/Guitar Duo.
+      </FullArtistBox>
+
+      <section id='fiddlocity' />
+      <FullArtistBox
+        bandname={'FIDDLOCITY'}
+        pic={'/images/bandphotos/fiddlocity.jpg'}
+        ensemble={'everyone - fiddle'}
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
+      >
+        Fiddlocity is a high energy fiddle performance group. It&apos;s
+        member&apos;s are 18 years and younger. If you would like more info or
+        would like to audition please click this link to sign up. Anyone is
+        welcome to audition. Membership fee for non-CSVF student&apos;s is
+        minimal. Students of Denice Carter are offered this oppurtunity free of
+        charge. Please click anywhere here to be redirected to more information.
       </FullArtistBox>
     </PageContainer>
   );
