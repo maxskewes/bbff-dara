@@ -45,10 +45,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bridgetown Bluegrass</title>
+        <title>Bridgetown Bluegrass & Folk Festival</title>
         <meta
-          name="Portland's own bluegrass and folk music festival"
-          content='bluegrass Portland music festival Bridgetown Folk PDX non-profit nonprofit live ethos program'
+          name="Bridgetown Bluegrass & Folk Festival"
+          content="Portland, Oregon's very own bluegrass and folk music festival"
+          // content='bluegrass Portland music festival Bridgetown Folk PDX non-profit nonprofit live ethos program'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
