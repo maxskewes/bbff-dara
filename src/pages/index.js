@@ -47,7 +47,7 @@ export default function Home() {
       <Head>
         <title>Bridgetown Bluegrass</title>
         <meta
-          name='description'
+          name="Portland's own bluegrass and folk music festival"
           content='bluegrass Portland music festival Bridgetown Folk PDX non-profit nonprofit live ethos program'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />

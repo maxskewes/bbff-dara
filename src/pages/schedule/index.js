@@ -51,16 +51,16 @@ const LineUp = () => {
       <>
         <section id={`#${sectionID}`}></section>
         {/* <Link href={bandWebsite} alt={`External link to ${bandname}'s website`} target='_blank'> */}
-          <Box
-            position={'relative'}
-            width={'full'}
-            maxW={[1200]}
-            p={[6]}
-            m={[2]}
-            borderRadius={'2xl'}
-            bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
-          >
-            {/* <Box
+        <Box
+          position={'relative'}
+          width={'full'}
+          maxW={[1200]}
+          p={[6]}
+          m={[2]}
+          borderRadius={'2xl'}
+          bgImage="linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)) , url('Background.jpg')"
+        >
+          {/* <Box
             position={'absolute'}
             right={3}
             bottom={3}
@@ -74,79 +74,79 @@ const LineUp = () => {
               <Text color={'white'}>back to lineup</Text>
             </Link>
           </Box> */}
-            <Flex
-              color={'white'}
-              flexDirection={['column', null, 'row']}
-              justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Flex flexDirection={['column']} pr={[0, null, 6]}>
-                <Text
-                  letterSpacing={[2]}
-                  fontSize={['2xl']}
-                  fontWeight={[600]}
-                  textAlign={'center'}
-                  whiteSpace={'pre-wrap'}
-                  maxW={[300]}
-                >
-                  {bandname}
-                </Text>
-                <Box w={[300]} h={[300]}>
-                  <Image
-                    w={'full'}
-                    h={'full'}
-                    py={[2]}
-                    src={pic}
-                    alt={`band photo of ${bandname}`}
-                    objectFit={'cover'}
-                  />
-                </Box>
-                <Text
-                  fontSize={['xs']}
-                  textAlign={'center'}
-                  whiteSpace={'pre-wrap'}
-                  pb={2}
-                >
-                  {ensemble}
-                </Text>
-              </Flex>
-
-              <Flex
-                flexDirection={'column'}
-                alignItems={['center']}
-                justifyContent={['center']}
-                pb={[0, null, 6, 0]}
+          <Flex
+            color={'white'}
+            flexDirection={['column', null, 'row']}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Flex flexDirection={['column']} pr={[0, null, 6]}>
+              <Text
+                letterSpacing={[2]}
+                fontSize={['2xl']}
+                fontWeight={[600]}
+                textAlign={'center'}
+                whiteSpace={'pre-wrap'}
+                maxW={[300]}
               >
-                <Text fontSize={['md']} textAlign={'justify'}>
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  {children}
-                </Text>
-                <Box
-                  position={['relative', null, 'absolute']}
-                  bottom={[null, null, 3]}
-                  right={[null, null, 6]}
-                  textAlign={'center'}
-                  width={['full', 'auto']}
-                  mt={4}
-                  pt={1}
-                  pb={2}
-                  px={12}
-                  cursor={'pointer'}
-                  borderRadius={'2xl'}
-                  _hover={{
-                    bgGradient:
-                      'linear( blue.600 0%, blue.400 50%, blue.600 90%)',
-                    color: 'white',
-                  }}
-                  bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
-                >
-                  <Link href={'/schedule'}>
-                    <Text color={'white'}>back to lineup</Text>
-                  </Link>
-                </Box>
-              </Flex>
+                {bandname}
+              </Text>
+              <Box w={[300]} h={[300]}>
+                <Image
+                  w={'full'}
+                  h={'full'}
+                  py={[2]}
+                  src={pic}
+                  alt={`band photo of ${bandname}`}
+                  objectFit={'cover'}
+                />
+              </Box>
+              <Text
+                fontSize={['xs']}
+                textAlign={'center'}
+                whiteSpace={'pre-wrap'}
+                pb={2}
+              >
+                {ensemble}
+              </Text>
             </Flex>
-          </Box>
+
+            <Flex
+              flexDirection={'column'}
+              alignItems={['center']}
+              justifyContent={['center']}
+              pb={[0, null, 6, 0]}
+            >
+              <Text fontSize={['md']} textAlign={'justify'}>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                {children}
+              </Text>
+              <Box
+                position={['relative', null, 'absolute']}
+                bottom={[null, null, 3]}
+                right={[null, null, 6]}
+                textAlign={'center'}
+                width={['full', 'auto']}
+                mt={4}
+                pt={1}
+                pb={2}
+                px={12}
+                cursor={'pointer'}
+                borderRadius={'2xl'}
+                _hover={{
+                  bgGradient:
+                    'linear( blue.600 0%, blue.400 50%, blue.600 90%)',
+                  color: 'white',
+                }}
+                bgGradient='linear(blue.900 0%, blue.600 50%, blue.900 90%)'
+              >
+                <Link href={'/schedule'}>
+                  <Text color={'white'}>back to lineup</Text>
+                </Link>
+              </Box>
+            </Flex>
+          </Flex>
+        </Box>
         {/* </Link> */}
       </>
     );
@@ -305,14 +305,7 @@ const LineUp = () => {
               synop={'Bluegrass Mando/Guitar Duo.'}
               to={'party-mcfly'}
             />
-            <ArtistBox
-              bandname={'The LOIS and CLARK EXPEDITION'}
-              time={'1:30pm'}
-              synop={
-                'Banjo/Guitar Duo with vocal harmonies featuring Linda Leavitt and Tom Nechville'
-              }
-              to={'lois-and-clark-expedition'}
-            />
+
             <ArtistBox
               bandname={'FIDDLOCITY'}
               time={'12:45pm'}
@@ -320,6 +313,14 @@ const LineUp = () => {
                 'A high energy fiddle performance group comprised of players all 18 years and younger.'
               }
               to={'fiddlocity'}
+            />
+            <ArtistBox
+              bandname={'The LOIS and CLARK EXPEDITION'}
+              time={'1:30pm'}
+              synop={
+                'Banjo/Guitar Duo with vocal harmonies featuring Linda Leavitt and Tom Nechville'
+              }
+              to={'lois-and-clark-expedition'}
             />
           </SimpleGrid>
         </Box>
