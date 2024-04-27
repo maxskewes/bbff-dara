@@ -176,7 +176,7 @@ const LineUp = () => {
             letterSpacing={[1.5]}
             pb={[4]}
           >
-            Chansel Stage
+            Chancel Stage
           </Text>
 
           <SimpleGrid columns={[1, null, 3]} spacing={1}>
@@ -187,14 +187,6 @@ const LineUp = () => {
                 "Boot-Stompin', Gritty and Bourbon Flavored - reprises ranging from Iron Maiden to Bill Monroe"
               }
               to={'alder-street'}
-            />
-            <ArtistBox
-              bandname={'JACKSTRAW'}
-              time={'7:00pm'}
-              synop={
-                "Portland's own Iconic Bluegrass Band - out of their comfort zone of their 20+ year residency at the Laruelthirst Public House"
-              }
-              to={'jackstraw'}
             />
             <ArtistBox
               bandname={'FOG HOLLER'}
@@ -212,7 +204,14 @@ const LineUp = () => {
               }
               to={'high-seagrass'}
             />
-
+            <ArtistBox
+              bandname={'JACKSTRAW'}
+              time={'7:00pm'}
+              synop={
+                "Portland's own Iconic Bluegrass Band - out of their comfort zone of their 20+ year residency at the Laruelthirst Public House"
+              }
+              to={'jackstraw'}
+            />
             <ArtistBox
               bandname={'BAND of COMERADOS'}
               time={'6:00pm'}
@@ -305,15 +304,6 @@ const LineUp = () => {
               synop={'Bluegrass Mando/Guitar Duo.'}
               to={'party-mcfly'}
             />
-
-            <ArtistBox
-              bandname={'FIDDLOCITY'}
-              time={'12:45pm'}
-              synop={
-                'A high energy fiddle performance group comprised of players all 18 years and younger.'
-              }
-              to={'fiddlocity'}
-            />
             <ArtistBox
               bandname={'The LOIS and CLARK EXPEDITION'}
               time={'1:30pm'}
@@ -321,6 +311,14 @@ const LineUp = () => {
                 'Banjo/Guitar Duo with vocal harmonies featuring Linda Leavitt and Tom Nechville'
               }
               to={'lois-and-clark-expedition'}
+            />
+            <ArtistBox
+              bandname={'FIDDLOCITY'}
+              time={'12:45pm'}
+              synop={
+                'A high energy fiddle performance group comprised of players all 18 years and younger.'
+              }
+              to={'fiddlocity'}
             />
           </SimpleGrid>
         </Box>
@@ -342,29 +340,6 @@ const LineUp = () => {
         for a benefit show from a hodgepodge of musicians living in
         Eugene&apos;s infamous Campbell Club Cooperative on Alder Street.Over
         the years Alder Street blossomed in Eugene's infamous local music scene.
-      </FullArtistBox>
-
-      <section id='jackstraw' />
-      <FullArtistBox
-        bandname={'JACKSTRAW'}
-        pic={'/images/bandphotos/jackstraw.jpg'}
-        ensemble={
-          'Jon Neufeld - Guitar\n David Pugh - Mandolin\n Jesse Withers - Upright Bass\n Darrin Craig - Guitar'
-        }
-        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
-      >
-        Jackstraw formed in 1997 when rhythm guitarist Darrin Craig and lead
-        player Jon Neufeld met mandolin picker David Pugh and bassist Jesse
-        Withers at Artichoke Music, a Portland instrument store. Six records and
-        27 years later, the band has toured throughout the United States,
-        playing roadhouses, clubs, listening rooms and festivals. Along the way,
-        they&apos;ve shared bills with bluegrass greats such as Del McCoury and
-        Tim O&apos;Brien and welcomed legends like Danny Barnes and Tony Furtado
-        as temporary band mates. The band&apos;s devoted following includes
-        bluegrass purists, alt-country fans, kids looking to dance, and people
-        who know a good tune when they hear one. Jackstraw has developed a
-        reputation over the years for their impeccable musicianship and
-        hard-driving original songs.
       </FullArtistBox>
 
       <section id='fog-holler' />
@@ -392,6 +367,48 @@ const LineUp = () => {
         quickly enthralling longtime bluegrass fans and newcomers alike.
       </FullArtistBox>
 
+      <section id='high-seagrass' />
+      <FullArtistBox
+        bandname={'The HIGH SEAGRASS'}
+        pic={'/images/bandphotos/high-seagrass.jpg'}
+        ensemble={'Mandolin\n Banjo\n Guitar\n Bass\n Squareneck Dobro'}
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
+      >
+        The High Seagrass are a swashbuckling band of bluegrass marauders
+        pickin&apos; and singin&apos; at sea level. The 5-piece Pacific
+        Northwest jamgrass band from Seattle, Washington is an organic offshoot
+        of Ballard&apos;s long-running Conor Byrne Pub bluegrass jam formed by
+        members inspired by both bluegrass and jamband music and culture. Their
+        unique brand fuses hard driving traditional prowess with bold
+        improvisational exploration. This group of accomplished musicians
+        channels the Emerald City&apos;s musical roots with a well curated
+        selection of bluegrass traditionals, rollicking originals, and
+        re-imagined covers.
+      </FullArtistBox>
+
+      <section id='jackstraw' />
+      <FullArtistBox
+        bandname={'JACKSTRAW'}
+        pic={'/images/bandphotos/jackstraw.jpg'}
+        ensemble={
+          'Jon Neufeld - Guitar\n David Pugh - Mandolin\n Jesse Withers - Upright Bass\n Darrin Craig - Guitar'
+        }
+        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
+      >
+        Jackstraw formed in 1997 when rhythm guitarist Darrin Craig and lead
+        player Jon Neufeld met mandolin picker David Pugh and bassist Jesse
+        Withers at Artichoke Music, a Portland instrument store. Six records and
+        27 years later, the band has toured throughout the United States,
+        playing roadhouses, clubs, listening rooms and festivals. Along the way,
+        they&apos;ve shared bills with bluegrass greats such as Del McCoury and
+        Tim O&apos;Brien and welcomed legends like Danny Barnes and Tony Furtado
+        as temporary band mates. The band&apos;s devoted following includes
+        bluegrass purists, alt-country fans, kids looking to dance, and people
+        who know a good tune when they hear one. Jackstraw has developed a
+        reputation over the years for their impeccable musicianship and
+        hard-driving original songs.
+      </FullArtistBox>
+
       <section id='muddy-souls' />
       <FullArtistBox
         bandname={'The MUDDY SOULS'}
@@ -413,23 +430,20 @@ const LineUp = () => {
         dancing and your face grinning.
       </FullArtistBox>
 
-      <section id='high-seagrass' />
+      <section id='band-of-comerados' />
       <FullArtistBox
-        bandname={'The HIGH SEAGRASS'}
-        pic={'/images/bandphotos/high-seagrass.jpg'}
-        ensemble={'Mandolin\n Banjo\n Guitar\n Bass\n Squareneck Dobro'}
+        bandname={'BAND of\n COMERADOS'}
+        pic={`https://static.wixstatic.com/media/929c29_e087af56464f43e7a9aac992db099965~mv2.jpg/v1/fill/w_977,h_548,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DSC09211.jpg`}
+        ensemble={
+          'Ryan McMahon - Mandolin, Vocals\nDevon James - Guitar, Vocals\nKyle Donaldson - Guitar, Vocals\nJeffrey Leppert - Upright Bass'
+        }
         bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
       >
-        The High Seagrass are a swashbuckling band of bluegrass marauders
-        pickin&apos; and singin&apos; at sea level. The 5-piece Pacific
-        Northwest jamgrass band from Seattle, Washington is an organic offshoot
-        of Ballard&apos;s long-running Conor Byrne Pub bluegrass jam formed by
-        members inspired by both bluegrass and jamband music and culture. Their
-        unique brand fuses hard driving traditional prowess with bold
-        improvisational exploration. This group of accomplished musicians
-        channels the Emerald City&apos;s musical roots with a well curated
-        selection of bluegrass traditionals, rollicking originals, and
-        re-imagined covers.
+        Since 2015 and extending far into the future, Band of Comerados plays
+        music that makes you feel good. Call it bluegrass, jamgrass, folk, or
+        indie, what sets the band apart is their intricate instrumentation, dual
+        vocal parts, intense improvisational jams, and the fact that these guys
+        have so much damn fun when they&apos;re playing live music!
       </FullArtistBox>
 
       <section id='skillethead' />
@@ -450,22 +464,6 @@ const LineUp = () => {
         rollicking rock cover done in Skillethead's own unique fashion. The
         spectrum reaches far and wide, the bluegrass universe is expanding, and
         Skillethead is on that ride!
-      </FullArtistBox>
-
-      <section id='band-of-comerados' />
-      <FullArtistBox
-        bandname={'BAND of\n COMERADOS'}
-        pic={`https://static.wixstatic.com/media/929c29_e087af56464f43e7a9aac992db099965~mv2.jpg/v1/fill/w_977,h_548,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/DSC09211.jpg`}
-        ensemble={
-          'Ryan McMahon - Mandolin, Vocals\nDevon James - Guitar, Vocals\nKyle Donaldson - Guitar, Vocals\nJeffrey Leppert - Upright Bass'
-        }
-        bandWebsite={'http://www.denicecarter.com/fiddlocity.html'}
-      >
-        Since 2015 and extending far into the future, Band of Comerados plays
-        music that makes you feel good. Call it bluegrass, jamgrass, folk, or
-        indie, what sets the band apart is their intricate instrumentation, dual
-        vocal parts, intense improvisational jams, and the fact that these guys
-        have so much damn fun when they&apos;re playing live music!
       </FullArtistBox>
 
       <section id='good-long-whiles' />
