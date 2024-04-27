@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+      <head>
         <title>Bridgetown Bluegrass & Folk Festival</title>
         <meta
           name='Bridgetown Bluegrass & Folk Festival'
@@ -54,7 +54,7 @@ export default function Home() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-      </Head>
+      </head>
 
       <main>
         <Box position='relative' width={'100vw'} height={'auto'} minH={300}>

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <div className={dellaRespira.className}>
-        <Head>
+        <head>
           <title>Bridgetown Bluegrass & Folk Festival</title>
           <meta
             name='Bridgetown Bluegrass & Folk Festival'
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
           />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
-        </Head>
+        </head>
         <motion.header
           initial={{ opacity: 0 }}
           animate={{
