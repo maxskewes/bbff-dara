@@ -94,7 +94,7 @@ const Workshops = () => {
           instrument={'Bluegrass Mandolin'}
           mentor={'Kaden Hurst'}
           bandname={'of Never Come Down'}
-          time={'11:00 - 2:00'}
+          time={'11:00 - 12:00'}
         />
         <WorkshopBox
           instrument={'Bluegrass Banjo'}
